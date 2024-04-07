@@ -1,0 +1,38 @@
+﻿
+using Terraria;
+using Terraria.ModLoader;
+using Terraria.ID;
+
+namespace EmptySet.Projectiles.Boss
+{
+    class BlastWaveProjectile:ModProjectile
+    {
+		public override string Texture => "Terraria/Images/Projectile_0";
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("冲击波");
+		}
+
+		public override void SetDefaults()
+		{
+			Projectile.width = 50;
+			Projectile.height =50;
+			Projectile.alpha = 255;
+			Projectile.penetrate = -1;
+			Projectile.aiStyle =-1;
+			Projectile.friendly = false;
+			Projectile.hostile = true;
+			Projectile.tileCollide = false;
+			Projectile.light = 1;
+			Projectile.timeLeft = 30;
+		}
+
+        public override void AI()
+        {
+			Dust dust = Main.dust[Dust.NewDust(Projectile.position,50,50,DustID.Torch)];
+			dust.scale = 1.5f;
+			dust.fadeIn = 1;
+			dust.noGravity = true;
+        }
+    }
+}

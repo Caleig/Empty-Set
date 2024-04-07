@@ -1,0 +1,1288 @@
+Mods: {
+	EmptySet: {
+		Biomes: {
+			TheCoreOfChaosBiome: {
+				DisplayName: 混沌核心
+				TownNPCDialogueName: the The Core Of Chaos Biome
+			}
+		}
+
+		Buffs: {
+			ChargedUAV: {
+				DisplayName: Mods.EmptySet.BuffName.ChargedUAV
+				Description: Mods.EmptySet.BuffDescription.ChargedUAV
+			}
+
+			CloudStarEyeBuff: {
+				DisplayName: 星眼
+				Description: 星眼保护着你
+			}
+
+			LeavesPoisoning: {
+				DisplayName: LeavesPoisoning debuff
+				Description: Losing life
+			}
+
+			TheAsylumoftheStarGod: {
+				DisplayName: 星神之庇护
+				Description: 增加防御，减免伤害，增加移速
+			}
+
+			TungstenSteelControllerBuff: {
+				DisplayName: 钨钢无人机
+				Description: 文案里面没写
+			}
+
+			MonsterHeaven: {
+				DisplayName: Monster Heaven
+				Description: Mods.EmptySet.Buffs.MonsterHeaven.Description
+			}
+		}
+
+		Items: {
+			EnergyDynamite: {
+				DisplayName: Engrgy Dynamite
+				Tooltip:
+					'''
+					"A detonator with greater flight capabilities"
+					[c/d6b044:~explosive~]
+					'''
+			}
+
+			EnergyBombs: {
+				DisplayName: Engrgy Bombs
+				Tooltip:
+					'''
+					"a Bomb"
+					[c/d6b044:~explosive~]
+					'''
+			}
+
+			GoldenKnife: {
+				DisplayName: Golden Knife
+				Tooltip:
+					'''
+					"Gives a health regeneration bonus based on the number of summon slots"
+					"Golden protection, but it takes a lot of people to take effect"
+
+					'''
+			}
+
+			TungstenKnife: {
+				DisplayName: Tungsten Knife
+				Tooltip: The more people you have, the more Defense you have
+			}
+
+			PlatinumKnife: {
+				DisplayName: Platinum Knife
+				Tooltip: The more people you have, the more speed you run
+			}
+
+			Graypendant: {
+				DisplayName: Gray Pendant
+				Tooltip:
+					'''
+					"Increases damage and throw speed, provides underwater lighting"
+					"The pendant loved by hunters who lived by the sea in ancient times"
+					'''
+			}
+
+			BloodlettingKnife: {
+				DisplayName: Bloodletting Knife
+				Tooltip:
+					'''
+					10% increased damage
+					10% increased critcal strike chance
+					"A dagger used by worshippers of the ancient gods"
+					"It is rumored that believers will slit their arms with knives
+					 and sacrifice to the gods with their own blood."
+					'''
+			}
+
+			ScrletBracer: {
+				DisplayName: Scrlet Bracer
+				Tooltip:
+					'''
+					Increased Throwing Critical Strike Chance and Throwing projectiles' Speed
+					shoot scarlet spikes when critical hits
+					'''
+			}
+
+			BeingsWoodenBracer: {
+				DisplayName: Beings Wooden Bracer
+				Tooltip:
+					'''
+					Increase throwing critical strike chance and throw speed
+					When you hit critically, it generates life energy, which recovers health when touched
+					'''
+			}
+
+			BurnHellTalisman: {
+				DisplayName: BurnHell Talisman
+				Tooltip:
+					'''
+					+1 summon bar
+					Throws are increased by 12%.
+					Throws and summons are increased by 7%.
+					Summons a lava spirit that floats above the player
+					'''
+			}
+
+			DefenderTalisman: {
+				DisplayName: Defender Talisman
+				Tooltip:
+					'''
+					Defeating the Wall of Flesh can release its real power.
+					Defense attributes increase with HP reduction
+					'''
+			}
+
+			DisasterBracelet: {
+				DisplayName: Disaster Bracelet
+				Tooltip:
+					'''
+					Increases your max number of minions by 1
+					Increases minion damage by 20%
+					The more minions, the fewer MaxLife
+					"Woe betide him who wears it."
+					'''
+			}
+
+			FangsNecklace: {
+				DisplayName: Fangs Necklace
+				Tooltip:
+					'''
+					3 defense
+					7% increased damage
+					'''
+			}
+
+			FlameFang: {
+				DisplayName: Flame Fang
+				Tooltip:
+					'''
+					"Slightly increased damage"
+					"Throwing a weapon will burn the enemy"
+					"There is a small chance that the whip will explode when attacking"
+					'''
+			}
+
+			ForestNecklace: {
+				DisplayName: Forest Necklace
+				Tooltip:
+					'''
+					Increases your max number of minions by 1
+					Increases throwing and minion damage by 7%
+					Increases throwing speed by 10%
+					'''
+			}
+
+			HelusWings: {
+				DisplayName: Helus Wings
+				Tooltip: Allows flight and slow fall
+			}
+
+			HunterCloak: {
+				DisplayName: Hunter Cloak
+				Tooltip:
+					'''
+					15% increased movement speed
+					4% increased throwing critcal strike chance
+					"A silk cloak once popular among hunters."
+					'''
+			}
+
+			HuntingTalisman: {
+				DisplayName: Hunting Talisman
+				Tooltip:
+					'''
+					Increases throwing and minion damage by 7%
+					"The talisman worn by hunters in hunting is said to be blessed by the hunting god."
+					'''
+			}
+
+			LivinglogWreath: {
+				DisplayName: Livinglog Wreath
+				Tooltip:
+					'''
+					130% increased movement speed
+					Increases max life by 20%
+					Increases jump height
+					"A wreath made of Plantera of the century."
+					'''
+			}
+
+			MetalBracer: {
+				DisplayName: Metal Bracer
+				Tooltip:
+					'''
+					2 defense
+					Increases throwing speed by 10%
+					5% increased throwing critcal strike chance
+					'''
+			}
+
+			PredatorNecklace: {
+				DisplayName: Predator Necklace
+				Tooltip:
+					'''
+					5 defense
+					5% increased damage
+					Increases armor penetration by 5
+					Releases bees and douses the user in honey when damaged
+					'''
+			}
+
+			ShakingEarthAmulet: {
+				DisplayName: Shaking Earth Amulet
+				Tooltip:
+					'''
+					10% increased movement speed
+					Increases jump height
+					Increases max life by 10
+					'''
+			}
+
+			SpiderFangNecklace: {
+				DisplayName: Spider Fang Necklace
+				Tooltip:
+					'''
+					Reduced thrown weapons damage by 10%, but has 33% chance to cause venom for 7 second
+					Increases throwing speed by 9%
+					'''
+			}
+
+			TheAsylumoftheStarGod: {
+				DisplayName: the Asy Lum of the Star God
+				Tooltip:
+					'''
+					Periodically give players buffs
+					The Star God, who was far away in other dimensions, noticed you, so he stuffed a talisman into your newbie bag
+					However, under the influence of the surrounding energy, only by releasing the ancient light and darkness hidden deep at the bottom of the world can it reveal its true power
+					'''
+			}
+
+			UlcerPupil: {
+				DisplayName: Ulcer Pupil
+				Tooltip:
+					'''
+					Increases armor penetration by 10
+					"This thing is disgusting."
+					'''
+			}
+
+			WoodenBracer: {
+				DisplayName: Wooden Bracer
+				Tooltip: 4% increased throwing critcal strike chance
+			}
+
+			极寒冰晶: {
+				DisplayName: 极寒冰晶
+				Tooltip: ""
+			}
+
+			苦寒吊坠: {
+				DisplayName: 苦寒吊坠
+				Tooltip: ""
+			}
+
+			AbyssCore: {
+				DisplayName: Abyss Core
+				Tooltip: No consume
+			}
+
+			DustyRemoteControl: {
+				DisplayName: Dusty Remote Control
+				Tooltip: Summon earth shaker
+			}
+
+			EarthShakerChest: {
+				DisplayName: Treasure Bag (Earth Shaker)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			Firework1: {
+				DisplayName: Firework
+				Tooltip: Let's watch the fireworks.
+			}
+
+			FrozenCoreChest: {
+				DisplayName: Treasure Bag (Frozen Core)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			HoneyBait: {
+				DisplayName: Honey Bait
+				Tooltip:
+					'''
+					Summon jungle hunter
+					Use it in jungle
+					'''
+			}
+
+			JungleHunterChest: {
+				DisplayName: Treasure Bag (Jungle Hunter)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			LavaHunterChest: {
+				DisplayName: Treasure Bag (Lava Hunter)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			LavaShimmerLamp: {
+				DisplayName: Lava Shimmer Lamp
+				Tooltip:
+					'''
+					It give energy inside out
+					It seems can attract a powerful creature that does not belong to hell.
+					Nonconsumable
+					'''
+			}
+
+			StarterBox: {
+				DisplayName: StarterBox
+				Tooltip: ""
+			}
+
+			StormBeacon: {
+				DisplayName: Storm Beacon
+				Tooltip:
+					'''
+					Thunderstorms flickering
+					Nonconsumable
+					'''
+			}
+
+			SubTest: {
+				DisplayName: Test
+				Tooltip: ""
+			}
+
+			苦寒刻印: {
+				DisplayName: 苦寒刻印
+				Tooltip: ""
+			}
+
+			BloodShadow: {
+				DisplayName: Blood Shadow
+				Tooltip: ""
+			}
+
+			BloodWreckage: {
+				DisplayName: Blood Wreckage
+				Tooltip: ""
+			}
+
+			ChargedCrystal: {
+				DisplayName: Charged Crystal
+				Tooltip: Full charged of energy
+			}
+
+			CorruptShard: {
+				DisplayName: Corrupt Shard
+				Tooltip: ""
+			}
+
+			DarkBrokenCrystal: {
+				DisplayName: Dark Broken Crystal
+				Tooltip: '''"Broken crystals composed of blood"'''
+			}
+
+			EternityAshBar: {
+				DisplayName: Eternity Ash Bar
+				Tooltip: '''"paint regret with constant ash"'''
+			}
+
+			EternityAshOre: {
+				DisplayName: Eternity Ash Ore
+				Tooltip: '''"It consists of the remains of the dead."'''
+			}
+
+			FelShadowBar: {
+				DisplayName: Fel Shadow Bar
+				Tooltip: '''"Fel Shadow Tiles"'''
+			}
+
+			FlamtaintBar: {
+				DisplayName: Flamtaint Bar
+				Tooltip: '''"It give out sanguine sparks"'''
+			}
+
+			GoldFragments: {
+				DisplayName: Gold Fragments
+				Tooltip: Drop by king slime
+			}
+
+			HardenedGel: {
+				DisplayName: Hardened Gel
+				Tooltip: '''"Unfortunately, this thing can't be eaten."'''
+			}
+
+			MetalFragment: {
+				DisplayName: Metal Fragment
+				Tooltip: Drop by earth shaker
+			}
+
+			MoltenDebris: {
+				DisplayName: Molten Debris
+				Tooltip: Drop by Lava Hunter
+			}
+
+			RaySoul: {
+				DisplayName: Ray Soul
+				Tooltip: The quintessence of ray clouds
+			}
+
+			RockFragments: {
+				DisplayName: Rock Fragments
+				Tooltip: ""
+			}
+
+			ShadowlightSparkle: {
+				DisplayName: Shadow light Sparkle
+				Tooltip: '''"Fragments of the shadow flame"'''
+			}
+
+			SoulOfPolymerization: {
+				DisplayName: Soul Of Polymerization
+				Tooltip: '''"Unification of all elements"'''
+			}
+
+			TungstenSteelBar: {
+				DisplayName: Tungsten Steel Bar
+				Tooltip:
+					'''
+					Tungsten steel is an alloy that exists in reality.
+					So it nothing with wulfrum in calamity.
+					'''
+			}
+
+			寒川碎块: {
+				DisplayName: 寒川碎块
+				Tooltip: ""
+			}
+
+			寒川锭: {
+				DisplayName: 寒川锭
+				Tooltip: ""
+			}
+
+			FireworkLauncher: {
+				DisplayName: Firework Launcher
+				Tooltip: Hand-held fireworks right-click launch
+			}
+
+			Portal: {
+				DisplayName: Portal
+				Tooltip: Portal
+			}
+
+			Telescope: {
+				DisplayName: Telescope
+				Tooltip: Wow! Best for watching fireworks!
+			}
+
+			缭乱砾岩: {
+				DisplayName: 缭乱砾岩
+				Tooltip: ""
+			}
+
+			CorruptionFlails: {
+				DisplayName: Corruption Flails
+				Tooltip: ""
+			}
+
+			BloodShadowCaveStaff: {
+				DisplayName: Blood Shadow Cave Staff
+				Tooltip: ""
+			}
+
+			ChargedLaserEmitter: {
+				DisplayName: Charged Laser Emitter
+				Tooltip: ""
+			}
+
+			CloudsPole: {
+				DisplayName: Clouds Pole
+				Tooltip: ""
+			}
+
+			DarklingCrux: {
+				DisplayName: Darkling Crux
+				Tooltip: Create a large cross over the player's head that shoots shadowflame fragments around and at the cursor position. After a period of time, the cross can be fired, dealing area damage.
+			}
+
+			EternityAshMagicBall: {
+				DisplayName: Eternity Ash Magic Ball
+				Tooltip:
+					'''
+					Shoot a ball that bounces off a block.
+					Silent
+					'''
+			}
+
+			EternityAshStaff: {
+				DisplayName: Eternity Ash Staff
+				Tooltip: Summon 2 dead souls to hunt your enemies.
+			}
+
+			FlightLeaves: {
+				DisplayName: FlightLeaves
+				Tooltip: Launch the leaves
+			}
+
+			GelStaff: {
+				DisplayName: Gel Staff
+				Tooltip: Shoot a gel
+			}
+
+			HolyTune: {
+				DisplayName: Holy Tune
+				Tooltip: Summon a lot of runes to kill your enemies.
+			}
+
+			LoudLavaFlow: {
+				DisplayName: Loud Lava Flow
+				Tooltip: ""
+			}
+
+			MiniFireballGun: {
+				DisplayName: Mini Fireball Gun
+				Tooltip: ""
+			}
+
+			PinkGelStaff: {
+				DisplayName: Pink Gel Staff
+				Tooltip: Shoot a gel and it will rebound when it meets a block.
+			}
+
+			TungstenSteelStaff: {
+				DisplayName: Tungsten Steel Staff
+				Tooltip: Shoot a tungsten steel projectile, Penetrability up to 3
+			}
+
+			Wither: {
+				DisplayName: Wither
+				Tooltip: Shoot three Wither Projectile,Poison 5 seconds when crit
+			}
+
+			寒川: {
+				DisplayName: 寒川
+				Tooltip: ""
+			}
+
+			ArbitralSword: {
+				DisplayName: Arbitral Sword
+				Tooltip: '''"Arbitrate sin and tear up your enemies"'''
+			}
+
+			Banisher: {
+				DisplayName: Banisher
+				Tooltip: Fire 3 wall piercing swords per attack
+			}
+
+			BloodSickle: {
+				DisplayName: Blood Sickle
+				Tooltip: Launch a penetrated sickle that will make the enemy attach ichor buff.
+			}
+
+			CactusPike: {
+				DisplayName: Cactus Pike
+				Tooltip: ""
+			}
+
+			ChargedCrystalLongSpear: {
+				DisplayName: Charged Crystal Long Spear
+				Tooltip: ""
+			}
+
+			CloudsGlaive: {
+				DisplayName: Clouds Glaive
+				Tooltip: ""
+			}
+
+			CloudsSword: {
+				DisplayName: Clouds Sword
+				Tooltip: ""
+			}
+
+			CorruptionEpee: {
+				DisplayName: Corruption Epee
+				Tooltip: Fire a ball of cursed flame that explodes
+			}
+
+			Dersilya: {
+				DisplayName: Dersilya
+				Tooltip:
+					'''
+					Left click to shoot a shadow ball that will explode
+					Right click to make a large-scale chop, quadruple damage, ignore defense
+					"Have no light, see nothing······"
+					'''
+			}
+
+			DesertedTomahawk: {
+				DisplayName: Deserted Tomahawk
+				Tooltip: Enlarge axe range by 3
+			}
+
+			EternityAshSickle: {
+				DisplayName: Eternity Ash Sickle
+				Tooltip: '''"Sink"'''
+			}
+
+			Exiler: {
+				DisplayName: Exiler
+				Tooltip: Sprint forward for a distance by right click
+			}
+
+			FelShadowHalberd: {
+				DisplayName: Fel Shadow Halberd
+				Tooltip: Firing projectiles with penetration when attacking
+			}
+
+			GelSword: {
+				DisplayName: Gel Sword
+				Tooltip: Shoot a gel affected by gravity, and the gel will bounce when it touches the block.
+			}
+
+			GloriousBrokener: {
+				DisplayName: Glorious brokener
+				Tooltip:
+					'''
+					Fire two different sickles.
+					"Fuck Light and dark"
+					'''
+			}
+
+			Issloos: {
+				DisplayName: Issloos
+				Tooltip:
+					'''
+					Left click fires a wall piercing sickle that hits enemies and has a chance to heal the player.
+					Right click to fire multiple sickles at the player's cursor position, the 4th hit generates a sickle that will regenerate the player's health,
+					explodes after 4 seconds, restores 25 health for the player and reduces the defense of the monster hit by the explosion.
+					'''
+			}
+
+			JungleSickle: {
+				DisplayName: Jungle Sickle
+				Tooltip: '''"From the ancient past"'''
+			}
+
+			LastingShadow: {
+				DisplayName: Lasting Shadow
+				Tooltip: '''"Launch multiple shadow bombs from the sky."'''
+			}
+
+			LavaCutter: {
+				DisplayName: Lava Cutter
+				Tooltip: ""
+			}
+
+			Oudersale: {
+				DisplayName: Oudersale
+				Tooltip:
+					'''
+					Left-click firing a critical strike will produce an extra sickle
+					"However, there is no end to the pain"
+					'''
+			}
+
+			PinkGelSword: {
+				DisplayName: Pink Gel Sword
+				Tooltip:
+					'''
+					Shoot three gels affected by gravity, and the gels will bounce when they touch the blocks
+					And its elasticity is better.
+					'''
+			}
+
+			PolarIceSword: {
+				DisplayName: Polar Ice Sword
+				Tooltip: ""
+			}
+
+			Salvation: {
+				DisplayName: Salvation
+				Tooltip: What is absolutely wrong with those who lip-service 'Salvation'
+			}
+
+			ShakeEartherDrill: {
+				DisplayName: Shake Earther Drill
+				Tooltip: ""
+			}
+
+			ShakeEartherEpee: {
+				DisplayName: Shake Earther Epee
+				Tooltip: ""
+			}
+
+			StarLight: {
+				DisplayName: Star Light
+				Tooltip: Launch a shock wave, and the enemy attacked by the sword body will attach "fire" debuff for 3s.
+			}
+
+			SunplateBlade: {
+				DisplayName: Sunplate Blade
+				Tooltip: ""
+			}
+
+			TalosSickle: {
+				DisplayName: TalosSickle
+				Tooltip: ""
+			}
+
+			TungstenSteelSword: {
+				DisplayName: Tungsten Steel Sword
+				Tooltip: Heal player when crit.
+			}
+
+			冷彻: {
+				DisplayName: 冷彻
+				Tooltip: ""
+			}
+
+			灼银: {
+				DisplayName: Vermillion
+				Tooltip: ""
+			}
+
+			Bright: {
+				DisplayName: Bright
+				Tooltip: '''"Zero ruin"'''
+			}
+
+			ChargedBow: {
+				DisplayName: Charged Bow
+				Tooltip: shoot addition changed arrow when shoot twice
+			}
+
+			ChargedRifle: {
+				DisplayName: Charged Rifle
+				Tooltip: shoot 3 bullet quickly, only first consume ammo.
+			}
+
+			ChlorophyteBow: {
+				DisplayName: Chlorophyte Bow
+				Tooltip: An additional 3 green arrows will be fired when you attack.
+			}
+
+			Clamour: {
+				DisplayName: Clamour
+				Tooltip: 10% chance to consume double ammo"I watched TV, New TV!"
+			}
+
+			CloudsBow: {
+				DisplayName: Clouds Bow
+				Tooltip: ""
+			}
+
+			Decline: {
+				DisplayName: Decline
+				Tooltip: ""
+			}
+
+			Energyheavy_DutySniperRifle: {
+				DisplayName: Energyheavy_DutySniperRifle
+				Tooltip: ""
+			}
+
+			EternityAshLongBow: {
+				DisplayName: Eternity Ash Long Bow
+				Tooltip: Shoot three parallel arrows at the same time.
+			}
+
+			EternityAshShortBow: {
+				DisplayName: Eternity Ash Short Bow
+				Tooltip:
+					'''
+					Shoot two arrows at the same time
+					"Close relatives of the eternity ash long bow"
+					'''
+			}
+
+			GelShortBow: {
+				DisplayName: Gel Short Bow
+				Tooltip: ""
+			}
+
+			HellFlameEjector: {
+				DisplayName: Hell Flame Ejector
+				Tooltip:
+					'''
+					Uses gel for ammo
+					31% change to not consume ammo
+					'''
+			}
+
+			Howling: {
+				DisplayName: Howling
+				Tooltip: '''"The devil wind sweeping the hell!"'''
+			}
+
+			LightRanger: {
+				DisplayName: Light Ranger
+				Tooltip:
+					'''
+					Shoot 2 arrows at the same time and convert wooden arrows into holy arrows
+					Fuck the hope and despair
+					'''
+			}
+
+			MeteoriteBow: {
+				DisplayName: Meteorite Bow
+				Tooltip:
+					'''
+					Transform wood arrow into jester arrows
+					[c/602020:-The wonderful transformation ability of meteorites?-]
+					'''
+			}
+
+			NightsBow: {
+				DisplayName: Night's Bow
+				Tooltip: Shoot a shadow ray at the cursor position. The longer the charge, the faster the speed.
+			}
+
+			PinkGelShortBow: {
+				DisplayName: Pink Gel Short Bow
+				Tooltip: ""
+			}
+
+			PlatinumRifle: {
+				DisplayName: PlatinumRifle
+				Tooltip: ""
+			}
+
+			SeedsPistol: {
+				DisplayName: Seeds Pistol
+				Tooltip: ""
+			}
+
+			ShiverBow: {
+				DisplayName: Shiver Bow
+				Tooltip:
+					'''
+					Transform wood arrow into frost burn arrows
+					[c/602020:-The wonderful transformation ability of shiver?-]
+					'''
+			}
+
+			TungstenSteelBow: {
+				DisplayName: Tungsten Steel Bow
+				Tooltip: '''"Small chance for double damage."'''
+			}
+
+			WindStorm: {
+				DisplayName: Wind Storm
+				Tooltip: convert musket bullets into charged bullets
+			}
+
+			ChargedController: {
+				DisplayName: Charged Controller
+				Tooltip: ""
+			}
+
+			CloudsStarEye: {
+				DisplayName: Cloud Star Eye
+				Tooltip: ""
+			}
+
+			SelfDefenseKnife: {
+				DisplayName: Self-defense knife
+				Tooltip: '''"At least you don't have to be beaten passively."'''
+			}
+
+			TungstenSteelController: {
+				DisplayName: Tungsten Steel Controller
+				Tooltip: ""
+			}
+
+			SuperGo: {
+				DisplayName: Super Go
+				Tooltip: ""
+			}
+
+			AdamantiteBoomerang: {
+				DisplayName: Adamantite Boomerang
+				Tooltip: 100% crit chance when per fifth use.
+			}
+
+			AncientThrowingSpear: {
+				DisplayName: Ancient Throwing Spear
+				Tooltip: Spear throwing becomes extremely fast after a period of time.
+			}
+
+			BrokenStarDisc: {
+				DisplayName: Broken Star Disc
+				Tooltip: Cast from broken of stars.
+			}
+
+			ChargedCrystalSpear: {
+				DisplayName: Charged Crystal Spear
+				Tooltip: ""
+			}
+
+			ChlorophytePike: {
+				DisplayName: Chlorophyte Pike
+				Tooltip: Throw a hinge that splits into a spore cloud when it hits an enemy monster or block.
+			}
+
+			CloudsSpear: {
+				DisplayName: Clouds Spear
+				Tooltip: ""
+			}
+
+			CorruptionFlyingBlade: {
+				DisplayName: Corruption Flying Blade
+				Tooltip: ""
+			}
+
+			CorruptionThrowingSpear: {
+				DisplayName: Corruption Throwing Spear
+				Tooltip: ""
+			}
+
+			CrimtaneFlyingBlade: {
+				DisplayName: Crimtane Flying Blade
+				Tooltip: ""
+			}
+
+			CrimtaneThrowingSpear: {
+				DisplayName: Crimtane Throwing Spear
+				Tooltip: ""
+			}
+
+			EbonwoodThrowingKnife: {
+				DisplayName: Ebonwood Throwing Knife
+				Tooltip: ""
+			}
+
+			EternityAshFlyingBlade: {
+				DisplayName: Eternity Ash Flying Blade
+				Tooltip: Throw a flying blade, which can penetrate up to 5 enemies.
+			}
+
+			GelBoomerang: {
+				DisplayName: Gel boomerang
+				Tooltip: ""
+			}
+
+			GelShuriken: {
+				DisplayName: Gel Shuriken
+				Tooltip: Throw a gel shuriken that is not controlled by gravity.
+			}
+
+			HellfireThrowingSpear: {
+				DisplayName: Hellfire Throwing Spear
+				Tooltip: Additional damage will be caused when the spear falls.
+			}
+
+			JungleThrowingSpear: {
+				DisplayName: Jungle Throwing Spear
+				Tooltip: Throw a spear that poisons enemies when hit.
+			}
+
+			LavaSlayer: {
+				DisplayName: Lava Slayer
+				Tooltip: ""
+			}
+
+			MiniMeteoriteThunder: {
+				DisplayName: Mini Meteorite Thunder
+				Tooltip:
+					'''
+					Throw out a Miniature Meteorite Thunder that is less affected by gravity
+					Generate four falling stars after explosion.
+					'''
+			}
+
+			NightsFlyBackBlade: {
+				DisplayName: Night's Fly Back Blade
+				Tooltip: Whittle your enemies to pieces at breakneck speed
+			}
+
+			NightsThrowingSpear: {
+				DisplayName: Night's Throwing Spear
+				Tooltip: An additional shadow spear will be fired when critically hit.
+			}
+
+			PinkGelFlybackBlade: {
+				DisplayName: Pink Gel Flyback Blade
+				Tooltip: Throw out a powder gel fly-back blade that can penetrate the enemy, and stack up to 5 blades.
+			}
+
+			QuenchGelJar: {
+				DisplayName: Quench Gel Jar
+				Tooltip: ""
+			}
+
+			SatanicPiercer: {
+				DisplayName: Satanic Piercer
+				Tooltip: ""
+			}
+
+			ShadewoodThrowingKnife: {
+				DisplayName: Shadewood Throwing Knife
+				Tooltip: ""
+			}
+
+			ShadowlightJavelin: {
+				DisplayName: Shadowlight Javelin
+				Tooltip: Throw an exploding shadow flame spear
+			}
+
+			SilverBlueThrowingKnife: {
+				DisplayName: SilverBlueThrowingKnife
+				Tooltip: ""
+			}
+
+			TitaniumThrowingKnife: {
+				DisplayName: Titanium Throwing Knife
+				Tooltip: ""
+			}
+
+			TungstemeraldSpear: {
+				DisplayName: TungstemeraldSpear
+				Tooltip: ""
+			}
+
+			TungstenSteelCard: {
+				DisplayName: Tungsten Steel Card
+				Tooltip: ""
+			}
+
+			WoodThrowingKnife: {
+				DisplayName: Wood Throwing Knife
+				Tooltip: ""
+			}
+
+			冰川之破: {
+				DisplayName: 冰川之破
+				Tooltip: ""
+			}
+
+			GelWhip: {
+				DisplayName: Gel Whip
+				Tooltip: '''"Suck the shit"'''
+			}
+
+			RockWhip: {
+				DisplayName: Rock Whip
+				Tooltip: ""
+			}
+
+			EternityAshYoyo: {
+				DisplayName: Eternity Ash Yoyo
+				Tooltip: Fire energy balls that track enemies.
+			}
+
+			ShakeEartherYoyo: {
+				DisplayName: ShakeEarther Yoyo
+				Tooltip: ""
+			}
+
+			TragicPendant: {
+				DisplayName: Tragic Pendant
+				Tooltip: ""
+			}
+
+			DemonBracer: {
+				DisplayName: Demon Bracer
+				Tooltip: ""
+			}
+		}
+
+		Projectiles: {
+			Lavasprite.DisplayName: Lava sprite
+			QuenchGelJarProj.DisplayName: Quench Gel Jar Proj
+			AimedProjectile.DisplayName: 激光瞄准
+			AttackAimedProjectile.DisplayName: 准心
+			BigShockWaveProjectile.DisplayName: 大冲击波
+			BonmPro.DisplayName: 钻地导弹
+			ChargedCrystal2Projectile.DisplayName: 充能晶体
+			ChargedCrystalProjectile.DisplayName: 充能晶体
+			ShockWaveProjectile.DisplayName: 冲击波
+			SlowDownMistProj.DisplayName: 雾气
+			钻地导弹.DisplayName: 钻地导弹
+			ExplodeProjectile.DisplayName: Explode Projectile
+			IcicleProjectile.DisplayName: 冰锥
+			LeavesBallProjectile.DisplayName: 叶球
+			PoisonousGogProjectile.DisplayName: 毒物
+			Wither.DisplayName: Wither
+			WitherProjectile.DisplayName: 枯萎
+			WitherProjectilePlayer.DisplayName: 枯萎
+			LaserProjectile.DisplayName: 激光
+			LavaProj.DisplayName: 熔岩
+			激光弹幕.DisplayName: 激光弹幕
+			腐化水晶激光.DisplayName: 腐化水晶激光
+			血弹.DisplayName: 血弹
+			雷暴之眼激光.DisplayName: 雷暴之眼激光
+			YanHuaProj.DisplayName: 烟花
+			ZiProj.DisplayName: 烟花
+			CorruptionFlailsProj.DisplayName: 深谙连枷
+			DarkCrystal.DisplayName: 暗水晶
+			ChargedCrystalLongSpearProj.DisplayName: 能晶长枪
+			ChargedCrystalLongSpearTurnProj.DisplayName: 能晶长枪
+			LoudLavaFlowHeldProj.DisplayName: Loud Lava Flow
+			ShakeEartherDrillProj.DisplayName: 撼地钻头
+			BloodShadowCave.DisplayName: Blood Shadow Cave
+			BloodShadowTear.DisplayName: Blood Shadow Tear
+			CloudsPoleProj.DisplayName: Clouds Pole
+			DarklingCrossing.DisplayName: Darkling Crossing
+			DarklingCrossingShard.DisplayName: Darkling Crossing Shard
+			EternityAshMagicBallProj.DisplayName: Eternity Ash Magic Ball
+			HolyTuneProj.DisplayName: HolyTune
+			LaserProj.DisplayName: Laser
+			LoudLavaFlowProj.DisplayName: Loud Lava Flow
+			MiniFireballGunProj.DisplayName: Mini Fireball
+			RuneBig.DisplayName: Rune Big
+			RuneMiddle1.DisplayName: Rune Middle1
+			RuneMiddle2.DisplayName: Rune Middle2
+			RuneSmall.DisplayName: Rune Small
+			TungstenSteelStaffProj.DisplayName: Tungsten Steel Staff Proj
+			BigShadowBall.DisplayName: Big Shadow Ball
+			BigShadowBall2.DisplayName: Big Shadow Ball2
+			BloodSickleProj.DisplayName: Blood Sickle Proj
+			CloudsSwordProj.DisplayName: 阴云剑剑气
+			DersilyaProj.DisplayName: Dersilya Proj
+			ExilesDashProjectile.DisplayName: 放逐者冲刺
+			ExileSwordkee.DisplayName: 放逐者剑气
+			GloriousBrokener.DisplayName: Glorious Brokener
+			IssloosProj.DisplayName: 伊希鲁斯镰气
+			VirtualEternityAshSickle.DisplayName: Virtual Eternity Ash Sickle
+			VirtualGloriousBrokener.DisplayName: Virtual Glorious Brokener
+			VirtualIssloosExplode.DisplayName: Virtual Issloos Explode
+			VirtualIssloosProj.DisplayName: Virtual Issoos
+			VirtualJungleSickle.DisplayName: Virtual Jungle Sickle
+			LavaFissureCuttingProj.DisplayName: Lava Fissure Cutting Proj
+			OudersaleDashProj.DisplayName: Oudersale Dash Proj
+			OudersaleProj.DisplayName: Oudersale Proj
+			SalvationProj.DisplayName: 救世
+			ShadowBall.DisplayName: Shadow Ball
+			ShakeEartherEpeeProj.DisplayName: 撼地者重剑剑气
+			SunplateBladeProj.DisplayName: Sunplate Blade
+			TalosSickleProj.DisplayName: 烁金镰镰气
+			TungstenSteelSwordProj.DisplayName: Tungsten Steel Sword Proj
+			冷彻弹幕.DisplayName: 冷彻弹幕
+			测试武器弹幕1.DisplayName: 测试武器弹幕1
+			极寒冰晶Proj.DisplayName: 极寒冰晶 Proj
+			ChargedArrowProj.DisplayName: Charged Arrow
+			ChargedBullet.DisplayName: Charged Bullet
+			LightRangerStar.DisplayName: Light Ranger Star
+			NightsBowArrow.DisplayName: 永夜箭
+			NightsBowProj.DisplayName: 永夜弓
+			SatanicExplosion.DisplayName: Satanic Explosion
+			ChargedUAVProjectile.DisplayName: 充能无人机
+			CloudStarEyeLaserProj.DisplayName: 星眼激光
+			CloudStarEyeProj.DisplayName: 星眼
+			LavaHunterBodyProj.DisplayName: Lava Hunter Body Proj
+			LavaHunterProj.DisplayName: Lava Hunter Proj
+			LavaHunterTailProj.DisplayName: Lava Hunter Tail Proj
+			SelfDefenseKnifeProj.DisplayName: Self-defense knife
+			TungstenSteelControllerProj.DisplayName: 钨钢无人机
+			SuperGoProj1.DisplayName: super go
+			SuperGoProj2.DisplayName: super go
+			AdamantiteBoomerangProj.DisplayName: Adamantite Boomerang Proj
+			BrokenStarDiscProj.DisplayName: Broken Star Disc
+			ChargedCrystalSpearProj.DisplayName: 能晶投矛
+			ChlorophytePikeProj.DisplayName: Chlorophyte Pike
+			CloudsSwordSpearProj.DisplayName: 阴云投矛
+			LavaSlayerProj.DisplayName: Lava Slayer Proj
+			SatanicPiercerProj.DisplayName: Satanic Piercer
+			ShadowlightExplosion.DisplayName: Shadowlight Explosion
+			ShadowlightJavelinExplosion.DisplayName: Shadowlight Javelin Explosion
+			ShadowlightJavelinProj.DisplayName: Shadowlight Javelin Proj
+			SilverBlueThrowingKnifeProj.DisplayName: SilverBlueThrowingKnife
+			TitaniumThrowingKnifeProj.DisplayName: Titanium Throwing Knife Proj
+			TitaniumThrowingKnifeProj2.DisplayName: Titanium Throwing Knife Proj2
+			TungstemeraldSpearProj.DisplayName: 钨翠投矛
+			TungstenSteelCardProj.DisplayName: Tungsten Steel Card
+			冰川之破弹幕.DisplayName: 冰川之破弹幕
+			GelStaffProj.DisplayName: Gel Staff Proj
+			PinkGelStaffProj.DisplayName: Pink Gel Staff Proj
+			ArbitralSwordProj.DisplayName: Arbitral Sword Proj
+			CactusPikeProj.DisplayName: Cactus Pike Proj
+			EternityAshSickleProj.DisplayName: Eternity Ash Sickle Proj
+			FelShadowHalberdProj.DisplayName: Fel Shadow Halberd Proj
+			FelShadowProj.DisplayName: Fel Shadow Proj
+			GelSwordProj.DisplayName: Gel Sword Proj
+			PinkGelSwordProj.DisplayName: Pink Gel Sword Proj
+			StarLightProj.DisplayName: Star Light Proj
+			CursedFlameBall.DisplayName: Cursed Flame Ball
+			CursedFlameBallExplode.DisplayName: Cursed Flame Ball Explode
+			EternityAshEnergy.DisplayName: Eternity Ash Energy
+			FelShadowSickle.DisplayName: Fel Shadow Sickle
+			HolyWave.DisplayName: Holy Wave
+			AncientThrowingSpearProj.DisplayName: Ancient Throwing Spear Proj
+			CorruptionFlyingBladeProj.DisplayName: Corruption Flying Blade Proj
+			CorruptionThrowingSpearProj.DisplayName: Corruption Throwing Spear Proj
+			CrimtaneFlyingBladeProj.DisplayName: Crimtane Flying Blade Proj
+			CrimtaneThrowingSpearProj.DisplayName: Crimtane Throwing Spear Proj
+			EbonwoodThrowingKnifeProj.DisplayName: Ebonwood Throwing Knife Proj
+			EternityAshFlyingBladeProj.DisplayName: Eternity Ash Flying Blade Proj
+			GelBoomerangProj.DisplayName: Gel Boomerang Proj
+			GelShurikenProj.DisplayName: Gel Shuriken Proj
+			HellfireThrowingSpearProj.DisplayName: Hellfire Throwing Spear Proj
+			JungleThrowingSpearProj.DisplayName: Jungle Throwing Spear Proj
+			MiniMeteoriteThunderProj.DisplayName: Mini Meteorite Thunder Proj
+			NightsFlyBackBladeProj.DisplayName: Nights Fly Back Blade Proj
+			NightsThrowingSpearProj.DisplayName: Nights Throwing Spear Proj
+			NightsThrowingSpearProj2.DisplayName: Nights Throwing Spear Proj2
+			PinkGelFlybackBladeProj.DisplayName: Pink Gel Flyback Blade Proj
+			ShadewoodThrowingKnifeProj.DisplayName: Shadewood Throwing Knife Proj
+			WoodThrowingKnifeProj.DisplayName: Wood Throwing Knife Proj
+			EternityAshYoyoProj.DisplayName: Eternity Ash Yoyo Proj
+			GelWhipProj.DisplayName: Gel Whip
+			RockWhipProj.DisplayName: Rock Whip
+			ShakeEartherYoyoProj.DisplayName: 震撼悠悠球
+			SingtheWoods.DisplayName: Singthe Woods
+			ScarletSpike.DisplayName: Scarlet Spike
+			GoldenKnife.DisplayName: Golden Knife
+			PlatinumKnife.DisplayName: Platinum Knife
+			TungstenKnife.DisplayName: Tungsten Knife
+			Explosion.DisplayName: Explosion
+			DesertGodSword.DisplayName: Desert God Sword
+			StarLightProj2.DisplayName: Star Light Proj2
+			EnergyBombsProj.DisplayName: Energy Bombs Proj
+			EnergyDetonatorProj.DisplayName: Energy Detonator Proj
+			Explosion2.DisplayName: Explosion2
+			Explosion3.DisplayName: Explosion3
+			EnergyDynamiteProj.DisplayName: Energy Dynamite Proj
+			test.DisplayName: test
+			DemonSpike.DisplayName: Demon Spike
+			der.DisplayName: der
+		}
+
+		NPCs: {
+			EarthShaker.DisplayName: 大地震撼者
+			FrozenCore.DisplayName: Frozen Core
+			JungleHunterBody.DisplayName: 丛林游猎者
+			JungleHunterHead.DisplayName: 丛林游猎者
+			JungleHunterTail.DisplayName: 丛林游猎者
+			LavaHunter.DisplayName: 熔岩游猎者
+			LavaHunterBody.DisplayName: 熔岩游猎者
+			LavaHunterTail.DisplayName: 熔岩游猎者
+			腐化水晶.DisplayName: 腐化水晶
+			血影屠戮者.DisplayName: 血影屠戮者
+			AbyssGazer.DisplayName: 渊视者
+			DeepGumPolymer.DisplayName: 渊胶聚合体
+			RoamingCar.DisplayName: 巡游小车
+			RoamingUAV.DisplayName: 漫游无人机
+			TungstenSlime.DisplayName: Tungsten Slime
+			Wreckage.DisplayName: 亡骸
+			极川灵.DisplayName: 极川灵
+			ThunderstormEye.DisplayName: 雷暴之眼
+			FakeNPC.DisplayName: Fake N P C
+		}
+
+		Tiles: {
+			FireworkLauncherTile.MapEntry: Firework Launcher
+			PortalTile.MapEntry: Telescope
+			TelescopeTile.MapEntry: Telescope
+			崩溃祭坛Tile.MapEntry: 崩溃祭坛
+			缭乱砾岩Tile.MapEntry: 缭乱砾岩
+		}
+	}
+}

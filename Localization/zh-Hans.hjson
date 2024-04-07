@@ -1,0 +1,1282 @@
+Mods: {
+	EmptySet: {
+		Biomes: {
+			TheCoreOfChaosBiome: {
+				DisplayName: 混沌核心
+				TownNPCDialogueName: the The Core Of Chaos Biome
+			}
+		}
+
+		Buffs: {
+			ChargedUAV: {
+				DisplayName: Mods.EmptySet.BuffName.ChargedUAV
+				Description: Mods.EmptySet.BuffDescription.ChargedUAV
+			}
+
+			CloudStarEyeBuff: {
+				DisplayName: 星眼
+				Description: 星眼保护着你
+			}
+
+			LeavesPoisoning: {
+				DisplayName: LeavesPoisoning debuff
+				Description: Losing life
+			}
+
+			TheAsylumoftheStarGod: {
+				DisplayName: 星神之庇护
+				Description: 增加防御，减免伤害，增加移速
+			}
+
+			TungstenSteelControllerBuff: {
+				DisplayName: 钨钢无人机
+				Description: 文案里面没写
+			}
+
+			MonsterHeaven: {
+				// DisplayName: Monster Heaven
+				// Description: Mods.EmptySet.Buffs.MonsterHeaven.Description
+			}
+		}
+
+		Items: {
+			EnergyDynamite: {
+				DisplayName: 充能爆弹
+				Tooltip:
+					'''
+					“矮人的最爱，尤其是玩炮塔的”
+					[c/d6b044:~爆炸物系~]
+					'''
+			}
+
+			EnergyBombs: {
+				DisplayName: 充能爆弹
+				Tooltip:
+					'''
+					“触发式引信”
+					[c/d6b044:~爆炸物系~]
+					'''
+			}
+
+			GoldenKnife: {
+				DisplayName: 金短刀
+				Tooltip:
+					'''
+					“根据召唤栏数量给予生命再生加成”
+					“金之加护，但要生效的话需要的人有点多”
+
+					'''
+			}
+
+			TungstenKnife: {
+				DisplayName: 钨短刀
+				Tooltip:
+					'''
+					“根据召唤栏数量给予防御加成”
+					“钨之祝福”
+					'''
+			}
+
+			PlatinumKnife: {
+				DisplayName: 铂金短刀
+				Tooltip:
+					'''
+					“根据召唤栏数量给予速度加成”
+					“人越多，跑路的速度的就越快”
+					'''
+			}
+
+			Graypendant: {
+				DisplayName: 沧灰吊坠
+				Tooltip:
+					'''
+					“增加伤害与投掷速度，提供水下照明”
+					“古时候生活在海边的猎人喜爱的吊坠”
+					'''
+			}
+
+			BloodlettingKnife: {
+				DisplayName: 放血短刀
+				Tooltip:
+					'''
+					古神信徒曾用于祭祀的匕首
+					增加玩家10%的全属性伤害与10%的暴击率,但代价是什么呢？
+					"传闻信徒们会用刀划开手臂，用自己的鲜血来祭祀神明。"
+					'''
+			}
+
+			ScrletBracer: {
+				DisplayName: 猩红护腕
+				Tooltip:
+					'''
+					增加投掷暴击率与投掷武器飞行速度
+					暴击时发射猩红尖刺
+					'''
+			}
+
+			BeingsWoodenBracer: {
+				DisplayName: 生命木护腕
+				Tooltip:
+					'''
+					增加投掷暴击率和投掷速度
+					暴击时会生成生命能量，触碰后回复生命值
+					'''
+			}
+
+			BurnHellTalisman: {
+				DisplayName: 焚狱护符
+				Tooltip:
+					'''
+					+1召唤栏
+					增加12%的投掷速度
+					增加7%的投掷和召唤伤害
+					召唤一个会浮在玩家上方的熔岩灵
+					'''
+			}
+
+			DefenderTalisman: {
+				DisplayName: 防御者护符
+				Tooltip:
+					'''
+					击败世界深处的血肉梦魇可以释放它的真正力量......
+					防御能力随着血量降低而提高
+					'''
+			}
+
+			DisasterBracelet: {
+				DisplayName: 祸难手环
+				Tooltip:
+					'''
+					增加大量召唤伤害并+1召唤栏
+					但随着召唤物的增多，玩家的血量会越来越少
+					“这玩意多少带点邪门”
+					'''
+			}
+
+			FangsNecklace: {
+				DisplayName: 獠牙项链
+				Tooltip:
+					'''
+					3防御
+					增加7%全属性伤害
+					'''
+			}
+
+			FlameFang: {
+				DisplayName: 焚炎獠牙
+				Tooltip:
+					'''
+					“略微增加伤害”
+					“投掷武器会使敌人燃烧”
+					“鞭子攻击时有小概率产出爆炸”
+					'''
+			}
+
+			ForestNecklace: {
+				DisplayName: 溃林项链
+				Tooltip:
+					'''
+					仆从数量上限提高1个
+					增加7%的投掷和召唤伤害
+					增加10%的投掷速度
+					'''
+			}
+
+			HelusWings: {
+				DisplayName: 赫琉斯之翼
+				Tooltip: 可飞行和缓慢坠落
+			}
+
+			HunterCloak: {
+				DisplayName: 猎客披风
+				Tooltip:
+					'''
+					+15%的移动速度
+					+4%的投掷暴击率
+					"曾流行于猎手们之间的丝绸披风"
+					'''
+			}
+
+			HuntingTalisman: {
+				DisplayName: 猎手护符
+				Tooltip:
+					'''
+					增加10%的投掷伤害
+					"猎手们在打猎时佩戴的护符，传说会受到狩猎之神的庇佑"
+					'''
+			}
+
+			LivinglogWreath: {
+				DisplayName: 活木花环
+				Tooltip:
+					'''
+					穿戴后，增加20%最大生命值，并极大增强跳跃能力与移动速度
+					"由世纪之花的花瓣制成的花环"
+					'''
+			}
+
+			MetalBracer: {
+				DisplayName: 金属护腕
+				Tooltip:
+					'''
+					+2防御
+					增加7%投掷武器弹幕飞行速度
+					增加5%的投掷暴击几率
+					'''
+			}
+
+			PredatorNecklace: {
+				DisplayName: 掠食者项链
+				Tooltip:
+					'''
+					5防御
+					增加5%全属性伤害
+					盔甲穿透增加5
+					受到伤害后释放2-5只蜜蜂，并将使用者浸入蜂蜜
+					'''
+			}
+
+			ShakingEarthAmulet: {
+				DisplayName: 撼地护符
+				Tooltip:
+					'''
+					增加10%的移动速度
+					增加跳跃高度增加10点最大生命值
+					'''
+			}
+
+			SpiderFangNecklace: {
+				DisplayName: 蛛牙项链
+				Tooltip:
+					'''
+					投掷武器面板伤害降低10%，但你的投掷武器有33%可以造成毒液减益（7秒）
+					增加9%的投掷速度
+					'''
+			}
+
+			TheAsylumoftheStarGod: {
+				DisplayName: 星神之庇护
+				Tooltip:
+					'''
+					周期性的给予玩家增益
+					远在其它次元摸鱼的星神注意到了你，所以他往你的新手礼包里塞了个护符
+					然而受周围能量的影响，只有释放深藏于世界底部的远古光暗才能使它展现它的真正力量
+					'''
+			}
+
+			UlcerPupil: {
+				DisplayName: 溃烂瞳孔
+				Tooltip:
+					'''
+					增加10点盔甲穿透力
+					"这玩意可真恶心"
+					'''
+			}
+
+			WoodenBracer: {
+				DisplayName: 木头护腕
+				Tooltip: 增加4%的投掷暴击几率
+			}
+
+			极寒冰晶: {
+				DisplayName: 极寒冰晶
+				Tooltip: ""
+			}
+
+			苦寒吊坠: {
+				DisplayName: 苦寒吊坠
+				Tooltip: ""
+			}
+
+			AbyssCore: {
+				DisplayName: 暗渊晶核
+				Tooltip: 不消耗
+			}
+
+			DustyRemoteControl: {
+				DisplayName: 蒙尘的遥控器
+				Tooltip: 召唤大地震撼者
+			}
+
+			EarthShakerChest: {
+				DisplayName: 宝藏匣 (大地震撼者)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			Firework1: {
+				DisplayName: 烟花
+				Tooltip: 一起来看烟花!
+			}
+
+			FrozenCoreChest: {
+				DisplayName: 宝藏匣 (极川之核)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			HoneyBait: {
+				DisplayName: 蜜汁饵食
+				Tooltip:
+					'''
+					召唤丛林游猎者
+					在丛林使用
+					'''
+			}
+
+			JungleHunterChest: {
+				DisplayName: 宝藏匣 (丛林游猎者)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			LavaHunterChest: {
+				DisplayName: 宝藏匣 (熔岩游猎者)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			LavaShimmerLamp: {
+				DisplayName: 熔岩微光灯
+				Tooltip:
+					'''
+					其内部不断散发着能量
+					似乎能吸引一个本不属于地狱的强大生物
+					不消耗
+					'''
+			}
+
+			StarterBox: {
+				DisplayName: 起点匣子
+				Tooltip: ""
+			}
+
+			StormBeacon: {
+				DisplayName: 风暴信标
+				Tooltip:
+					'''
+					雷暴闪烁着
+					无消耗
+					'''
+			}
+
+			SubTest: {
+				DisplayName: ceshi
+				Tooltip: ""
+			}
+
+			苦寒刻印: {
+				DisplayName: 苦寒刻印
+				Tooltip: ""
+			}
+
+			BloodShadow: {
+				DisplayName: 血影
+				Tooltip: ""
+			}
+
+			BloodWreckage: {
+				DisplayName: 血骸
+				Tooltip: ""
+			}
+
+			ChargedCrystal: {
+				DisplayName: 充能源晶
+				Tooltip: 充满着能量
+			}
+
+			CorruptShard: {
+				DisplayName: 深谙碎晶
+				Tooltip: ""
+			}
+
+			DarkBrokenCrystal: {
+				DisplayName: 暗血碎晶
+				Tooltip: '''"由血组成的碎晶体"'''
+			}
+
+			EternityAshBar: {
+				DisplayName: 恒灰锭
+				Tooltip: '''"恒灰灰绘悔"'''
+			}
+
+			EternityAshOre: {
+				DisplayName: 恒灰矿
+				Tooltip: '''"由死灵的遗骸组成"'''
+			}
+
+			FelShadowBar: {
+				DisplayName: 邪影锭
+				Tooltip: '''"邪影板砖（）"'''
+			}
+
+			FlamtaintBar: {
+				DisplayName: 堕烬锭
+				Tooltip: '''"这玩意散发着血红色的火花"'''
+			}
+
+			GoldFragments: {
+				DisplayName: 黄金碎块
+				Tooltip: 史莱姆王掉落
+			}
+
+			HardenedGel: {
+				DisplayName: 硬化凝胶
+				Tooltip: '''"可惜这玩意不能吃"'''
+			}
+
+			MetalFragment: {
+				DisplayName: 金属碎块
+				Tooltip: 大地震撼者掉落
+			}
+
+			MoltenDebris: {
+				DisplayName: 熔火碎块
+				Tooltip: 熔岩游猎者掉落
+			}
+
+			RaySoul: {
+				DisplayName: 阴雷晶魂
+				Tooltip: 雷云之精华
+			}
+
+			RockFragments: {
+				DisplayName: 岩能碎块
+				Tooltip: ""
+			}
+
+			ShadowlightSparkle: {
+				DisplayName: 微光暗影焰
+				Tooltip: '''"暗影焰的残片"'''
+			}
+
+			SoulOfPolymerization: {
+				DisplayName: 聚合之魂
+				Tooltip: '''"万元归一"'''
+			}
+
+			TungstenSteelBar: {
+				DisplayName: 钨钢锭
+				Tooltip:
+					'''
+					钨钢是一种现实中存在的合金，
+					所以这玩意与灾厄的钨钢没有半毛钱关系
+					'''
+			}
+
+			寒川碎块: {
+				DisplayName: 寒川碎块
+				Tooltip: ""
+			}
+
+			寒川锭: {
+				DisplayName: 寒川锭
+				Tooltip: ""
+			}
+
+			FireworkLauncher: {
+				DisplayName: 烟花发射架
+				Tooltip: 手持烟花右键发射
+			}
+
+			Portal: {
+				DisplayName: 传送门
+				Tooltip: emmmmm
+			}
+
+			Telescope: {
+				DisplayName: 望远镜
+				Tooltip: 哇! 最适合用来观赏烟花了!
+			}
+
+			缭乱砾岩: {
+				DisplayName: 缭乱砾岩
+				Tooltip: ""
+			}
+
+			CorruptionFlails: {
+				DisplayName: 深谙连枷
+				Tooltip: ""
+			}
+
+			BloodShadowCaveStaff: {
+				DisplayName: 血影空洞杖
+				Tooltip: ""
+			}
+
+			ChargedLaserEmitter: {
+				DisplayName: 充能激光发射器
+				Tooltip: ""
+			}
+
+			CloudsPole: {
+				DisplayName: 阴云极点
+				Tooltip: ""
+			}
+
+			DarklingCrux: {
+				DisplayName: 暗影焰十字架
+				Tooltip: 在玩家头顶生成一个巨大的十字架，十字架会向周围与光标位置不断发射暗影焰残片,使用一段时间后可以将十字架发射出去，造成范围伤害
+			}
+
+			EternityAshMagicBall: {
+				DisplayName: 恒灰法球
+				Tooltip:
+					'''
+					发射一颗遇到物块会反弹的法球
+					无言
+					'''
+			}
+
+			EternityAshStaff: {
+				DisplayName: 恒灰法杖
+				Tooltip: 召唤2个亡魂来追杀敌人
+			}
+
+			FlightLeaves: {
+				DisplayName: 飞叶
+				Tooltip: 发射叶子
+			}
+
+			GelStaff: {
+				DisplayName: 凝胶法杖
+				Tooltip: 射出一坨凝胶
+			}
+
+			HolyTune: {
+				DisplayName: 逐光邪奏曲
+				Tooltip: 召唤大量的符文来砸死你的敌人
+			}
+
+			LoudLavaFlow: {
+				DisplayName: 熔炎啸流
+				Tooltip: ""
+			}
+
+			MiniFireballGun: {
+				DisplayName: 微型火球枪
+				Tooltip: ""
+			}
+
+			PinkGelStaff: {
+				DisplayName: 粉凝胶法杖
+				Tooltip: 射出一坨粉凝胶，遇到物块会反弹
+			}
+
+			TungstenSteelStaff: {
+				DisplayName: 钨钢法杖
+				Tooltip: 发射一个钨钢矢，最多可穿透3个敌怪
+			}
+
+			Wither: {
+				DisplayName: 枯萎
+				Tooltip: 发射3个枯萎弹幕，暴击时造成5秒“中毒”buff
+			}
+
+			寒川: {
+				DisplayName: 寒川
+				Tooltip: ""
+			}
+
+			ArbitralSword: {
+				DisplayName: 仲裁巨剑
+				Tooltip: '''"仲裁罪恶，撕碎你的敌人"'''
+			}
+
+			Banisher: {
+				DisplayName: 放逐者
+				Tooltip: 每次攻击时会发射3枚穿墙剑气
+			}
+
+			BloodSickle: {
+				DisplayName: 血影魔镰
+				Tooltip: 发射一个会使敌怪附上灵液buff的穿墙镰气
+			}
+
+			CactusPike: {
+				DisplayName: 仙人掌长枪
+				Tooltip: ""
+			}
+
+			ChargedCrystalLongSpear: {
+				DisplayName: 能晶长枪
+				Tooltip: ""
+			}
+
+			CloudsGlaive: {
+				DisplayName: 阴云宽剑
+				Tooltip: ""
+			}
+
+			CloudsSword: {
+				DisplayName: 阴云剑
+				Tooltip: ""
+			}
+
+			CorruptionEpee: {
+				DisplayName: 腐化重剑
+				Tooltip: 发射一颗会爆炸的诅咒焰球
+			}
+
+			Dersilya: {
+				DisplayName: 德塞拉亚
+				Tooltip:
+					'''
+					"左键发射一个会爆炸的影球"
+					"右键进行一次大范围斩击，伤害为武器面板的4倍，并无视防御，有10秒冷却时间"
+					"暗淡无光，一无所见……"
+					'''
+			}
+
+			DesertedTomahawk: {
+				DisplayName: 荒芜战斧
+				Tooltip: +3范围
+			}
+
+			EternityAshSickle: {
+				DisplayName: 恒灰镰刀
+				Tooltip: '''"沉沦"'''
+			}
+
+			Exiler: {
+				DisplayName: 流放者
+				Tooltip: 右键向前方横向冲刺一段距离
+			}
+
+			FelShadowHalberd: {
+				DisplayName: 邪影长戟
+				Tooltip: 攻击时会发射带有穿透的射弹
+			}
+
+			GelSword: {
+				DisplayName: 凝胶剑
+				Tooltip: 发射一个受重力影响的凝胶，凝胶碰到物块会反弹
+			}
+
+			GloriousBrokener: {
+				DisplayName: 光耀破碎者
+				Tooltip:
+					'''
+					发射两种不同的镰气
+					"去TM的光明与黑暗"
+					'''
+			}
+
+			Issloos: {
+				DisplayName: 伊希鲁斯
+				Tooltip:
+					'''
+					左键发射一个击中敌怪有几率为玩家回血的穿墙镰气
+					右键像玩家光标位置发射多把镰刀，第4下在光标处生成一个会为玩家回血的镰刀，
+					4秒后爆炸，会为玩家回复25点生命值且使被炸到的怪物减防
+					'''
+			}
+
+			JungleSickle: {
+				DisplayName: 林翠镰
+				Tooltip: '''"来自古老的过去"'''
+			}
+
+			LastingShadow: {
+				DisplayName: 影恒
+				Tooltip: '''"从天上发射多枚影弹"'''
+			}
+
+			LavaCutter: {
+				DisplayName: 熔岩裂切
+				Tooltip: ""
+			}
+
+			Oudersale: {
+				DisplayName: 奥德赛拉
+				Tooltip:
+					'''
+					"左键发射一个暴击会产生额外弹幕的镰气"
+					"然而，痛苦永无止境"
+					'''
+			}
+
+			PinkGelSword: {
+				DisplayName: 粉凝胶刃
+				Tooltip: 发射3个受重力影响的凝胶，凝胶碰到物块会反弹,且更能弹
+			}
+
+			PolarIceSword: {
+				DisplayName: 极地冰刀
+				Tooltip: ""
+			}
+
+			Salvation: {
+				DisplayName: 救世
+				Tooltip: 那些在口头上说着“救世啊”的人，其脑子绝对有什么毛病
+			}
+
+			ShakeEartherDrill: {
+				DisplayName: 撼地钻头
+				Tooltip: ""
+			}
+
+			ShakeEartherEpee: {
+				DisplayName: 撼地者重剑
+				Tooltip: ""
+			}
+
+			StarLight: {
+				DisplayName: 星华
+				Tooltip: 发射一道剑气，被剑本体攻击到的敌人将附上3秒"着火"效果
+			}
+
+			SunplateBlade: {
+				DisplayName: 日盘刃
+				Tooltip: ""
+			}
+
+			TalosSickle: {
+				DisplayName: 烁金镰
+				Tooltip: ""
+			}
+
+			TungstenSteelSword: {
+				DisplayName: 钨钢剑
+				Tooltip: '''"暴击时回复少量生命值"'''
+			}
+
+			冷彻: {
+				DisplayName: 冷彻
+				Tooltip: ""
+			}
+
+			灼银: {
+				DisplayName: 灼银
+				Tooltip: ""
+			}
+
+			Bright: {
+				DisplayName: 明
+				Tooltip: '''"零殇"'''
+			}
+
+			ChargedBow: {
+				DisplayName: 充能弓
+				Tooltip: 每攻击两下就射出一支充能箭
+			}
+
+			ChargedRifle: {
+				DisplayName: 充能步枪
+				Tooltip: 快速射出3发子弹，只有第一发消耗弹药。
+			}
+
+			ChlorophyteBow: {
+				DisplayName: 叶绿弓
+				Tooltip: 攻击时会额外射出3支叶绿箭
+			}
+
+			Clamour: {
+				DisplayName: 喧嚣
+				Tooltip: 攻击时有10%消耗双倍弹药"我看了电视！新买的电视！"
+			}
+
+			CloudsBow: {
+				DisplayName: 阴云弓
+				Tooltip: ""
+			}
+
+			Decline: {
+				DisplayName: 衰败
+				Tooltip: ""
+			}
+
+			Energyheavy_DutySniperRifle: {
+				DisplayName: 充能重狙
+				Tooltip: ""
+			}
+
+			EternityAshLongBow: {
+				DisplayName: 恒灰长弓
+				Tooltip: 同时射出3支相互平行的箭
+			}
+
+			EternityAshShortBow: {
+				DisplayName: 恒灰短弓
+				Tooltip:
+					'''
+					同时射出两支箭
+					"恒灰长弓的近亲"
+					'''
+			}
+
+			GelShortBow: {
+				DisplayName: 凝胶短弓
+				Tooltip: ""
+			}
+
+			HellFlameEjector: {
+				DisplayName: 狱火喷射器
+				Tooltip:
+					'''
+					以凝胶作为弹药
+					有31%不消耗弹药
+					'''
+			}
+
+			Howling: {
+				DisplayName: 啸风
+				Tooltip: '''"横扫地狱的恶魔之风！"'''
+			}
+
+			LightRanger: {
+				DisplayName: 曙光巡游者
+				Tooltip:
+					'''
+					同时射出2支箭并将木箭转化为圣箭
+					去TM的希望与绝望
+					'''
+			}
+
+			MeteoriteBow: {
+				DisplayName: 陨星弓
+				Tooltip:
+					'''
+					将木箭转化为小丑箭
+					[c/602020:-陨星奇妙转化能力?-]
+					'''
+			}
+
+			NightsBow: {
+				DisplayName: 永夜弓
+				Tooltip: 向光标位置发射暗影射线，蓄力越长，速度越快
+			}
+
+			PinkGelShortBow: {
+				DisplayName: 粉凝胶短弓
+				Tooltip: ""
+			}
+
+			PlatinumRifle: {
+				DisplayName: 铂金步枪
+				Tooltip: ""
+			}
+
+			SeedsPistol: {
+				DisplayName: 种子手枪
+				Tooltip: ""
+			}
+
+			ShiverBow: {
+				DisplayName: 寒颤弓
+				Tooltip:
+					'''
+					将木箭转化为霜冻箭
+					[c/602020:-寒颤奇妙转化能力?-]
+					'''
+			}
+
+			TungstenSteelBow: {
+				DisplayName: 钨钢弓
+				Tooltip: '''"有小概率造成双倍伤害"'''
+			}
+
+			WindStorm: {
+				DisplayName: 风暴
+				Tooltip: 具有将火枪子弹转化为充能弹的能力
+			}
+
+			ChargedController: {
+				DisplayName: 充能遥控器
+				Tooltip: ""
+			}
+
+			CloudsStarEye: {
+				DisplayName: 阴云星眼
+				Tooltip: ""
+			}
+
+			SelfDefenseKnife: {
+				DisplayName: 防身小刀
+				Tooltip: '''"至少不用被动挨打了"'''
+			}
+
+			TungstenSteelController: {
+				DisplayName: 钨钢控制器
+				Tooltip: ""
+			}
+
+			SuperGo: {
+				DisplayName: Super Go
+				Tooltip: ""
+			}
+
+			AdamantiteBoomerang: {
+				DisplayName: 精金回旋镖
+				Tooltip: 第五次攻击时必定暴击
+			}
+
+			AncientThrowingSpear: {
+				DisplayName: 古遗投矛
+				Tooltip: 投矛扔出一段时间后会变得极快
+			}
+
+			BrokenStarDisc: {
+				DisplayName: 碎星飞盘
+				Tooltip: '''"以星体的碎块铸造而成"'''
+			}
+
+			ChargedCrystalSpear: {
+				DisplayName: 能晶投矛
+				Tooltip: ""
+			}
+
+			ChlorophytePike: {
+				DisplayName: 叶绿鉸
+				Tooltip: 扔出一个在击中敌怪或物块后会分裂出孢子云的鉸
+			}
+
+			CloudsSpear: {
+				DisplayName: 阴云投矛
+				Tooltip: ""
+			}
+
+			CorruptionFlyingBlade: {
+				DisplayName: 腐化飞刃
+				Tooltip: ""
+			}
+
+			CorruptionThrowingSpear: {
+				DisplayName: 腐化投矛
+				Tooltip: ""
+			}
+
+			CrimtaneFlyingBlade: {
+				DisplayName: 猩红旋刃
+				Tooltip: ""
+			}
+
+			CrimtaneThrowingSpear: {
+				DisplayName: 血腥投矛
+				Tooltip: ""
+			}
+
+			EbonwoodThrowingKnife: {
+				DisplayName: 乌木投刀
+				Tooltip: ""
+			}
+
+			EternityAshFlyingBlade: {
+				DisplayName: 恒灰飞刃
+				Tooltip: 扔出一枚飞刃，最多可以穿透5个敌怪
+			}
+
+			GelBoomerang: {
+				DisplayName: 凝胶回旋镖
+				Tooltip: ""
+			}
+
+			GelShuriken: {
+				DisplayName: 凝胶手里剑
+				Tooltip: 扔出一个不受重力控制的凝胶手里剑
+			}
+
+			HellfireThrowingSpear: {
+				DisplayName: 狱炎投矛
+				Tooltip: 投矛下落时会造成额外伤害
+			}
+
+			JungleThrowingSpear: {
+				DisplayName: 林翠投矛
+				Tooltip: 扔出一个击中敌人后会使其中毒的投矛
+			}
+
+			LavaSlayer: {
+				DisplayName: 熔岩斩杀者
+				Tooltip: ""
+			}
+
+			MiniMeteoriteThunder: {
+				DisplayName: 微型彗星雷
+				Tooltip: 扔出一个受重力影响较小的彗星雷，爆炸后生成4颗落星
+			}
+
+			NightsFlyBackBlade: {
+				DisplayName: 永夜回飞刃
+				Tooltip: 以极快的速度将你的敌人削成碎片
+			}
+
+			NightsThrowingSpear: {
+				DisplayName: 永夜投矛
+				Tooltip: 暴击时会额外发射一把暗影投矛
+			}
+
+			PinkGelFlybackBlade: {
+				DisplayName: 粉凝胶回飞刃
+				Tooltip: 扔出一个可以穿透敌怪的粉凝胶回飞刃，最多可堆叠5个
+			}
+
+			QuenchGelJar: {
+				DisplayName: 淬火凝胶罐
+				Tooltip: ""
+			}
+
+			SatanicPiercer: {
+				DisplayName: 恶魔投矛
+				Tooltip: ""
+			}
+
+			ShadewoodThrowingKnife: {
+				DisplayName: 暗影木投刀
+				Tooltip: ""
+			}
+
+			ShadowlightJavelin: {
+				DisplayName: 暗影焰投矛
+				Tooltip: 扔出一把会爆炸的暗影焰投矛
+			}
+
+			SilverBlueThrowingKnife: {
+				DisplayName: 银蓝投刀
+				Tooltip: ""
+			}
+
+			TitaniumThrowingKnife: {
+				DisplayName: 钛金飞刀
+				Tooltip: ""
+			}
+
+			TungstemeraldSpear: {
+				DisplayName: 钨翠投矛
+				Tooltip: ""
+			}
+
+			TungstenSteelCard: {
+				DisplayName: 钨钢牌
+				Tooltip: ""
+			}
+
+			WoodThrowingKnife: {
+				DisplayName: 木投刀
+				Tooltip: ""
+			}
+
+			冰川之破: {
+				DisplayName: 冰川之破
+				Tooltip: ""
+			}
+
+			GelWhip: {
+				DisplayName: 凝胶鞭
+				Tooltip: '''"抽他丫的"'''
+			}
+
+			RockWhip: {
+				DisplayName: 岩流鞭
+				Tooltip: ""
+			}
+
+			EternityAshYoyo: {
+				DisplayName: 恒灰悠悠球
+				Tooltip: 发射可以跟踪敌人的能量球
+			}
+
+			ShakeEartherYoyo: {
+				DisplayName: 震撼悠悠球
+				Tooltip: ""
+			}
+
+			TragicPendant: {
+				// DisplayName: Tragic Pendant
+				// Tooltip: ""
+			}
+
+			DemonBracer: {
+				// DisplayName: Demon Bracer
+				// Tooltip: ""
+			}
+		}
+
+		Projectiles: {
+			Lavasprite.DisplayName: 熔岩灵
+			QuenchGelJarProj.DisplayName: Quench Gel Jar Proj
+			AimedProjectile.DisplayName: 激光瞄准
+			AttackAimedProjectile.DisplayName: 准心
+			BigShockWaveProjectile.DisplayName: 大冲击波
+			BonmPro.DisplayName: 钻地导弹
+			ChargedCrystal2Projectile.DisplayName: 充能晶体
+			ChargedCrystalProjectile.DisplayName: 充能晶体
+			ShockWaveProjectile.DisplayName: 冲击波
+			SlowDownMistProj.DisplayName: 雾气
+			钻地导弹.DisplayName: 钻地导弹
+			ExplodeProjectile.DisplayName: Explode Projectile
+			IcicleProjectile.DisplayName: 冰锥
+			LeavesBallProjectile.DisplayName: 叶球
+			PoisonousGogProjectile.DisplayName: 毒物
+			Wither.DisplayName: Wither
+			WitherProjectile.DisplayName: 枯萎
+			WitherProjectilePlayer.DisplayName: 枯萎
+			LaserProjectile.DisplayName: 激光
+			LavaProj.DisplayName: 熔岩
+			激光弹幕.DisplayName: 激光弹幕
+			腐化水晶激光.DisplayName: 腐化水晶激光
+			血弹.DisplayName: 血弹
+			雷暴之眼激光.DisplayName: 雷暴之眼激光
+			YanHuaProj.DisplayName: 烟花
+			ZiProj.DisplayName: 烟花
+			CorruptionFlailsProj.DisplayName: 深谙连枷
+			DarkCrystal.DisplayName: 暗水晶
+			ChargedCrystalLongSpearProj.DisplayName: 能晶长枪
+			ChargedCrystalLongSpearTurnProj.DisplayName: 能晶长枪
+			LoudLavaFlowHeldProj.DisplayName: 熔炎啸流
+			ShakeEartherDrillProj.DisplayName: 撼地钻头
+			BloodShadowCave.DisplayName: 血影空洞
+			BloodShadowTear.DisplayName: 血影泪
+			CloudsPoleProj.DisplayName: 阴云极点
+			DarklingCrossing.DisplayName: Darkling Crossing
+			DarklingCrossingShard.DisplayName: Darkling Crossing Shard
+			EternityAshMagicBallProj.DisplayName: 恒灰法球
+			HolyTuneProj.DisplayName: 逐光邪奏曲
+			LaserProj.DisplayName: 激光
+			LoudLavaFlowProj.DisplayName: 熔炎啸流
+			MiniFireballGunProj.DisplayName: 微型火球
+			RuneBig.DisplayName: Rune Big
+			RuneMiddle1.DisplayName: Rune Middle1
+			RuneMiddle2.DisplayName: Rune Middle2
+			RuneSmall.DisplayName: Rune Small
+			TungstenSteelStaffProj.DisplayName: Tungsten Steel Staff Proj
+			BigShadowBall.DisplayName: Big Shadow Ball
+			BigShadowBall2.DisplayName: Big Shadow Ball2
+			BloodSickleProj.DisplayName: Blood Sickle Proj
+			CloudsSwordProj.DisplayName: 阴云剑剑气
+			DersilyaProj.DisplayName: Dersilya Proj
+			ExilesDashProjectile.DisplayName: 放逐者冲刺
+			ExileSwordkee.DisplayName: 放逐者剑气
+			GloriousBrokener.DisplayName: 光曜破碎者
+			IssloosProj.DisplayName: 伊希鲁斯镰气
+			VirtualEternityAshSickle.DisplayName: 虚恒灰镰刀
+			VirtualGloriousBrokener.DisplayName: 虚光耀破碎者
+			VirtualIssloosExplode.DisplayName: Virtual Issloos Explode
+			VirtualIssloosProj.DisplayName: 虚伊希鲁斯
+			VirtualJungleSickle.DisplayName: 虚林翠镰
+			LavaFissureCuttingProj.DisplayName: Lava Fissure Cutting Proj
+			OudersaleDashProj.DisplayName: Oudersale Dash Proj
+			OudersaleProj.DisplayName: Oudersale Proj
+			SalvationProj.DisplayName: 救世
+			ShadowBall.DisplayName: Shadow Ball
+			ShakeEartherEpeeProj.DisplayName: 撼地者重剑剑气
+			SunplateBladeProj.DisplayName: 日盘刃
+			TalosSickleProj.DisplayName: 烁金镰镰气
+			TungstenSteelSwordProj.DisplayName: Tungsten Steel Sword Proj
+			冷彻弹幕.DisplayName: 冷彻
+			测试武器弹幕1.DisplayName: 测试武器弹幕1
+			极寒冰晶Proj.DisplayName: 极寒冰晶
+			ChargedArrowProj.DisplayName: 充能箭
+			ChargedBullet.DisplayName: 充能弹
+			LightRangerStar.DisplayName: 彗星
+			NightsBowArrow.DisplayName: 永夜箭
+			NightsBowProj.DisplayName: 永夜弓
+			SatanicExplosion.DisplayName: Satanic Explosion
+			ChargedUAVProjectile.DisplayName: 充能无人机
+			CloudStarEyeLaserProj.DisplayName: 星眼激光
+			CloudStarEyeProj.DisplayName: 星眼
+			LavaHunterBodyProj.DisplayName: Lava Hunter Body Proj
+			LavaHunterProj.DisplayName: Lava Hunter Proj
+			LavaHunterTailProj.DisplayName: Lava Hunter Tail Proj
+			SelfDefenseKnifeProj.DisplayName: 防身小刀
+			TungstenSteelControllerProj.DisplayName: 钨钢无人机
+			SuperGoProj1.DisplayName: super go
+			SuperGoProj2.DisplayName: super go
+			AdamantiteBoomerangProj.DisplayName: Adamantite Boomerang Proj
+			BrokenStarDiscProj.DisplayName: 碎星飞盘
+			ChargedCrystalSpearProj.DisplayName: 能晶投矛
+			ChlorophytePikeProj.DisplayName: 叶绿鉸
+			CloudsSwordSpearProj.DisplayName: 阴云投矛
+			LavaSlayerProj.DisplayName: Lava Slayer Proj
+			SatanicPiercerProj.DisplayName: 恶魔投矛
+			ShadowlightExplosion.DisplayName: Shadowlight Explosion
+			ShadowlightJavelinExplosion.DisplayName: Shadowlight Javelin Explosion
+			ShadowlightJavelinProj.DisplayName: Shadowlight Javelin Proj
+			SilverBlueThrowingKnifeProj.DisplayName: 银蓝投刀
+			TitaniumThrowingKnifeProj.DisplayName: Titanium Throwing Knife Proj
+			TitaniumThrowingKnifeProj2.DisplayName: Titanium Throwing Knife Proj2
+			TungstemeraldSpearProj.DisplayName: 钨翠投矛
+			TungstenSteelCardProj.DisplayName: 钨钢牌
+			冰川之破弹幕.DisplayName: 冰川之破
+			GelStaffProj.DisplayName: Gel Staff Proj
+			PinkGelStaffProj.DisplayName: Pink Gel Staff Proj
+			ArbitralSwordProj.DisplayName: Arbitral Sword Proj
+			CactusPikeProj.DisplayName: Cactus Pike Proj
+			EternityAshSickleProj.DisplayName: Eternity Ash Sickle Proj
+			FelShadowHalberdProj.DisplayName: Fel Shadow Halberd Proj
+			FelShadowProj.DisplayName: Fel Shadow Proj
+			GelSwordProj.DisplayName: Gel Sword Proj
+			PinkGelSwordProj.DisplayName: Pink Gel Sword Proj
+			StarLightProj.DisplayName: Star Light Proj
+			CursedFlameBall.DisplayName: Cursed Flame Ball
+			CursedFlameBallExplode.DisplayName: Cursed Flame Ball Explode
+			EternityAshEnergy.DisplayName: Eternity Ash Energy
+			FelShadowSickle.DisplayName: Fel Shadow Sickle
+			HolyWave.DisplayName: Holy Wave
+			AncientThrowingSpearProj.DisplayName: Ancient Throwing Spear Proj
+			CorruptionFlyingBladeProj.DisplayName: Corruption Flying Blade Proj
+			CorruptionThrowingSpearProj.DisplayName: Corruption Throwing Spear Proj
+			CrimtaneFlyingBladeProj.DisplayName: Crimtane Flying Blade Proj
+			CrimtaneThrowingSpearProj.DisplayName: Crimtane Throwing Spear Proj
+			EbonwoodThrowingKnifeProj.DisplayName: Ebonwood Throwing Knife Proj
+			EternityAshFlyingBladeProj.DisplayName: Eternity Ash Flying Blade Proj
+			GelBoomerangProj.DisplayName: Gel Boomerang Proj
+			GelShurikenProj.DisplayName: Gel Shuriken Proj
+			HellfireThrowingSpearProj.DisplayName: Hellfire Throwing Spear Proj
+			JungleThrowingSpearProj.DisplayName: Jungle Throwing Spear Proj
+			MiniMeteoriteThunderProj.DisplayName: Mini Meteorite Thunder Proj
+			NightsFlyBackBladeProj.DisplayName: Nights Fly Back Blade Proj
+			NightsThrowingSpearProj.DisplayName: Nights Throwing Spear Proj
+			NightsThrowingSpearProj2.DisplayName: Nights Throwing Spear Proj2
+			PinkGelFlybackBladeProj.DisplayName: Pink Gel Flyback Blade Proj
+			ShadewoodThrowingKnifeProj.DisplayName: Shadewood Throwing Knife Proj
+			WoodThrowingKnifeProj.DisplayName: Wood Throwing Knife Proj
+			EternityAshYoyoProj.DisplayName: Eternity Ash Yoyo Proj
+			GelWhipProj.DisplayName: 凝胶鞭
+			RockWhipProj.DisplayName: 岩流鞭
+			ShakeEartherYoyoProj.DisplayName: 震撼悠悠球
+			SingtheWoods.DisplayName: Singthe Woods
+			ScarletSpike.DisplayName: Scarlet Spike
+			// GoldenKnife.DisplayName: Golden Knife
+			// PlatinumKnife.DisplayName: Platinum Knife
+			// TungstenKnife.DisplayName: Tungsten Knife
+			// Explosion.DisplayName: Explosion
+			// DesertGodSword.DisplayName: Desert God Sword
+			// StarLightProj2.DisplayName: Star Light Proj2
+			// EnergyBombsProj.DisplayName: Energy Bombs Proj
+			// EnergyDetonatorProj.DisplayName: Energy Detonator Proj
+			// Explosion2.DisplayName: Explosion2
+			// Explosion3.DisplayName: Explosion3
+			// EnergyDynamiteProj.DisplayName: Energy Dynamite Proj
+			// test.DisplayName: test
+			// DemonSpike.DisplayName: Demon Spike
+			// der.DisplayName: der
+		}
+
+		NPCs: {
+			EarthShaker.DisplayName: 大地震撼者
+			FrozenCore.DisplayName: 极川之核
+			JungleHunterBody.DisplayName: 丛林游猎者
+			JungleHunterHead.DisplayName: 丛林游猎者
+			JungleHunterTail.DisplayName: 丛林游猎者
+			LavaHunter.DisplayName: 熔岩游猎者
+			LavaHunterBody.DisplayName: 熔岩游猎者
+			LavaHunterTail.DisplayName: 熔岩游猎者
+			腐化水晶.DisplayName: 腐化水晶
+			血影屠戮者.DisplayName: 血影屠戮者
+			AbyssGazer.DisplayName: 渊视者
+			DeepGumPolymer.DisplayName: 渊胶聚合体
+			RoamingCar.DisplayName: 巡游小车
+			RoamingUAV.DisplayName: 漫游无人机
+			TungstenSlime.DisplayName: 钨史莱姆
+			Wreckage.DisplayName: 亡骸
+			极川灵.DisplayName: 极川灵
+			ThunderstormEye.DisplayName: 雷暴之眼
+			FakeNPC.DisplayName: Fake N P C
+		}
+
+		Tiles: {
+			FireworkLauncherTile.MapEntry: 烟花发射架
+			PortalTile.MapEntry: 传送门
+			TelescopeTile.MapEntry: 望远镜
+			崩溃祭坛Tile.MapEntry: 崩溃祭坛
+			缭乱砾岩Tile.MapEntry: 缭乱砾岩
+		}
+	}
+}
