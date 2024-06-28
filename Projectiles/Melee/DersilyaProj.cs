@@ -15,8 +15,8 @@ public class DersilyaProj : ModProjectile
     public override void SetDefaults()
     {
         Projectile.DamageType = DamageClass.Melee;
-        Projectile.width = 214; //已精确测量
-        Projectile.height = 66;
+        Projectile.width = 116; //已精确测量
+        Projectile.height = 54;
         Projectile.friendly = true;
         Projectile.scale = 1.4f;
         Projectile.tileCollide = false;
@@ -36,13 +36,10 @@ public class DersilyaProj : ModProjectile
         Projectile.velocity *= 0.95f;
 
     }
-    public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-    {
-
-        
-    }
     public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
     {
-        modifiers.FinalDamage.Flat += target.defense;
+        modifiers.ScalingArmorPenetration += 1 ;
+        modifiers.FinalDamage.Flat = 804;
+        base.ModifyHitNPC(target, ref modifiers);
     }
 }

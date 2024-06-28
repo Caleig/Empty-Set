@@ -43,7 +43,7 @@ namespace EmptySet.Common.Systems
             else if(player.armor.Any(x => x.type == ModContent.ItemType<Items.Accessories.BeingsWoodenBracer>()) && hit.Crit && hit.DamageType == DamageClass.Throwing)
             {
         
-                Projectile.NewProjectile(null, player.Center, new Vector2(0, 0), ModContent.ProjectileType<Projectiles.Buffs.SingtheWoods>(), 0, 8, player.whoAmI);
+                Projectile.NewProjectile(null, player.Center, new Vector2(0, 0), ModContent.ProjectileType<Projectiles.Buffs.SingtheWood2>(), 0, 8, player.whoAmI);
             }
             if (player.armor.Any(x => x.type == ModContent.ItemType<FlameFang>()) && hit.DamageType == DamageClass.Throwing)
             {

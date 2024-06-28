@@ -13,10 +13,11 @@ public class EternityAshSickleProj : ModProjectile
 
     public override void SetDefaults()
     {
-        Projectile.width = 20;
-        Projectile.height = 40;//50
+        Projectile.width = 22;
+        Projectile.height = 44;//54
         Projectile.friendly = true;
         Projectile.penetrate = 3 + 1;
+        Projectile.tileCollide = false;
         Projectile.DamageType = DamageClass.Melee;
         Projectile.timeLeft = 12 * EmptySet.Frame;
         Projectile.light = 0.1f;

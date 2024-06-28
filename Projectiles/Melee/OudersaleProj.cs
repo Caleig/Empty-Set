@@ -14,51 +14,28 @@ public class OudersaleProj : ModProjectile
 {
     public override void SetStaticDefaults()
     {
-        ProjectileID.Sets.TrailCacheLength[Projectile.type] = 2; // 要记录的旧位置长度
+        ProjectileID.Sets.TrailCacheLength[Projectile.type] = 4; // 要记录的旧位置长度
         ProjectileID.Sets.TrailingMode[Projectile.type] = 0; // 记录模式
     }
     public override void SetDefaults()
     {
-        Projectile.width = 30; //已精确测量
-        Projectile.height = 80;
+        Projectile.width = 50; //已精确测量
+        Projectile.height = 50;
         Projectile.friendly = true;
-        Projectile.penetrate = 15 + 1;
+        Projectile.penetrate = 6;
         Projectile.tileCollide = false;
         Projectile.timeLeft = (int)(12 * EmptySet.Frame);
 
 
         Projectile.DamageType = DamageClass.Melee;
         Projectile.ignoreWater = false;
-        Projectile.aiStyle = 1;
-        AIType = ProjectileID.Bullet;
+        Projectile.aiStyle = -1;
     }
 
 
     public override void AI()
     {
-        Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(0f);
-
-    }
-    public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
-    {
-        if (hit.Crit)
-        {
-            int range = 500;
-            var posList = new Vector2[]
-            {
-                new(range, 0),
-                new(-range, 0),
-                new(0, range),
-                new(0, -range),
-            };
-
-            foreach (var v2 in posList)
-            {
-                Projectile.NewProjectileDirect(Projectile.GetSource_FromAI(), target.position + v2,
-                    -v2.SafeNormalize(Vector2.One) * 8f, ModContent.ProjectileType<BloodSickleProj>(), Projectile.damage,
-                    Projectile.knockBack, Projectile.owner, 1);
-            }
-        }
+        Projectile.rotation += 0.3f * Projectile.direction;
 
     }
     public override bool PreDraw(ref Color lightColor)

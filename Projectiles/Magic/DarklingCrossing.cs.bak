@@ -32,8 +32,8 @@ public class DarklingCrossing : ModProjectile
 
     public override void SetDefaults()
     {
-        Projectile.width = 32;
-        Projectile.height = 32;
+        Projectile.width = 65;
+        Projectile.height = 65;
         Projectile.scale = 0.5f;
         Projectile.alpha = 255;
         Projectile.friendly = true;

@@ -18,7 +18,7 @@ public class BloodSickleProj : ModProjectile
         Projectile.width = 28; //已精确测量
         Projectile.height = 52;
         Projectile.friendly = true;
-        Projectile.penetrate = 15 + 1;
+        Projectile.penetrate = 5 + 1;
         Projectile.tileCollide = false;
         Projectile.DamageType = DamageClass.Melee;
         Projectile.timeLeft = (12 * EmptySet.Frame);

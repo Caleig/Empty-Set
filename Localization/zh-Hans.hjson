@@ -37,6 +37,11 @@ Mods: {
 				// DisplayName: Monster Heaven
 				// Description: Mods.EmptySet.Buffs.MonsterHeaven.Description
 			}
+
+			Speedfaster: {
+				// DisplayName: Speedfaster
+				// Description: Mods.EmptySet.Buffs.Speedfaster.Description
+			}
 		}
 
 		Items: {
@@ -618,8 +623,8 @@ Mods: {
 				DisplayName: 德塞拉亚
 				Tooltip:
 					'''
-					"左键发射一个会爆炸的影球"
-					"右键进行一次大范围斩击，伤害为武器面板的4倍，并无视防御，有10秒冷却时间"
+					“左键发射一个谙颅，击中敌怪时会从玩家后方生成多枚影刃”
+					“右键将德塞拉亚扔出去，造成大量伤害”
 					"暗淡无光，一无所见……"
 					'''
 			}
@@ -687,8 +692,8 @@ Mods: {
 				DisplayName: 奥德赛拉
 				Tooltip:
 					'''
-					"左键发射一个暴击会产生额外弹幕的镰气"
-					"然而，痛苦永无止境"
+					"发射快速镰气，第三次攻击时会额外发射跟踪镰气"
+					"直至万劫不复…"
 					'''
 			}
 
@@ -1086,6 +1091,46 @@ Mods: {
 				// DisplayName: Demon Bracer
 				// Tooltip: ""
 			}
+
+			DemonHand: {
+				// DisplayName: Demon Hand
+				// Tooltip: ""
+			}
+
+			SingtheWoods: {
+				// DisplayName: Singthe Woods
+				// Tooltip: ""
+			}
+
+			ImpurityMagicCrystal: {
+				// DisplayName: Impurity Magic Crystal
+				// Tooltip: ""
+			}
+
+			MagicCrystal: {
+				// DisplayName: Magic Crystal
+				// Tooltip: ""
+			}
+
+			ApprenticeStaves: {
+				// DisplayName: Apprentice Staves
+				// Tooltip: ""
+			}
+
+			BookofRocks: {
+				// DisplayName: Bookof Rocks
+				// Tooltip: ""
+			}
+
+			ScarletExplosiveBomb: {
+				// DisplayName: Scarlet Explosive Bomb
+				// Tooltip: ""
+			}
+
+			Broadsword: {
+				// DisplayName: Broadsword
+				// Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -1153,6 +1198,7 @@ Mods: {
 			LavaFissureCuttingProj.DisplayName: Lava Fissure Cutting Proj
 			OudersaleDashProj.DisplayName: Oudersale Dash Proj
 			OudersaleProj.DisplayName: Oudersale Proj
+			OudersaleProj2.DisplayName: Oudersale Proj
 			SalvationProj.DisplayName: 救世
 			ShadowBall.DisplayName: Shadow Ball
 			ShakeEartherEpeeProj.DisplayName: 撼地者重剑剑气
@@ -1247,13 +1293,38 @@ Mods: {
 			// test.DisplayName: test
 			// DemonSpike.DisplayName: Demon Spike
 			// der.DisplayName: der
+			// der2.DisplayName: der2
+			// OuderSale.DisplayName: Ouder Sale
+			// OuderSale2.DisplayName: Ouder Sale2
+			// DemonHand.DisplayName: Demon Hand
+			// BTLcCharging.DisplayName: B T Lc Charging
+			// SingtheWood2.DisplayName: Singthe Wood2
+			// Moswordver.DisplayName: Moswordver
+			// BookofRocks.DisplayName: Bookof Rocks
+			// BookofRocks2.DisplayName: Bookof Rocks2
+			// Explosion4.DisplayName: Explosion4
+			// Magic1.DisplayName: Magic1
+			// ScarletExplosiveBomb.DisplayName: Scarlet Explosive Bomb
 		}
 
 		NPCs: {
-			EarthShaker.DisplayName: 大地震撼者
-			FrozenCore.DisplayName: 极川之核
+			EarthShaker: {
+				DisplayName: 大地震撼者
+				// BossChecklistIntegration.SpawnInfo: 在地表任意时间使用 [i:5623] 召唤
+			}
+
+			FrozenCore: {
+				DisplayName: 极川之核
+				// BossChecklistIntegration.SpawnInfo: 在暴风雪中击杀 [c/3333FF:极川灵] 召唤
+			}
+
 			JungleHunterBody.DisplayName: 丛林游猎者
-			JungleHunterHead.DisplayName: 丛林游猎者
+
+			JungleHunterHead: {
+				DisplayName: 丛林游猎者
+				// BossChecklistIntegration.SpawnInfo: 在丛林使用 [i:5627] 召唤
+			}
+
 			JungleHunterTail.DisplayName: 丛林游猎者
 			LavaHunter.DisplayName: 熔岩游猎者
 			LavaHunterBody.DisplayName: 熔岩游猎者

@@ -10,7 +10,7 @@ using Terraria.ModLoader;
 namespace EmptySet.Items.Weapons.Throwing;
 
 /// <summary>
-/// 永夜回飞刃
+/// 永夜飞刃
 /// </summary>
 public class NightsFlyBackBlade : ModItem
 {
@@ -46,7 +46,7 @@ public class NightsFlyBackBlade : ModItem
         Item.shootSpeed = 16f;
     }
     public override bool CanUseItem(Player player)
-        => player.ownedProjectileCounts[Item.shoot] < 3;
+        => player.ownedProjectileCounts[Item.shoot] < 1;
     public override void AddRecipes() => CreateRecipe()
         .AddIngredient<EternityAshFlyingBlade>()
         .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.EvilFlyingBlade))

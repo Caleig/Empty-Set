@@ -22,17 +22,18 @@ public class der : ModProjectile
     Vector2[] vec = new Vector2[1];
     public override void SetDefaults()
     {
-        Projectile.width = 153;
-        Projectile.height = 153;
+        Projectile.width = 154;
+        Projectile.height = 154;
         Projectile.aiStyle = -1;
-        Projectile.tileCollide = true;
+        Projectile.tileCollide = false;
         Projectile.timeLeft = 22;
         Projectile.scale = 1.5f;
-        Projectile.alpha = 80;
+        Projectile.alpha = 0;
     }
     public override void AI()
     {
-        if(Main.time % 3 == 0)
+        Projectile.alpha += 10;
+        if (Main.time % 3 == 0)
         {
 
             vec[0] = Projectile.Center;
@@ -51,8 +52,8 @@ public class der : ModProjectile
             Dust.NewDustPerfect(vector2, 43, vector3 * 1f, 100, Color.DarkRed * Projectile.Opacity, 1.2f * Projectile.Opacity);
         }
         Player player = Main.player[Projectile.owner];
-        Projectile.Center = player.Center + (player.itemRotation - (MathHelper.PiOver4 / 2f)).ToRotationVector2() * 60;
-        Projectile.rotation = Vector2.Normalize(Projectile.Center - player.Center).ToRotation() - MathHelper.PiOver4;
+        Projectile.Center = player.Center + new Vector2(player.width, player.height / 2);
+        Projectile.rotation = player.itemRotation + (MathHelper.PiOver4 / 2);
         base.AI();
     }
 }

@@ -25,8 +25,8 @@ public class EternityAshSickle : ModItem
         Item.rare = ItemRarityID.Green;
         Item.value = Item.sellPrice(0, 2, 15, 0);
 
-        Item.width = 54;
-        Item.height = 52;
+        Item.width = 74;
+        Item.height = 72;
 
         Item.damage = 35;
         Item.crit = 10;

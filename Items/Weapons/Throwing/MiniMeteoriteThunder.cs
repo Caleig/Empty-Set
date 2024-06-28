@@ -25,8 +25,8 @@ public class MiniMeteoriteThunder : ModItem
         Item.rare = ItemRarityID.Blue;
         Item.value = Item.sellPrice(0, 0, 10, 75);
 
-        Item.width = 74; //已精确测量
-        Item.height = 54;
+        Item.width = 54; //已精确测量
+        Item.height = 38;
 
         Item.damage = 23;
         Item.crit = 0;

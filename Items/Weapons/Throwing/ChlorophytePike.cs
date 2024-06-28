@@ -19,8 +19,8 @@ public class ChlorophytePike : ModItem
     }
     public override void SetDefaults()
     {
-        Item.width = 70;
-        Item.height = 70;
+        Item.width = 44;
+        Item.height = 52;
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTime = UseSpeedLevel.VeryFastSpeed;
         Item.useAnimation = UseSpeedLevel.VeryFastSpeed;

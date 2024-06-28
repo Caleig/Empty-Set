@@ -43,6 +43,7 @@ public class CursedFlameBall : ModProjectile
         var dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.CursedTorch);
         dust.scale = 1.5f;
         dust.noGravity = true;
+        Projectile.rotation += 0.3f * Projectile.direction;
     }
 
     public override bool OnTileCollide(Vector2 oldVelocity)
@@ -74,6 +75,7 @@ public class CursedFlameBallExplode : ModProjectile
     {
         for (int i = 0; i < 5; i++)
         {
+
             float num1 = Main.rand.Next(-50, 51);
             float num2 = Main.rand.Next(-50, 51);
             float num3 = (float)Math.Sqrt(num1 * num1 + num2 * num2);

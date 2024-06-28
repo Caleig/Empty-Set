@@ -64,13 +64,17 @@ public class Dersilya : ModItem
     {
         if (Main.mouseLeft)
         {
-            if(Main.MouseScreen.X + Main.screenPosition.X - player.position.X > 0)
+
+            if (Main.MouseScreen.X + Main.screenPosition.X - player.position.X > 0)
             {
                 Projectile.NewProjectile(source, position + new Vector2(0, -4), velocity, type, damage, knockback, Item.whoAmI);
                 Projectile.NewProjectile(source, position, velocity, ModContent.ProjectileType<der>(), damage, knockback, player.whoAmI);
             }
             else
+            {
                 Projectile.NewProjectile(source, position + new Vector2(0, -4), velocity, ModContent.ProjectileType<BigShadowBall2>(), damage, knockback, Item.whoAmI);
+                Projectile.NewProjectile(source, position, velocity, ModContent.ProjectileType<der2>(), damage, knockback, player.whoAmI);
+            }
         }
 
         if (Main.mouseRight)
@@ -117,7 +121,7 @@ public class Dersilya : ModItem
         .AddIngredient<LastingShadow>()
         .AddIngredient<CorruptionEpee>()
         .AddIngredient<CorruptShard>(4)
-        .AddIngredient(ItemID.ChlorophyteBar,7)
+        .AddIngredient<SoulOfPolymerization>()
         .AddTile(TileID.MythrilAnvil)
         .Register();
 }

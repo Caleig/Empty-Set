@@ -27,8 +27,8 @@ public class CorruptionEpee : ModItem
         Item.rare = ItemRarityID.LightRed;
         Item.value = Item.sellPrice(0, 15, 0, 0);
 
-        Item.width = 70; //已精确测量
-        Item.height = 70;
+        Item.width = 68; //已精确测量
+        Item.height = 68;
 
         Item.damage = 85;
         Item.crit = 5;

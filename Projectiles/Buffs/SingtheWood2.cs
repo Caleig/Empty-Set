@@ -6,7 +6,7 @@ using EmptySet.UI;
 
 namespace EmptySet.Projectiles.Buffs
 {
-    public class SingtheWoods : ModProjectile
+    public class SingtheWood2 : ModProjectile
     {
         public override void SetDefaults()
         {

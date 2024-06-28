@@ -19,8 +19,8 @@ public class TragicPendant: ModItem
     }
     public override void SetDefaults()
     {
-        Item.width = 34;
-        Item.height = 36;
+        Item.width = 22;
+        Item.height = 34;
         Item.value = Item.sellPrice(0, 3, 10, 0);
         Item.rare = ItemRarityID.LightRed;
         Item.accessory = true;

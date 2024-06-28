@@ -19,6 +19,7 @@ public class FelShadowSickle : ModProjectile
         Projectile.height = 70;
         Projectile.friendly = true;
         Projectile.penetrate = 15 + 1;
+        Projectile.tileCollide = false;
         Projectile.DamageType = DamageClass.Melee;
         Projectile.timeLeft = 12 * EmptySet.Frame;
         //Projectile.light = 0.1f;

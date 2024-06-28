@@ -25,8 +25,8 @@ public class ShadowlightSparkle : ModItem
 
     public override void SetDefaults()
     {
-        Item.width = 54;
-        Item.height = 54;
+        Item.width = 32;
+        Item.height = 32;
         Item.rare = ItemRarityID.Green;
         Item.material = true;
         Item.value = Item.sellPrice(0, 0, 50, 0);

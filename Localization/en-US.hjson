@@ -37,6 +37,11 @@ Mods: {
 				DisplayName: Monster Heaven
 				Description: Mods.EmptySet.Buffs.MonsterHeaven.Description
 			}
+
+			Speedfaster: {
+				DisplayName: Speedfaster
+				Description: Mods.EmptySet.Buffs.Speedfaster.Description
+			}
 		}
 
 		Items: {
@@ -616,8 +621,8 @@ Mods: {
 				DisplayName: Dersilya
 				Tooltip:
 					'''
-					Left click to shoot a shadow ball that will explode
-					Right click to make a large-scale chop, quadruple damage, ignore defense
+					               Left-click to fire a skull, which spawns multiple Shadow Blades from behind the player when it hits an enemy
+					Right-click to throw Dersilya out, dealing a lot of damage
 					"Have no light, see nothing······"
 					'''
 			}
@@ -685,8 +690,8 @@ Mods: {
 				DisplayName: Oudersale
 				Tooltip:
 					'''
-					Left-click firing a critical strike will produce an extra sickle
-					"However, there is no end to the pain"
+					Fires a quick scythe, and an additional tracking scythe on the third attack
+					"Until the catastrophe is gone..."
 					'''
 			}
 
@@ -1092,6 +1097,46 @@ Mods: {
 				DisplayName: Demon Bracer
 				Tooltip: ""
 			}
+
+			DemonHand: {
+				DisplayName: Demon Hand
+				Tooltip: ""
+			}
+
+			SingtheWoods: {
+				DisplayName: Singthe Woods
+				Tooltip: ""
+			}
+
+			ImpurityMagicCrystal: {
+				DisplayName: Impurity Magic Crystal
+				Tooltip: ""
+			}
+
+			MagicCrystal: {
+				DisplayName: Magic Crystal
+				Tooltip: ""
+			}
+
+			ApprenticeStaves: {
+				DisplayName: Apprentice Staves
+				Tooltip: ""
+			}
+
+			BookofRocks: {
+				DisplayName: Bookof Rocks
+				Tooltip: ""
+			}
+
+			ScarletExplosiveBomb: {
+				DisplayName: Scarlet Explosive Bomb
+				Tooltip: ""
+			}
+
+			Broadsword: {
+				DisplayName: Broadsword
+				Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -1159,6 +1204,7 @@ Mods: {
 			LavaFissureCuttingProj.DisplayName: Lava Fissure Cutting Proj
 			OudersaleDashProj.DisplayName: Oudersale Dash Proj
 			OudersaleProj.DisplayName: Oudersale Proj
+			OudersaleProj2.DisplayName: Oudersale Proj
 			SalvationProj.DisplayName: 救世
 			ShadowBall.DisplayName: Shadow Ball
 			ShakeEartherEpeeProj.DisplayName: 撼地者重剑剑气
@@ -1253,13 +1299,38 @@ Mods: {
 			test.DisplayName: test
 			DemonSpike.DisplayName: Demon Spike
 			der.DisplayName: der
+			der2.DisplayName: der2
+			OuderSale.DisplayName: Ouder Sale
+			OuderSale2.DisplayName: Ouder Sale2
+			DemonHand.DisplayName: Demon Hand
+			BTLcCharging.DisplayName: B T Lc Charging
+			SingtheWood2.DisplayName: Singthe Wood2
+			Moswordver.DisplayName: Moswordver
+			BookofRocks.DisplayName: Bookof Rocks
+			BookofRocks2.DisplayName: Bookof Rocks2
+			Explosion4.DisplayName: Explosion4
+			Magic1.DisplayName: Magic1
+			ScarletExplosiveBomb.DisplayName: Scarlet Explosive Bomb
 		}
 
 		NPCs: {
-			EarthShaker.DisplayName: 大地震撼者
-			FrozenCore.DisplayName: Frozen Core
+			EarthShaker: {
+				DisplayName: 大地震撼者
+				BossChecklistIntegration.SpawnInfo: 在地表任意时间使用 [i:5623] 召唤
+			}
+
+			FrozenCore: {
+				DisplayName: Frozen Core
+				BossChecklistIntegration.SpawnInfo: 在暴风雪中击杀 [c/3333FF:极川灵] 召唤
+			}
+
 			JungleHunterBody.DisplayName: 丛林游猎者
-			JungleHunterHead.DisplayName: 丛林游猎者
+
+			JungleHunterHead: {
+				DisplayName: 丛林游猎者
+				BossChecklistIntegration.SpawnInfo: 在丛林使用 [i:5627] 召唤
+			}
+
 			JungleHunterTail.DisplayName: 丛林游猎者
 			LavaHunter.DisplayName: 熔岩游猎者
 			LavaHunterBody.DisplayName: 熔岩游猎者

@@ -24,8 +24,8 @@ public class DarklingCrux : ModItem
     {
         Item.rare = ItemRarityID.Blue;
         Item.value = Item.sellPrice(0, 4, 0, 0);
-        Item.width = 26;
-        Item.height = 40;            
+        Item.width = 54;
+        Item.height = 78;
         Item.damage = 41;
         Item.mana = 5;
         Item.crit = 7;

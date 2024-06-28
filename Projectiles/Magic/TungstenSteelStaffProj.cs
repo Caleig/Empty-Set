@@ -23,7 +23,9 @@ public class TungstenSteelStaffProj : ModProjectile
     }
 
     public override void AI()
+
     {
+        Projectile.rotation += 0.3f * Projectile.direction;
         var dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.GemDiamond,0,0,0,new (93, 136, 136));//,0, 0, 0, Color.Pink
         dust.noGravity = true;
         //Projectile.rotation += Projectile.velocity.ToRotation() * 0.07f;

@@ -13,12 +13,14 @@ using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
+using EmptySet.NPCs.Boss.LavaHunter;
 
 namespace EmptySet.NPCs.Boss.JungleHunter
 {
     [AutoloadBossHead]
     public class JungleHunterHead : WormHead
     {
+        private bool spawned = false;
 
         public static int secondStageHeadSlot = -1;
 
@@ -54,7 +56,7 @@ namespace EmptySet.NPCs.Boss.JungleHunter
         protected override void AIBefore(NPCStateMachine n)
         {
             float PercentageOfLife = (float)NPC.life / (float)NPC.lifeMax;
-
+            if (!spawned) spawn();
             if (PercentageOfLife < 0.25)
             {
                 n.allowNPCStates1AI = true;
@@ -204,6 +206,43 @@ namespace EmptySet.NPCs.Boss.JungleHunter
         public override void OnKill()
         {
             NPC.SetEventFlagCleared(ref DownedBossSystem.downedJungleHunter, -1);
+        }
+        private void spawn()
+        {
+            spawned = true;
+            NPC.TargetClosest(false);
+            Player player;
+            player = Main.player[NPC.target];
+            for (int i = 0; i < NPCID.Sets.TrailCacheLength[NPC.type]; i++)
+                NPC.oldPos[i] = NPC.position;
+
+            if (Main.netMode != NetmodeID.MultiplayerClient)
+            {
+                int prev = NPC.whoAmI;
+                for (int i = 0; i < MaxSegmentLength; i++)
+                {
+                    int type = i == MaxSegmentLength - 1 ? ModContent.NPCType<LavaHunterTail>() : ModContent.NPCType<LavaHunterBody>();
+                    int n = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, type, NPC.whoAmI);
+                    if (n != Main.maxNPCs)
+                    {
+                        Main.npc[n].ai[1] = prev;
+                        Main.npc[n].ai[3] = NPC.whoAmI;
+                        Main.npc[n].realLife = NPC.whoAmI;
+
+                        if (Main.netMode == NetmodeID.Server)
+                            NetMessage.SendData(MessageID.SyncNPC, -1, -1, null, n);
+
+                        prev = n;
+                    }
+                    else
+                    {
+                        NPC.active = false;
+                        if (Main.netMode == NetmodeID.Server)
+                            NetMessage.SendData(MessageID.SyncNPC, -1, -1, null, NPC.whoAmI);
+                        return;
+                    }
+                }
+            }
         }
     }
     internal class JungleHunterBody : WormBody

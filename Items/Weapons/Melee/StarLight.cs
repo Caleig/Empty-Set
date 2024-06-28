@@ -49,7 +49,7 @@ public class StarLight : ModItem
     }
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
-        Projectile.NewProjectileDirect(source, position, velocity, ModContent.ProjectileType<StarLightProj>(), damage, knockback, player.whoAmI);
+        
         return base.Shoot(player, source, position, velocity, type, damage, knockback);
     }
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
