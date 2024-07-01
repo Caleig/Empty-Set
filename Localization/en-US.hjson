@@ -1137,6 +1137,11 @@ Mods: {
 				DisplayName: Broadsword
 				Tooltip: ""
 			}
+
+			碎晶: {
+				DisplayName: 碎晶
+				Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -1340,7 +1345,7 @@ Mods: {
 			AbyssGazer.DisplayName: 渊视者
 			DeepGumPolymer.DisplayName: 渊胶聚合体
 			RoamingCar.DisplayName: 巡游小车
-			RoamingUAV.DisplayName: 漫游无人机
+			RoamingUAV.DisplayName: 巡游飞械
 			TungstenSlime.DisplayName: Tungsten Slime
 			Wreckage.DisplayName: 亡骸
 			极川灵.DisplayName: 极川灵
