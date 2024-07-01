@@ -1,10 +1,13 @@
-﻿using Terraria;
+﻿using System;
+using Terraria;
 using Terraria.GameContent.Creative;
 
 namespace EmptySet.Utils;
 
 public static class EmptySetUtils
 {
+    public static int GetNPCLifeMax(int normal, int expert, int master)=> Main.masterMode ? ScaledNPCMaxLife(master) : Main.expertMode ? ScaledNPCMaxLife(expert) : ScaledNPCMaxLife(normal);
+    public static int GetNPCDamage(int normal, int expert, int master) => Main.masterMode ? ScaledNPCDamage(master) : Main.expertMode ? ScaledNPCDamage(expert) : ScaledNPCDamage(normal);
     /// <summary>
     /// 在不同难度世界下控制弹幕伤害
     /// </summary>

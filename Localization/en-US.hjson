@@ -1351,6 +1351,7 @@ Mods: {
 			极川灵.DisplayName: 极川灵
 			ThunderstormEye.DisplayName: 雷暴之眼
 			FakeNPC.DisplayName: Fake N P C
+			RoamingTower.DisplayName: Roaming Tower
 		}
 
 		Tiles: {

@@ -15,8 +15,6 @@ public class RoamingUAV : ModNPC
 {
     public override void SetStaticDefaults()
     {
-        // DisplayName.SetDefault("漫游无人机");
-
         Main.npcFrameCount[Type] = Main.npcFrameCount[4];
 
         NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
@@ -29,13 +27,13 @@ public class RoamingUAV : ModNPC
     {
         NPC.width = 32;
         NPC.height = 28;
-        NPC.lifeMax = Main.masterMode ? EmptySetUtils.ScaledNPCMaxLife(45) : Main.expertMode ? EmptySetUtils.ScaledNPCMaxLife(30) : EmptySetUtils.ScaledNPCMaxLife(15);
+        NPC.lifeMax = EmptySetUtils.GetNPCLifeMax(15, 30, 45);
         NPC.defense = 3;
-        NPC.damage = Main.masterMode ? EmptySetUtils.ScaledNPCDamage(15) : Main.expertMode ? EmptySetUtils.ScaledNPCDamage(10) : EmptySetUtils.ScaledNPCDamage(5);
+        NPC.damage = EmptySetUtils.GetNPCDamage(5, 10, 15);
         NPC.knockBackResist = 0.1f;
         NPC.HitSound = SoundID.NPCHit4;
         NPC.DeathSound = SoundID.NPCDeath14;
-        NPC.value = 60f;
+        //NPC.value = 60f;
         NPC.aiStyle = 2; // 战斗AI，重要的是选择匹配我们想要模仿的NPCID的aiStyle
         AIType = NPCID.None; // 执行AI代码时使用香草僵尸类型。(这也意味着它会尝试在白天消失)
                              //AnimationType = NPCID.DemonEye; // 执行动画代码时使用类型。重要的是在SetStaticDefaults匹配Main.npcFrameCount[NPC.type]。
