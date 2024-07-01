@@ -1,6 +1,0 @@
-C:\Users\Caleigh\Documents\My Games\Terraria\tModLoader\ModSources\EmptySet\obj\Debug\net6.0\EmptySet.csproj.AssemblyReference.cache
-C:\Users\Caleigh\Documents\My Games\Terraria\tModLoader\ModSources\EmptySet\obj\Debug\net6.0\EmptySet.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Caleigh\Documents\My Games\Terraria\tModLoader\ModSources\EmptySet\obj\Debug\net6.0\EmptySet.AssemblyInfoInputs.cache
-C:\Users\Caleigh\Documents\My Games\Terraria\tModLoader\ModSources\EmptySet\obj\Debug\net6.0\EmptySet.AssemblyInfo.cs
-C:\Users\Caleigh\Documents\My Games\Terraria\tModLoader\ModSources\EmptySet\obj\Debug\net6.0\EmptySet.csproj.CoreCompileInputs.cache
-C:\Users\Caleigh\Documents\My Games\Terraria\tModLoader\ModSources\EmptySet\obj\Debug\net6.0\EmptySet.sourcelink.json
