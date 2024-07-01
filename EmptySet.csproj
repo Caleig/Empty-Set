@@ -3,10 +3,13 @@
   <Import Project="..\tModLoader.targets" />
   <PropertyGroup>
     <AssemblyName>EmptySet</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="NPCs\Enemy\RoamingTower.png" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
