@@ -17,7 +17,7 @@ public class BurnHellTalismanEffect : ModPlayer
             base.OnHitNPCWithItem(item, target, hit, damageDone);
     }
 
-    public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
+    public override void OnHitNPCWithProj(Terraria.Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
     {
         if (IsEnabled && (proj.DamageType == DamageClass.Throwing || proj.DamageType == DamageClass.SummonMeleeSpeed))
             target.AddBuff(BuffID.OnFire, 180);

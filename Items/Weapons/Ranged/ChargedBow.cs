@@ -1,13 +1,14 @@
-﻿using Microsoft.Xna.Framework;
+﻿using EmptySet.Common.Players;
+using EmptySet.Common.Systems;
 using EmptySet.Items.Materials;
 using EmptySet.Projectiles.Ranged;
 using EmptySet.Utils;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace EmptySet.Items.Weapons.Ranged;
@@ -17,7 +18,8 @@ namespace EmptySet.Items.Weapons.Ranged;
 /// </summary>
 public class ChargedBow : ModItem
 {
-    private int _count = 1;
+    private int EnergyCost = 9;
+    //private int _count = 1;
     public override void SetStaticDefaults()
     {
         // DisplayName.SetDefault("Charged Bow");
@@ -35,35 +37,39 @@ public class ChargedBow : ModItem
         Item.DamageType = DamageClass.Ranged;
         Item.noMelee = true;
         Item.damage = 11;
-        Item.knockBack = KnockBackLevel.BeLower;
-        Item.crit = 4;
-        Item.value = Item.sellPrice(0, 0, 75, 0);
+        Item.knockBack = KnockBackLevel.None;
+        Item.crit = 4-4;
+        Item.value = Item.sellPrice(0, 0, 3, 0);
         Item.rare = ItemRarityID.Blue;
         Item.UseSound = SoundID.Item5;
 
         Item.shoot = ProjectileID.WoodenArrowFriendly;
-        Item.shootSpeed = 7;
+        Item.shootSpeed = 8f;
         Item.useAmmo = AmmoID.Arrow;
     }
 
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
-        Projectile.NewProjectile(source, position, velocity, type, damage, knockback, Main.myPlayer);
-        if (_count == 2) 
+        if (Main.mouseLeft)
+            Projectile.NewProjectile(source, position, velocity, type, damage, knockback, Main.myPlayer);
+        if(Main.mouseRight)
         {
-            SoundEngine.PlaySound(SoundID.Item75, player.position);
-            Projectile.NewProjectile(source, position, velocity, ModContent.ProjectileType<ChargedArrowProj>(), damage, knockback, Main.myPlayer);
-            _count = 0;
+            var myEnergier = player.GetModPlayer<EnergyPlayer>();
+            if (myEnergier.Consume(EnergyCost))
+            {
+                SoundEngine.PlaySound(SoundID.Item75, player.position);
+                Projectile.NewProjectile(source, position, velocity.SafeNormalize(Vector2.One)*13f, ModContent.ProjectileType<ChargedArrowProj>(), damage, knockback, Main.myPlayer);
+            }
         }
-        _count++;
         return false;
     }
 
     public override Vector2? HoldoutOffset() => new Vector2(-5f, 0);
-
+    public override bool AltFunctionUse(Player player) => player.GetModPlayer<EnergyPlayer>().CanConsume(EnergyCost);
     public override void AddRecipes() => CreateRecipe()
-        .AddIngredient(ModContent.ItemType<MetalFragment>(), 15)
-        .AddIngredient(ModContent.ItemType<ChargedCrystal>(), 10)
+        .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.CopperOrTinBow))
+        .AddIngredient<MetalFragment>(10)
+        .AddIngredient<ChargedCrystal>(2)
         .AddTile(TileID.Anvils)
         .Register();
 

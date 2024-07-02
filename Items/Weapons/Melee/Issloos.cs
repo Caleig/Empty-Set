@@ -133,12 +133,12 @@ public class Issloos : ModItem
         if (t != 0) 
         {
             Color c = Color.White;
-            Vector2 pos = position + new Vector2(15,13);
+            Vector2 pos = position + new Vector2(50,44);
             float sca = 0.7f;
             if (player.HeldItem.type == Type) 
             {
                 c = Color.Black;
-                pos = position + new Vector2(20,18);
+                pos = position + new Vector2(58,46);
                 sca = 0.8f;
             }
             spriteBatch.DrawString(FontAssets.ItemStack.Value, (t / 60+1).ToString(), pos, c, 0, origin, sca, SpriteEffects.None, 0);

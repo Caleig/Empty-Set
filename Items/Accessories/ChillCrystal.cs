@@ -14,15 +14,11 @@ namespace EmptySet.Items.Accessories;
 /// <summary>
 /// 极寒冰晶
 /// </summary>
-public class 极寒冰晶 : ModItem
+public class ChillCrystal : ModItem
 {
     private int[] projs = new int[3];
     public override void SetStaticDefaults()
     {
-        //DisplayName.SetDefault("Ulcer Pupil")
-        //Tooltip.SetDefault("Increases armor penetration by 10\n" +
-        //                  "\"This thing is disgusting.\"");
-
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
     public override void SetDefaults()

@@ -1136,6 +1136,51 @@ Mods: {
 				// DisplayName: 碎晶
 				// Tooltip: ""
 			}
+
+			坚壁盾: {
+				DisplayName: 坚壁盾
+				Tooltip:
+					'''
+					生命值低于50%时给予额外增益
+					能量是满的情况下免疫击退并略微提升移速
+					“将憾地的能量核心给拆了下来制成”
+					'''
+			}
+
+			撼地护符: {
+				DisplayName: 撼地护符
+				Tooltip:
+					'''
+					装备此饰品时获得充能槽
+					能量是满的情况下略微提高跳跃能力
+					“撼地的天线”
+					'''
+			}
+
+			巡游信标: {
+				// DisplayName: 巡游信标
+				// Tooltip: ""
+			}
+
+			ChillCrystal: {
+				// DisplayName: Chill Crystal
+				// Tooltip: ""
+			}
+
+			EarthSharkerAmulet: {
+				// DisplayName: Earth Sharker Amulet
+				// Tooltip: ""
+			}
+
+			HardShield: {
+				// DisplayName: Hard Shield
+				// Tooltip: ""
+			}
+
+			EarthShakerEpee: {
+				// DisplayName: Earth Shaker Epee
+				// Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -1310,11 +1355,12 @@ Mods: {
 			// Explosion4.DisplayName: Explosion4
 			// Magic1.DisplayName: Magic1
 			// ScarletExplosiveBomb.DisplayName: Scarlet Explosive Bomb
+			// EarthShakerEpeeProj.DisplayName: Earth Shaker Epee Proj
 		}
 
 		NPCs: {
 			EarthShaker: {
-				DisplayName: 大地震撼者
+				DisplayName: 撼地重械
 				// BossChecklistIntegration.SpawnInfo: 在地表任意时间使用 [i:5623] 召唤
 			}
 
@@ -1345,7 +1391,7 @@ Mods: {
 			极川灵.DisplayName: 极川灵
 			ThunderstormEye.DisplayName: 雷暴之眼
 			FakeNPC.DisplayName: Fake N P C
-			// RoamingTower.DisplayName: 巡游炮塔
+			// RoamingTower.DisplayName: Roaming Tower
 		}
 
 		Tiles: {

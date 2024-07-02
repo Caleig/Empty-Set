@@ -117,7 +117,7 @@ namespace EmptySet.Common.Systems
 				() => true,
 				new List<int>()
 				{
-					ModContent.ItemType<DefenderTalisman>(),
+					//ModContent.ItemType<DefenderTalisman>(),
 					ModContent.ItemType<MetalFragment>(),
 					ModContent.ItemType<ChargedCrystal>(),
 					ModContent.ItemType<EarthShakerChest>()

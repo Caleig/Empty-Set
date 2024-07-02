@@ -30,7 +30,9 @@ public class MyRecipeGroup : ModSystem
         ("TitaniumOrAdamantite",new(()=>"钛金锭或精金锭", ItemID.TitaniumBar, ItemID.AdamantiteBar)),
         ("SliverOrTungsten",new(()=>"银锭或钨锭", ItemID.SilverBar, ItemID.TungstenBar)),
         ("EvilGun",new(()=>"火枪或夺命枪", ItemID.Musket, ItemID.TheUndertaker)),
-        ("IronOrLead",new (()=>"IronOrLead", ItemID.IronBar,ItemID.LeadBar))
+        ("IronOrLead",new (()=>"铁/铅锭", ItemID.IronBar,ItemID.LeadBar)),
+        ("CopperOrTinBow",new (()=>"铜/锡弓", ItemID.CopperBow,ItemID.TinBow)),
+        ("CopperOrBroadSword",new (()=>"铜/锡阔剑", ItemID.CopperBroadsword,ItemID.TinBroadsword))
     };
 
     public override void Unload()
@@ -61,5 +63,7 @@ public enum MyRecipeGroupId
     TitaniumOrAdamantite,
     SliverOrTungsten,
     EvilGun,
-    IronOrLead
+    IronOrLead,
+    CopperOrTinBow,
+    CopperOrBroadSword
 }

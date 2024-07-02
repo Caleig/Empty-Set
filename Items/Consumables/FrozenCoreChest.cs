@@ -24,7 +24,7 @@ public class FrozenCoreChest : BossBag
         itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<寒川碎块>(), 100,70,110));
         itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<冰川之破>(), 9));
         itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<苦寒吊坠>(), 50));
-        itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<极寒冰晶>(), 50));
+        itemLoot.Add(ItemDrop.GetItemDropRule<ChillCrystal>(50));
         itemLoot.Add(ItemDrop.GetItemDropRule(ItemID.GoldCoin, 100,23,31));
     }
 }
