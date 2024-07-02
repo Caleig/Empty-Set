@@ -33,16 +33,24 @@ namespace EmptySet.Projectiles.Boss.EarthShaker
 		public override void AI()
 		{
 			Projectile.localAI[0]++;
-			if (Projectile.localAI[0] % 5 == 0) 
-			{
-				Projectile.localAI[1]++;
-				if (Projectile.ai[0] == 1)
-					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.position + new Vector2(-Projectile.width * Projectile.localAI[1]+22, 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), Projectile.damage, Projectile.knockBack, Main.myPlayer);
-				if (Projectile.ai[0] == 2)
-					Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.position + new Vector2(Projectile.width * Projectile.localAI[1]+22, 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), Projectile.damage, Projectile.knockBack, Main.myPlayer);
-			}
+            if (Projectile.localAI[0] % 5 == 0)
+            {
+                Projectile.localAI[1]++;
+                if (Projectile.ai[0] == 1)
+                    if (Projectile.ai[1] == 0)
+                        Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.position + new Vector2(-Projectile.width * Projectile.localAI[1] + 22, 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), Projectile.damage, Projectile.knockBack, Main.myPlayer);
+                    else
+                        Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.position + new Vector2(-Projectile.width * Projectile.localAI[1] + 22, 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), Projectile.damage, Projectile.knockBack, Main.myPlayer);
 
-			int frameSpeed = 3;
+                if (Projectile.ai[0] == 2)
+                    if (Projectile.ai[1] == 0)
+                        Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.position + new Vector2(Projectile.width * Projectile.localAI[1] + 22, 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), Projectile.damage, Projectile.knockBack, Main.myPlayer);
+                    else
+                        Projectile.NewProjectile(Projectile.GetSource_FromAI(), Projectile.position + new Vector2(Projectile.width * Projectile.localAI[1] + 22, 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), Projectile.damage, Projectile.knockBack, Main.myPlayer);
+
+            }
+
+            int frameSpeed = 3;
 
 			Projectile.frameCounter++;
 

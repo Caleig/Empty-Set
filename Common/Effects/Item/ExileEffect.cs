@@ -24,7 +24,7 @@ public class ExileEffect : ModPlayer
         if (CanUseDash && dashDelay == 0 && Player.dashDelay == 0)
         {
             SoundEngine.PlaySound(SoundID.Item71, Main.LocalPlayer.position);
-            int p = Projectile.NewProjectile(Player.GetSource_ItemUse(Player.HeldItem), Player.position, new Vector2(0, 0), ModContent.ProjectileType<ExilesDashProjectile>(), 0, 0, Player.whoAmI);
+            int p = Terraria.Projectile.NewProjectile(Player.GetSource_ItemUse(Player.HeldItem), Player.position, new Vector2(0, 0), ModContent.ProjectileType<ExilesDashProjectile>(), 0, 0, Player.whoAmI);
             Main.projectile[p].ai[0] = Player.whoAmI;
             Main.projectile[p].ai[1] = Player.direction;
 

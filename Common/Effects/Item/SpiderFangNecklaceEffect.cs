@@ -15,7 +15,7 @@ public class SpiderFangNecklaceEffect : ModPlayer
             target.AddBuff(BuffID.Venom, duration);
     }
 
-    public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
+    public override void OnHitNPCWithProj(Terraria.Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
     {
         if (IsEnabled && proj.DamageType == DamageClass.Throwing && Main.rand.NextBool(7))
             target.AddBuff(BuffID.Venom, duration);

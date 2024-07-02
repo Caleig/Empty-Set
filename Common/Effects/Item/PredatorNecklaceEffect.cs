@@ -30,7 +30,7 @@ public class PredatorNecklaceEffect : ModPlayer
             for (int i = 0; i < num; i++)
             {
                 var beeVelocity = new Vector2(1, 0).RotatedBy(Main.rand.NextFloat(MathHelper.ToRadians(180), MathHelper.ToRadians(360)));
-                Projectile.NewProjectile(Player.GetSource_Accessory(Accessory),Player.position, beeVelocity, ProjectileID.Bee,10,0,Player.whoAmI);
+                Terraria.Projectile.NewProjectile(Player.GetSource_Accessory(Accessory),Player.position, beeVelocity, ProjectileID.Bee,10,0,Player.whoAmI);
             }
             Player.AddBuff(BuffID.Honey,1800);
         }

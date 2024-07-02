@@ -52,12 +52,12 @@ public class SuperGo : ModItem
         Item.rare = ItemRarityID.Green;
         Item.value = Item.sellPrice(0, 3, 0, 0);
 
-        Item.width = 17; //已精确测量
+        Item.width = 17;
         Item.height = 17;
 
         Item.scale = 4f;
         Item.crit = 0;
-        Item.damage = 51;
+        Item.damage = 999999;
 
         Item.knockBack = KnockBackLevel.BeLower;
         Item.useTime = UseSpeedLevel.FastSpeed;

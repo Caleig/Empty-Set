@@ -1142,6 +1142,41 @@ Mods: {
 				DisplayName: 碎晶
 				Tooltip: ""
 			}
+
+			坚壁盾: {
+				DisplayName: 坚壁盾
+				Tooltip: ""
+			}
+
+			撼地护符: {
+				DisplayName: 撼地护符
+				Tooltip: ""
+			}
+
+			巡游信标: {
+				DisplayName: 巡游信标
+				Tooltip: ""
+			}
+
+			ChillCrystal: {
+				DisplayName: Chill Crystal
+				Tooltip: ""
+			}
+
+			EarthSharkerAmulet: {
+				DisplayName: Earth Sharker Amulet
+				Tooltip: ""
+			}
+
+			HardShield: {
+				DisplayName: Hard Shield
+				Tooltip: ""
+			}
+
+			EarthShakerEpee: {
+				DisplayName: Earth Shaker Epee
+				Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -1316,11 +1351,12 @@ Mods: {
 			Explosion4.DisplayName: Explosion4
 			Magic1.DisplayName: Magic1
 			ScarletExplosiveBomb.DisplayName: Scarlet Explosive Bomb
+			EarthShakerEpeeProj.DisplayName: Earth Shaker Epee Proj
 		}
 
 		NPCs: {
 			EarthShaker: {
-				DisplayName: 大地震撼者
+				DisplayName: Earth Shaker
 				BossChecklistIntegration.SpawnInfo: 在地表任意时间使用 [i:5623] 召唤
 			}
 

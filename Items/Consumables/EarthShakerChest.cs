@@ -24,9 +24,9 @@ public class EarthShakerChest : BossBag
     }
     public override void ModifyItemLoot(ItemLoot itemLoot)
     {
-        itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<MetalFragment>(), 100,30,40));
-        itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<ChargedCrystal>(), 100,20,30));
-        itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<ShakingEarthAmulet>(), 100));
+        itemLoot.Add(ItemDrop.GetItemDropRule<MetalFragment>(100, 30, 40));
+        itemLoot.Add(ItemDrop.GetItemDropRule<ChargedCrystal>(100, 5, 10));
+        itemLoot.Add(ItemDrop.GetItemDropRule<EarthSharkerAmulet>(100));
         itemLoot.Add(ItemDrop.GetItemDropRule(ItemID.GoldCoin, 100, 2, 3));
     }
 }
