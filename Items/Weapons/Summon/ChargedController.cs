@@ -1,19 +1,18 @@
-﻿using Microsoft.Xna.Framework;
-using EmptySet.Buffs;
+﻿using EmptySet.Buffs;
 using EmptySet.Items.Materials;
 using EmptySet.Projectiles.Summon;
 using EmptySet.Utils;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace EmptySet.Items.Weapons.Summon;
 
 /// <summary>
-/// 充能遥控器
+/// 巡游遥控器
 /// </summary>
 public class ChargedController : ModItem
 {
@@ -26,22 +25,22 @@ public class ChargedController : ModItem
     }
     public override void SetDefaults()
     {
-        Item.width = 32; 
-        Item.height = 34; 
-        Item.damage = 12;
-        Item.mana = 1;
+        Item.width = 32;
+        Item.height = 34;
+        Item.damage = 13;
+        Item.mana = 11;
         Item.knockBack = KnockBackLevel.TooLower;
         Item.useTime = UseSpeedLevel.NormalSpeed;
         Item.useAnimation = UseSpeedLevel.NormalSpeed; // 武器使用动画的时间跨度，建议与useTime设置相同。
-        Item.crit = 7; 
-        Item.value = Item.sellPrice(0,0,50,0);
+        Item.crit = 7 - 4;
+        Item.value = Item.sellPrice(0, 0, 50, 0);
         Item.rare = ItemRarityID.Blue;
-        Item.useStyle = ItemUseStyleID.Swing; 
+        Item.useStyle = ItemUseStyleID.Swing;
         Item.UseSound = SoundID.Item44;
 
 
         // 下面的这些是召唤武器需要的
-        Item.noMelee = true; 
+        Item.noMelee = true;
         Item.DamageType = DamageClass.Summon;
         Item.buffType = ModContent.BuffType<ChargedUAV>();
         // 没有buffTime否则项目工具提示会显示"1分钟持续时间"
@@ -68,8 +67,8 @@ public class ChargedController : ModItem
     }
 
     public override void AddRecipes() => CreateRecipe()
-        .AddIngredient(ModContent.ItemType<MetalFragment>(), 10)
-        .AddIngredient(ModContent.ItemType<ChargedCrystal>(), 11)
+        .AddIngredient<MetalFragment>(10)
+        .AddIngredient<ChargedCrystal>(5)
         .AddTile(TileID.Anvils)
         .Register();
 }

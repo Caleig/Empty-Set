@@ -32,7 +32,7 @@ public class EnergyPlayer : ModPlayer
     }
     public bool CanConsume(int energy)
     {
-        if (IsEnabled && Enengy > energy)
+        if (IsEnabled && Enengy >= energy)
             return true;
         return false;
     }

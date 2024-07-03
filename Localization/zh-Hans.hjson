@@ -42,6 +42,11 @@ Mods: {
 				// DisplayName: Speedfaster
 				// Description: Mods.EmptySet.Buffs.Speedfaster.Description
 			}
+
+			ChargedUAVBuff: {
+				// DisplayName: Charged U A V Buff
+				// Description: Mods.EmptySet.Buffs.ChargedUAVBuff.Description
+			}
 		}
 
 		Items: {
@@ -1181,6 +1186,11 @@ Mods: {
 				// DisplayName: Earth Shaker Epee
 				// Tooltip: ""
 			}
+
+			EnergyLaserTransmitter: {
+				// DisplayName: Energy Laser Transmitter
+				// Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -1356,6 +1366,11 @@ Mods: {
 			// Magic1.DisplayName: Magic1
 			// ScarletExplosiveBomb.DisplayName: Scarlet Explosive Bomb
 			// EarthShakerEpeeProj.DisplayName: Earth Shaker Epee Proj
+			// ChargedCrystalSpearProj2.DisplayName: Charged Crystal Spear Proj2
+			// BonmPro2.DisplayName: Bonm Pro2
+			// DrillMissile.DisplayName: Drill Missile
+			// EnergyLaser.DisplayName: Energy Laser
+			// ChargedLaserProj.DisplayName: Charged Laser Proj
 		}
 
 		NPCs: {

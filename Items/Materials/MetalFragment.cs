@@ -1,5 +1,4 @@
 ﻿using Terraria;
-using Terraria.Localization;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -7,14 +6,12 @@ using Terraria.ModLoader;
 namespace EmptySet.Items.Materials;
 
 /// <summary>
-/// 金属碎块
+/// 破碎金属碎片
 /// </summary>
 public class MetalFragment : ModItem
 {
     public override void SetStaticDefaults()
     {
-
-
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
     }
 
