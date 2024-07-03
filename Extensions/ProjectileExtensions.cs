@@ -79,7 +79,35 @@ public static class ProjectileExtensions
         projectile.friendly = oldFriendly;
         projectile.damage = oldDamage;
     }
+    public static void LetExplodeWith(this Projectile projectile, Vector2 explosionArea, Action action, int damage = default,
+        bool friendly = true, bool hostile = true)
+    {
+        var oldSize = projectile.Size;
+        var oldHostile = projectile.hostile;
+        var oldDamage = projectile.damage;
+        var oldFriendly = projectile.friendly;
+        var center = projectile.Center;
+        var pos = projectile.position;
 
+        projectile.maxPenetrate = -1;
+        projectile.penetrate = -1;
+        
+        projectile.Size = explosionArea;
+        //projectile.Center = center;
+        projectile.tileCollide = false;
+        projectile.velocity *= 0.01f;
+        projectile.damage = damage == default ? projectile.damage : damage;
+        projectile.hostile = hostile;
+        projectile.friendly = friendly;
+        projectile.Damage();
+        action.Invoke();
+        projectile.Size = oldSize;
+        projectile.position = pos;
+        // projectile.Center = center;
+        projectile.hostile = oldHostile;
+        projectile.friendly = oldFriendly;
+        projectile.damage = oldDamage;
+    }
     /// <summary>
     /// 使弹幕方向性旋转
     /// </summary>

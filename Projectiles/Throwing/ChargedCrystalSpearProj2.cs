@@ -8,18 +8,19 @@ using Terraria.ModLoader;
 
 namespace EmptySet.Projectiles.Throwing;
 
-internal class ChargedCrystalSpearProj : ModProjectile
+internal class ChargedCrystalSpearProj2 : ModProjectile
 {
+    public override string Texture => base.Texture.Remove(base.Texture.Length-1,1);
     public override void SetStaticDefaults()
     {
         // DisplayName.SetDefault("能晶投矛");
-        ProjectileID.Sets.TrailCacheLength[Projectile.type] = 3; // 要记录的旧位置长度
+        ProjectileID.Sets.TrailCacheLength[Projectile.type] = 12; // 要记录的旧位置长度
         ProjectileID.Sets.TrailingMode[Projectile.type] = 0; // 记录模式
     }
     public override void SetDefaults()
     {
         Projectile.width = 26;
-        Projectile.height = 72;
+        Projectile.height = 76;
         Projectile.friendly = true;
         Projectile.DamageType = DamageClass.Throwing;
         Projectile.timeLeft = 600;
@@ -29,7 +30,8 @@ internal class ChargedCrystalSpearProj : ModProjectile
         Projectile.tileCollide = true;
         Projectile.extraUpdates = 1;
         Projectile.aiStyle = 1;
-        AIType = ProjectileID.WoodenArrowFriendly;
+        AIType = ProjectileID.Bullet;
+        Projectile.penetrate = 3 + 1;
     }
 
     public override bool PreDraw(ref Color lightColor)
@@ -50,12 +52,12 @@ internal class ChargedCrystalSpearProj : ModProjectile
     public override void AI()
     {
         base.AI();
-        if (Main.rand.NextBool(5))
+        if (Main.rand.NextBool(2))
         {
             int dust = Dust.NewDust(Projectile.Center, 1, 1, DustID.Frost);
             Main.dust[dust].noGravity = true;
         }
-        if (Main.rand.NextBool(5)) Dust.NewDustPerfect(Projectile.Center, DustID.Frost, Projectile.velocity).noGravity = true;
+        if (Main.rand.NextBool(2)) Dust.NewDustPerfect(Projectile.Center, DustID.Frost, Projectile.velocity).noGravity = true;
     }
 
     public override bool OnTileCollide(Vector2 oldVelocity)

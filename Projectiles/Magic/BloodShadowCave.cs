@@ -40,7 +40,7 @@ public class BloodShadowCave : ModProjectile
             var p = Projectile.position;
             var x = p.X;//- Projectile.width / 2f;
             var y = p.Y;// - Projectile.height / 2f;
-            var pos = new Vector2(x+Main.rand.Next(34+1), y+ Main.rand.Next(34 + 1));
+            var pos = new Vector2(x+Main.rand.Next(6,44+1), y+ Main.rand.Next(34 + 1));
             Projectile.NewProjectile(Projectile.GetSource_FromAI(), pos, Projectile.velocity,
                 ModContent.ProjectileType<BloodShadowTear>(), Projectile.damage, Projectile.knockBack,
                 Projectile.owner);

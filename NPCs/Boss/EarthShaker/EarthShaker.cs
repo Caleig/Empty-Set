@@ -1027,7 +1027,7 @@ class AttackState5 : NPCState1
 		timer++;
 		if (timer == 180) 
 		{
-			Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(0, -NPC.height / 2 -40), (n.target.Center - NPC.Center + new Vector2(0, NPC.height / 2 - 40)).SafeNormalize(Vector2.UnitX)*10, ModContent.ProjectileType<ChargedCrystal2Projectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).halfLifeChargedCrystalDamage), 0, Main.myPlayer);
+			Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(0, -NPC.height / 2 -40), (n.target.Center - NPC.Center + new Vector2(0, NPC.height / 2 +30)).SafeNormalize(Vector2.One)*10, ModContent.ProjectileType<ChargedCrystal2Projectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).halfLifeChargedCrystalDamage), 0, Main.myPlayer);
 			timer = 0;
 		}
 	}
