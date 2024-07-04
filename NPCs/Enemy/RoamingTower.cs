@@ -51,7 +51,7 @@ public class RoamingTower : ModNPC
     {
         npcLoot.Add(new OneFromRulesRule(1, 
             ItemDrop.GetItemDropRule(ItemID.SilverCoin, 100, 1, 2),
-            ItemDrop.GetItemDropRule(ModContent.ItemType<碎晶>(), 100),
+            ItemDrop.GetItemDropRule(ModContent.ItemType<Crystalfragments>(), 100),
             ItemDrop.GetItemDropRule(ModContent.ItemType<DustyRemoteControl>(), 10)
             ));
     }

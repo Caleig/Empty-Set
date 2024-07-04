@@ -76,7 +76,7 @@ public class RoamingUAV : ModNPC
         //npcLoot.Add(new OneFromRulesRule(1,options));
 
 
-        npcLoot.Add(new OneFromRulesRule(1, ItemDrop.GetItemDropRule(ItemID.CopperCoin, 100, 10, 30), ItemDrop.GetItemDropRule(ModContent.ItemType<碎晶>(), 30)));
+        npcLoot.Add(new OneFromRulesRule(1, ItemDrop.GetItemDropRule(ItemID.CopperCoin, 100, 10, 30), ItemDrop.GetItemDropRule(ModContent.ItemType<Crystalfragments>(), 30)));
     }
 
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
