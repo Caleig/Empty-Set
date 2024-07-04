@@ -42,11 +42,6 @@ Mods: {
 				DisplayName: Speedfaster
 				Description: Mods.EmptySet.Buffs.Speedfaster.Description
 			}
-
-			ChargedUAVBuff: {
-				DisplayName: Charged U A V Buff
-				Description: Mods.EmptySet.Buffs.ChargedUAVBuff.Description
-			}
 		}
 
 		Items: {
@@ -510,7 +505,11 @@ Mods: {
 
 			ChargedLaserEmitter: {
 				DisplayName: Charged Laser Emitter
-				Tooltip: ""
+				Tooltip:
+					'''
+					Right-click to consume 15 energy to call for missiles to bombard enemies
+					"One of the parts of the drop weight"
+					'''
 			}
 
 			CloudsPole: {
@@ -724,9 +723,9 @@ Mods: {
 				Tooltip: ""
 			}
 
-			ShakeEartherEpee: {
-				DisplayName: Shake Earther Epee
-				Tooltip: ""
+			EarthShakerEpee: {
+				DisplayName: Earth Shaker Epee
+				Tooltip: Right-click to consume 5 energy to fire Sword Aura
 			}
 
 			StarLight: {
@@ -739,9 +738,13 @@ Mods: {
 				Tooltip: ""
 			}
 
-			TalosSickle: {
-				DisplayName: TalosSickle
-				Tooltip: ""
+			Nihilism: {
+				DisplayName: Nihilism
+				Tooltip:
+					'''
+					"Fires a gear that slows down when it hits an enemy"
+					"Empty……"
+					'''
 			}
 
 			TungstenSteelSword: {
@@ -759,6 +762,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			CloudsThunderKnife: {
+				DisplayName: Clouds ThunderKnife
+				Tooltip: Launches a vortex of lightning
+			}
+
 			Bright: {
 				DisplayName: Bright
 				Tooltip: '''"Zero ruin"'''
@@ -766,7 +774,7 @@ Mods: {
 
 			ChargedBow: {
 				DisplayName: Charged Bow
-				Tooltip: shoot addition changed arrow when shoot twice
+				Tooltip: Right-clicks and consumes 9 energy to fire an additional Charged Arrow
 			}
 
 			ChargedRifle: {
@@ -889,8 +897,8 @@ Mods: {
 				Tooltip: convert musket bullets into charged bullets
 			}
 
-			ChargedController: {
-				DisplayName: Charged Controller
+			CruisingController: {
+				DisplayName: Cruising Controller
 				Tooltip: ""
 			}
 
@@ -931,7 +939,7 @@ Mods: {
 
 			ChargedCrystalSpear: {
 				DisplayName: Charged Crystal Spear
-				Tooltip: ""
+				Tooltip: Right-click to spend 10 energy to launch a charged spear
 			}
 
 			ChlorophytePike: {
@@ -1143,18 +1151,39 @@ Mods: {
 				Tooltip: ""
 			}
 
-			碎晶: {
-				DisplayName: 碎晶
+			Crystalfragments: {
+				DisplayName: Crystal fragments
 				Tooltip: ""
 			}
 
-			坚壁盾: {
-				DisplayName: 坚壁盾
-				Tooltip: ""
+			HardShield: {
+				DisplayName: Hard Shield
+				Tooltip:
+					'''
+					+3 Defense，+3% damage reduction，+10 Energy
+					Grants an additional buff when the health is below 50%.
+					When energy is full, is immune to knockback and increases movement speed
+					“Made from the energy core of the machine”
+					'''
 			}
 
-			撼地护符: {
-				DisplayName: 撼地护符
+			EarthSharkerAmulet: {
+				DisplayName: Earth Sharker Amulet
+				Tooltip:
+					'''
+					Equip this cosmetic item to gain a charge gauge
+					Increases jumping ability when energy is full
+					“The antenna of the giant machine”
+					'''
+			}
+
+			Paradebuoy: {
+				DisplayName: Parade buoy
+				Tooltip: The main engine that attracts cruising machinery
+			}
+
+			ChillCrystal: {
+				DisplayName: Chill Crystal
 				Tooltip: ""
 			}
 
@@ -1163,28 +1192,13 @@ Mods: {
 				Tooltip: ""
 			}
 
-			ChillCrystal: {
-				DisplayName: Chill Crystal
+			碎晶: {
+				DisplayName: 碎晶
 				Tooltip: ""
 			}
 
-			EarthSharkerAmulet: {
-				DisplayName: Earth Sharker Amulet
-				Tooltip: ""
-			}
-
-			HardShield: {
-				DisplayName: Hard Shield
-				Tooltip: ""
-			}
-
-			EarthShakerEpee: {
-				DisplayName: Earth Shaker Epee
-				Tooltip: ""
-			}
-
-			EnergyLaserTransmitter: {
-				DisplayName: Energy Laser Transmitter
+			TalosSickle: {
+				DisplayName: Talos Sickle
 				Tooltip: ""
 			}
 		}
@@ -1362,17 +1376,21 @@ Mods: {
 			Magic1.DisplayName: Magic1
 			ScarletExplosiveBomb.DisplayName: Scarlet Explosive Bomb
 			EarthShakerEpeeProj.DisplayName: Earth Shaker Epee Proj
-			ChargedCrystalSpearProj2.DisplayName: Charged Crystal Spear Proj2
 			BonmPro2.DisplayName: Bonm Pro2
-			DrillMissile.DisplayName: Drill Missile
-			EnergyLaser.DisplayName: Energy Laser
 			ChargedLaserProj.DisplayName: Charged Laser Proj
+			DrillMissile.DisplayName: Drill Missile
+			ChargedCrystalSpearProj2.DisplayName: Charged Crystal Spear Proj2
+			whirlpoolProj.DisplayName: whirlpool Proj
 		}
 
 		NPCs: {
 			EarthShaker: {
 				DisplayName: Earth Shaker
-				BossChecklistIntegration.SpawnInfo: 在地表任意时间使用 [i:5623] 召唤
+
+				BossChecklistIntegration: {
+					SpawnInfo: 在地表任意时间使用 [i:5623] 召唤
+					EntryName: 大地震撼者
+				}
 			}
 
 			FrozenCore: {

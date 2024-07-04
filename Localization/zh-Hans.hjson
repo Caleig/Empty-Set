@@ -42,11 +42,6 @@ Mods: {
 				// DisplayName: Speedfaster
 				// Description: Mods.EmptySet.Buffs.Speedfaster.Description
 			}
-
-			ChargedUAVBuff: {
-				// DisplayName: Charged U A V Buff
-				// Description: Mods.EmptySet.Buffs.ChargedUAVBuff.Description
-			}
 		}
 
 		Items: {
@@ -511,8 +506,12 @@ Mods: {
 			}
 
 			ChargedLaserEmitter: {
-				DisplayName: 充能激光发射器
-				Tooltip: ""
+				DisplayName: 溢能激光发射器
+				Tooltip:
+					'''
+					右键消耗15点能量呼唤导弹来轰炸敌人
+					“撼地重械的零部件之一”
+					'''
 			}
 
 			CloudsPole: {
@@ -722,9 +721,9 @@ Mods: {
 				Tooltip: ""
 			}
 
-			ShakeEartherEpee: {
+			EarthShakerEpee: {
 				DisplayName: 撼地者重剑
-				Tooltip: ""
+				Tooltip: 右键消耗5点能量发射剑气
 			}
 
 			StarLight: {
@@ -737,9 +736,13 @@ Mods: {
 				Tooltip: ""
 			}
 
-			TalosSickle: {
-				DisplayName: 烁金镰
-				Tooltip: ""
+			Nihilism: {
+				DisplayName: 奈尔丽增
+				Tooltip:
+					'''
+					"发射一枚击中敌怪后会减速的齿轮"
+					"空荡荡的…"
+					'''
 			}
 
 			TungstenSteelSword: {
@@ -757,6 +760,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			CloudsThunderKnife: {
+				DisplayName: 阴云雷切
+				Tooltip: 发射一个雷电漩涡
+			}
+
 			Bright: {
 				DisplayName: 明
 				Tooltip: '''"零殇"'''
@@ -764,7 +772,7 @@ Mods: {
 
 			ChargedBow: {
 				DisplayName: 充能弓
-				Tooltip: 每攻击两下就射出一支充能箭
+				Tooltip: 右键时消耗9点能量额外发射一枚充能箭
 			}
 
 			ChargedRifle: {
@@ -887,8 +895,8 @@ Mods: {
 				Tooltip: 具有将火枪子弹转化为充能弹的能力
 			}
 
-			ChargedController: {
-				DisplayName: 充能遥控器
+			CruisingController: {
+				DisplayName: 巡游遥控器
 				Tooltip: ""
 			}
 
@@ -929,7 +937,7 @@ Mods: {
 
 			ChargedCrystalSpear: {
 				DisplayName: 能晶投矛
-				Tooltip: ""
+				Tooltip: 右键消耗10点能量发射充能投矛
 			}
 
 			ChlorophytePike: {
@@ -1137,34 +1145,35 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			碎晶: {
-				// DisplayName: 碎晶
-				// Tooltip: ""
+			Crystalfragments: {
+				DisplayName: 碎晶
+				Tooltip: ""
 			}
 
-			坚壁盾: {
+			HardShield: {
 				DisplayName: 坚壁盾
 				Tooltip:
 					'''
+					+3防御，+3%伤害减免，+10能量
 					生命值低于50%时给予额外增益
 					能量是满的情况下免疫击退并略微提升移速
 					“将憾地的能量核心给拆了下来制成”
 					'''
 			}
 
-			撼地护符: {
+			EarthSharkerAmulet: {
 				DisplayName: 撼地护符
 				Tooltip:
 					'''
-					装备此饰品时获得充能槽
+					装备此饰品获得充能槽
 					能量是满的情况下略微提高跳跃能力
 					“撼地的天线”
 					'''
 			}
 
-			巡游信标: {
-				// DisplayName: 巡游信标
-				// Tooltip: ""
+			Paradebuoy: {
+				DisplayName: 巡游信标
+				Tooltip: 吸引巡游械的主机
 			}
 
 			ChillCrystal: {
@@ -1172,23 +1181,18 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			EarthSharkerAmulet: {
-				// DisplayName: Earth Sharker Amulet
+			巡游信标: {
+				// DisplayName: 巡游信标
 				// Tooltip: ""
 			}
 
-			HardShield: {
-				// DisplayName: Hard Shield
+			碎晶: {
+				// DisplayName: 碎晶
 				// Tooltip: ""
 			}
 
-			EarthShakerEpee: {
-				// DisplayName: Earth Shaker Epee
-				// Tooltip: ""
-			}
-
-			EnergyLaserTransmitter: {
-				// DisplayName: Energy Laser Transmitter
+			TalosSickle: {
+				// DisplayName: Talos Sickle
 				// Tooltip: ""
 			}
 		}
@@ -1366,17 +1370,21 @@ Mods: {
 			// Magic1.DisplayName: Magic1
 			// ScarletExplosiveBomb.DisplayName: Scarlet Explosive Bomb
 			// EarthShakerEpeeProj.DisplayName: Earth Shaker Epee Proj
-			// ChargedCrystalSpearProj2.DisplayName: Charged Crystal Spear Proj2
 			// BonmPro2.DisplayName: Bonm Pro2
-			// DrillMissile.DisplayName: Drill Missile
-			// EnergyLaser.DisplayName: Energy Laser
 			// ChargedLaserProj.DisplayName: Charged Laser Proj
+			// DrillMissile.DisplayName: Drill Missile
+			// ChargedCrystalSpearProj2.DisplayName: Charged Crystal Spear Proj2
+			// whirlpoolProj.DisplayName: whirlpool Proj
 		}
 
 		NPCs: {
 			EarthShaker: {
 				DisplayName: 撼地重械
-				// BossChecklistIntegration.SpawnInfo: 在地表任意时间使用 [i:5623] 召唤
+
+				BossChecklistIntegration: {
+					// SpawnInfo: 在地表任意时间使用 [i:5623] 召唤
+					// EntryName: 大地震撼者
+				}
 			}
 
 			FrozenCore: {
