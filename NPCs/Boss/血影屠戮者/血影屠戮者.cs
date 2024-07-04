@@ -80,8 +80,8 @@ namespace EmptySet.NPCs.Boss.血影屠戮者
 
         public override bool PreAI()
         {
-            NPC.lifeMax = Main.masterMode ? 32000 : Main.expertMode ? 25700 : 15000;
-            NPC.defense = Main.masterMode ? 27 : Main.expertMode ? 27 : 27;
+            NPC.lifeMax = Main.masterMode ? 28000 : Main.expertMode ? 23700 : 15000;
+            NPC.defense = Main.masterMode ? 24 : Main.expertMode ? 24 : 24;
             NPC.damage = Main.masterMode ? 145 : Main.expertMode ? 105 : 65;
             if (NPC.life > NPC.lifeMax) NPC.life = NPC.lifeMax;
             bloodDamage = Main.masterMode ? 60 : Main.expertMode ? 45 : 30;
@@ -99,7 +99,7 @@ namespace EmptySet.NPCs.Boss.血影屠戮者
             {
                 case ATTACK_STATE_MOVE:
                     move(player.Center, 0.03f);
-                    if (NPC.localAI[0] > 30) 
+                    if (NPC.localAI[0] > 30)
                     {
                         NPC.localAI[0] = 0;
                         state = Main.rand.Next(1,4);
@@ -108,30 +108,30 @@ namespace EmptySet.NPCs.Boss.血影屠戮者
                     NPC.rotation = NPC.velocity.ToRotation();
                     break;
                 case ATTACK_STATE1:
-                    if (NPC.localAI[0] < 20) 
+                    if (NPC.localAI[0] < 15)
                     {
                         move(player.Center, 0.01f);
                     }
-                    else if (NPC.localAI[0] == 20)
+                    else if (NPC.localAI[0] == 15)
                     {
                         SoundEngine.PlaySound(SoundID.ForceRoar, player.position);
                         NPC.velocity = (player.Center - NPC.Center).SafeNormalize(Vector2.UnitX) * 20f;
                     }
-                    else if (NPC.localAI[0] == 51+20)
+                    else if (NPC.localAI[0] == 51+15)
                     {
                         NPC.velocity = Vector2.Zero;
                         NPC.rotation = (player.Center - NPC.Center).ToRotation();
                         for (int i = 0; i < 8; i++)
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, Vector2.UnitX.RotatedBy(i * MathHelper.PiOver4)*8, ModContent.ProjectileType<血弹>(), EmptySetUtils.ScaledProjDamage(bloodDamage), 0, player.whoAmI);
                     }
-                    else if (NPC.localAI[0] == 60+20)
+                    else if (NPC.localAI[0] == 60+15)
                     {
                         bloodTime--;
                         NPC.localAI[0] = 0;
                         if (bloodTime <= 0) 
                         {
                             state = ATTACK_STATE_MOVE;
-                            bloodTime = Main.rand.Next(5, 8);
+                            bloodTime = Main.rand.Next(2, 3);
                         }
                     }
                     NPC.rotation = NPC.velocity.ToRotation();
@@ -145,26 +145,26 @@ namespace EmptySet.NPCs.Boss.血影屠戮者
                         if (Vector2.Distance(targetPos, NPC.Center) <= 40) NPC.localAI[0] = 60;
                         changeState = true;
                     }
-                    else if (NPC.localAI[0] <= 61 + 270)
+                    else if (NPC.localAI[0] <= 61 + 120)
                     {
                         move2(targetPos, 8, 5);
                         NPC.rotation = (player.Center - NPC.Center).ToRotation();
                         if ((NPC.localAI[0] - 61) % 30 == 0)
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, (dashLeft ? 1 : -1) * Vector2.UnitX * 8, ModContent.ProjectileType<血弹>(), EmptySetUtils.ScaledProjDamage(bloodDamage), 0, player.whoAmI);
                     }
-                    else if (NPC.localAI[0] == 61 + 271)
+                    else if (NPC.localAI[0] == 61 + 121)
                     {
                         NPC.velocity = (dashLeft ? 1 : -1) * Vector2.UnitX * 20f;
                     }
-                    else if (NPC.localAI[0] == 330 + 60)
+                    else if (NPC.localAI[0] == 180 + 60)
                     {
                         NPC.velocity = Vector2.Zero;
                     }
-                    else if (NPC.localAI[0] == 330 + 70)
+                    else if (NPC.localAI[0] == 180 + 70)
                     {
                         NPC.velocity = (player.Center - NPC.Center).SafeNormalize(Vector2.UnitX) * 20f;
                     }
-                    else if (NPC.localAI[0] >= 330 + 130) 
+                    else if (NPC.localAI[0] >= 180 + 130)
                     {
                         for (int i = 0; i < 18; i++)
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, Vector2.UnitX.RotatedBy(i * MathHelper.Pi / 9) * 8, ModContent.ProjectileType<血弹>(), EmptySetUtils.ScaledProjDamage(bloodDamage), 0, player.whoAmI);
@@ -195,7 +195,7 @@ namespace EmptySet.NPCs.Boss.血影屠戮者
                         for (int i = 0; i < 12; i++)
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, Vector2.UnitX.RotatedBy(i * MathHelper.Pi / 6) * 8, ModContent.ProjectileType<血弹>(), EmptySetUtils.ScaledProjDamage(bloodDamage), 0, player.whoAmI);
                     }
-                    else if (NPC.localAI[0] == 71 + 50) 
+                    else if (NPC.localAI[0] == 71 + 50)
                     {
                         NPC.localAI[0] = 0;
                         state = ATTACK_STATE_MOVE;
