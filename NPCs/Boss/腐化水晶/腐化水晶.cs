@@ -84,8 +84,8 @@ namespace EmptySet.NPCs.Boss.腐化水晶
 
         public override bool PreAI()
         {
-            NPC.lifeMax = Main.masterMode ? 42000 : Main.expertMode ? 32000 : 16000;
-            NPC.defense = Main.masterMode ? 32 : Main.expertMode ? 32 : 32;
+            NPC.lifeMax = Main.masterMode ? 32000 : Main.expertMode ? 22000 : 14000;
+            NPC.defense = Main.masterMode ? 30 : Main.expertMode ? 30 : 30;
             NPC.damage = Main.masterMode ? 120 : Main.expertMode ? 90 : 50;
             if (NPC.life > NPC.lifeMax) NPC.life = NPC.lifeMax;
             laserDamage = Main.masterMode ? 135 : Main.expertMode ? 95 : 55;
@@ -97,7 +97,7 @@ namespace EmptySet.NPCs.Boss.腐化水晶
         {
             base.AI();
             NPC.localAI[0]++;
-            Main.dust[Dust.NewDust(NPC.position, 62, 124, DustID.Shadowflame)].noGravity = true;
+            Main.dust[Dust.NewDust(NPC.position, 62, 64, DustID.Shadowflame)].noGravity = true;
             if (!findPlayer()) return;
             switch (state) 
             {
@@ -113,34 +113,34 @@ namespace EmptySet.NPCs.Boss.腐化水晶
                     } 
                     break;
                 case ATTACK_STATE_TELEPORT:
-                    if (NPC.localAI[0] <= 180)
+                    if (NPC.localAI[0] <= 40)
                     {
                         for (int i = 0; i < 5; i++)
                             Main.dust[Dust.NewDust(player.Center + new Vector2(15 * 16 * (particleLeft ? -1 : 1), 0), 100, 100, DustID.Shadowflame)].fadeIn = 0.05f;
                     }
-                    else if (NPC.localAI[0] == 181)
+                    else if (NPC.localAI[0] == 41)
                     {
                         NPC.Teleport(player.Center + new Vector2(15 * 16 * (particleLeft ? -1 : 1), 0), TeleportationStyleID.RodOfDiscord);
                     }
-                    else if (NPC.localAI[0] == 211)
+                    else if (NPC.localAI[0] == 50)
                     {
                         NPC.velocity = (player.Center - NPC.Center).SafeNormalize(Vector2.UnitX) * 20;
                     }
-                    else if (NPC.localAI[0] == 211 + 20)
+                    else if (NPC.localAI[0] == 50 + 20)
                     {
                         NPC.velocity.X = 0;
                         NPC.velocity.Y = 5;
                     }
-                    else if (NPC.localAI[0] == 211 + 20 + 120) 
+                    else if (NPC.localAI[0] == 50 + 20 + 90)
                     {
                         NPC.velocity = (player.Center - NPC.Center).SafeNormalize(Vector2.UnitX) * 20;
                     }
-                    else if (NPC.localAI[0] >= 211 + 20 + 121 && NPC.localAI[0] < 211 + 20 + 120 + 50)
+                    else if (NPC.localAI[0] >= 50 + 20 + 121 && NPC.localAI[0] < 50 + 20 + 90 + 50)
                     {
                         if (NPC.localAI[0] % 10 == 0)
                             Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, (player.Center - NPC.Center).SafeNormalize(Vector2.UnitX) * 10, ModContent.ProjectileType<DarkCrystal>(), EmptySetUtils.ScaledProjDamage(sickleDamage), 0, player.whoAmI);
                     }
-                    else if (NPC.localAI[0] == 211 + 20 + 120 + 50)
+                    else if (NPC.localAI[0] == 50 + 20 + 90 + 50)
                     {
                         state = ATTACK_STATE_MOVE;
                         NPC.localAI[0] = 0;
@@ -176,7 +176,7 @@ namespace EmptySet.NPCs.Boss.腐化水晶
                     }
                     else 
                     {
-                        if (NPC.localAI[0] <= 180) 
+                        if (NPC.localAI[0] <= 90)
                         {
                             if (NPC.localAI[0] == 1) 
                             {
@@ -185,17 +185,17 @@ namespace EmptySet.NPCs.Boss.腐化水晶
                                 targetPos = player.Center + new Vector2(dashLeft ? -320 : 320, -160);
                             }
                             move(targetPos,0.08f);
-                            if (Vector2.Distance(targetPos, NPC.Center) <= 40)  NPC.localAI[0] = 180;
+                            if (Vector2.Distance(targetPos, NPC.Center) <= 40)  NPC.localAI[0] = 90;
                         }
-                        else if (NPC.localAI[0] == 181)
+                        else if (NPC.localAI[0] == 91)
                         {
                             //NPC.velocity = ((player.Center.X - NPC.Center.X) > 0 ? 1 : -1) * Vector2.UnitX * 5;
                             NPC.velocity = (dashLeft ? 1 : -1) * Vector2.UnitX * 5;
                             laserIndex = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, Vector2.UnitY, ModContent.ProjectileType<腐化水晶激光>(), EmptySetUtils.ScaledProjDamage(laserDamage), 0, player.whoAmI);
                             Main.projectile[laserIndex].ai[1] = NPC.whoAmI;
-                            Main.projectile[laserIndex].timeLeft = 240;
+                            Main.projectile[laserIndex].timeLeft = 180;
                         }
-                        else if (NPC.localAI[0] == 181 + 240)
+                        else if (NPC.localAI[0] == 91 + 180)
                         {
                             NPC.localAI[0] = 0;
                             laserTime++;
@@ -203,7 +203,7 @@ namespace EmptySet.NPCs.Boss.腐化水晶
                             Main.projectile[laserIndex].Kill();
                         }
                     }
-                    if (laserTime >= 7) 
+                    if (laserTime >= 3)
                     {
                         state = ATTACK_STATE_MOVE;
                         laserTime = 0;
@@ -225,7 +225,7 @@ namespace EmptySet.NPCs.Boss.腐化水晶
                             }
                             sickleTime++;
                         }
-                        if (sickleTime >= 7) 
+                        if (sickleTime >= 3)
                         {
                             sickleTime = 0;
                             state = ATTACK_STATE_MOVE;
