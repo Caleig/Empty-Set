@@ -1201,6 +1201,11 @@ Mods: {
 				DisplayName: Talos Sickle
 				Tooltip: ""
 			}
+
+			ChargedController: {
+				DisplayName: Charged Controller
+				Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -1430,5 +1435,7 @@ Mods: {
 			崩溃祭坛Tile.MapEntry: 崩溃祭坛
 			缭乱砾岩Tile.MapEntry: 缭乱砾岩
 		}
+
+		UI.Energy: Energy
 	}
 }
