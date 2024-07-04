@@ -43,8 +43,11 @@ public class RoamingTower : ModNPC
             timer++;
         else
         {
-            timer = 0;
-            Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Top , (Main.player[NPC.target].Center - NPC.Center + new Vector2(0, NPC.height / 2)).SafeNormalize(Vector2.UnitX) * 10, ModContent.ProjectileType<ChargedCrystal2Projectile>(), EmptySetUtils.ScaledProjDamage((NPC.damage)), 0, Main.myPlayer);
+            if (NPC.position.Distance(Main.player[NPC.target].position) < 900f)
+            {
+                timer = 0;
+                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Top, (Main.player[NPC.target].Center - NPC.Center + new Vector2(0, NPC.height / 2)).SafeNormalize(Vector2.UnitX) * 10, ModContent.ProjectileType<ChargedCrystal2Projectile>(), EmptySetUtils.ScaledProjDamage((NPC.damage)), 0, Main.myPlayer);
+            }
         }
     }
     public override void ModifyNPCLoot(NPCLoot npcLoot)

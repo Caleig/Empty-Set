@@ -67,7 +67,7 @@ public class EnergyPlayer : ModPlayer
                 else
                 {
                     if (Enengy < EnengyMax) Enengy++;
-                    Main.NewText($"energy:{Enengy}");
+                    //Main.NewText($"energy:{Enengy}");
                     frameTochargeTimer = 0;
                 }
             }
