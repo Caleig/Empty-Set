@@ -20,21 +20,26 @@ public class TalosSickleProj:ModProjectile
     }
     public override void SetDefaults()
     {
-        Projectile.width = 62;
+        Projectile.width = 26;
         Projectile.height = 26;
         Projectile.friendly = true;
+        Projectile.penetrate = 8;
+        Projectile.tileCollide = false;
+        Projectile.timeLeft = (int)(12 * EmptySet.Frame);
+
+
         Projectile.DamageType = DamageClass.Melee;
-        Projectile.timeLeft = 10 * EmptySet.Frame;
-        Projectile.alpha = 0;
-        Projectile.light = 0.5f;
         Projectile.ignoreWater = false;
-        Projectile.tileCollide = true; 
-        Projectile.extraUpdates = 1;
-        Projectile.aiStyle = 1;
-        Projectile.penetrate = 3 + 1;
-        AIType = ProjectileID.Bullet;
+        Projectile.aiStyle = -1;
     }
 
+
+    public override void AI()
+    {
+        Projectile.rotation += 0.5f * Projectile.direction;
+        var dust1 = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Silver);
+        dust1.noGravity = true;
+    }
     public override bool PreDraw(ref Color lightColor)
     {
         Main.instance.LoadProjectile(Projectile.type);
@@ -49,6 +54,10 @@ public class TalosSickleProj:ModProjectile
             Main.EntitySpriteDraw(texture, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0);
         }
 
-        return true;
+             return true;
+    }
+    public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+    {
+        Projectile.velocity *= 0.4f;
     }
 }
