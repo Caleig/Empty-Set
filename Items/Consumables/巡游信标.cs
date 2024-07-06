@@ -62,9 +62,10 @@ public class 巡游信标 : ModItem
     }
 
     public override void AddRecipes() => CreateRecipe()
-        .AddIngredient(ModContent.ItemType<碎晶>(), 5)
+        .AddIngredient(ModContent.ItemType<碎晶>(), 3)
         .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.CopperOrTin), 4)
         .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.IronOrLead), 6)
         .AddTile(TileID.Anvils)
         .Register();
+
 }

@@ -1,5 +1,5 @@
-﻿using EmptySet.Common.Systems;
-using EmptySet.NPCs.Boss.EarthShaker;
+﻿using EmptySet.NPCs.MiniBoss.ThunderstormEye;
+using EmptySet.Common.Systems;
 using EmptySet.Utils;
 using Terraria;
 using Terraria.Audio;
@@ -7,6 +7,9 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using EmptySet.NPCs.Boss.EarthShaker;
+using EmptySet.Items.Materials;
+using EmptySet.Projectiles.Boss.EarthShaker;
 
 namespace EmptySet.Items.Consumables;
 
@@ -25,8 +28,8 @@ public class DustyRemoteControl : ModItem
 
     public override void SetDefaults()
     {
-        Item.width = 40;
-        Item.height = 36;
+        Item.width = 16;
+        Item.height = 38;
         Item.maxStack = 20;
         Item.value = Item.sellPrice(0,0,20,0);
         Item.rare = ItemRarityID.Blue;
@@ -62,7 +65,7 @@ public class DustyRemoteControl : ModItem
     }
 
     public override void AddRecipes() => CreateRecipe()
-        .AddIngredient(ItemID.DirtBlock, 15)
+        .AddIngredient(ModContent.ItemType<ChargedCrystal>(), 1)
         .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.CopperOrTin), 6)//铜锡组合
         .AddRecipeGroup(RecipeGroupID.IronBar, 8)
         .AddTile(TileID.Anvils)
