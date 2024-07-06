@@ -19,7 +19,7 @@ internal class ChargedCrystalSpearProj : ModProjectile
     public override void SetDefaults()
     {
         Projectile.width = 26;
-        Projectile.height = 72;
+        Projectile.height = 26;
         Projectile.friendly = true;
         Projectile.DamageType = DamageClass.Throwing;
         Projectile.timeLeft = 600;
