@@ -18,7 +18,7 @@ internal class EarthShakerEpeeProj : ModProjectile
     public override void SetDefaults()
     {
         Projectile.width = 28;
-        Projectile.height = 72;
+        Projectile.height = 28;
         Projectile.friendly = true;
         Projectile.DamageType = DamageClass.Melee;
         Projectile.penetrate = 2 + 1;
