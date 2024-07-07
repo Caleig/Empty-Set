@@ -1,4 +1,6 @@
-﻿using EmptySet.Utils;
+﻿using EmptySet.Items.Materials;
+using EmptySet.Projectiles.Weapons.Melee;
+using EmptySet.Utils;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -26,18 +28,20 @@ public class JungleSickle : ModItem
         Item.width = 54;
         Item.height = 48;
 
-        Item.damage = 27;
+        Item.damage = 10;
         Item.crit = 12;
 
         Item.useStyle = ItemUseStyleID.Swing;
-        Item.knockBack = KnockBackLevel.BeLower;
-        Item.useAnimation = UseSpeedLevel.FastSpeed;
-        Item.useTime = UseSpeedLevel.FastSpeed;
-        Item.UseSound = SoundID.Item71; //镰刀
+        Item.knockBack = 1;
+        Item.useAnimation = 34;
+        Item.useTime = 34;
+        Item.UseSound = SoundID.Item1; //镰刀
 
         Item.DamageType = DamageClass.Melee;
 
         Item.autoReuse = true;
+        Item.shoot = ModContent.ProjectileType<JungleSickleProj>();
+        Item.shootSpeed = 7f;
     }
 
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
@@ -48,6 +52,7 @@ public class JungleSickle : ModItem
 
     public override void AddRecipes() => CreateRecipe()
         .AddIngredient(ItemID.JungleSpores, 7)
+        .AddIngredient(ItemID.Vine, 3)
         .AddTile(TileID.WorkBenches)
         .Register();
 }
