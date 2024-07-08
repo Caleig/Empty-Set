@@ -39,7 +39,7 @@ public class DersilyaProj : ModProjectile
     public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
     {
         modifiers.ScalingArmorPenetration += 1 ;
-        modifiers.FinalDamage.Flat = 804;
+        modifiers.FinalDamage.Flat = 300;
         base.ModifyHitNPC(target, ref modifiers);
     }
 }
