@@ -35,7 +35,7 @@ public class Dersilya : ModItem
         Item.width = 70;
         Item.height = 70;
 
-        Item.damage = 52;
+        Item.damage = 50;
         Item.crit = 4;
 
         Item.knockBack = KnockBackLevel.BeLower;
