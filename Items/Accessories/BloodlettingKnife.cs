@@ -25,8 +25,8 @@ public class BloodlettingKnife : ModItem
 
     public override void SetDefaults()
     {
-        Item.width = 54;
-        Item.height = 58;
+        Item.width = 36;
+        Item.height = 46;
         Item.rare = ItemRarityID.Green;
         Item.value = Item.sellPrice(0, 0, 45, 0);
         Item.accessory = true;
