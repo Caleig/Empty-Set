@@ -767,6 +767,11 @@ Mods: {
 				Tooltip: Launches a vortex of lightning
 			}
 
+			ChlorophyteAxe: {
+				DisplayName: Chlorophyte Axe
+				Tooltip: Full of chlorophyll, I don't know if I can photosynthesize and sprout if I plant it in the ground.
+			}
+
 			Bright: {
 				DisplayName: Bright
 				Tooltip: '''"Zero ruin"'''
@@ -1386,6 +1391,8 @@ Mods: {
 			DrillMissile.DisplayName: Drill Missile
 			ChargedCrystalSpearProj2.DisplayName: Charged Crystal Spear Proj2
 			whirlpoolProj.DisplayName: whirlpool Proj
+			JungleSickleProj.DisplayName: Jungle Sickle Proj
+			ChlorophyteAxeProj.DisplayName: Chlorophyte Axe Proj
 		}
 
 		NPCs: {

@@ -765,6 +765,15 @@ Mods: {
 				Tooltip: 发射一个雷电漩涡
 			}
 
+			ChlorophyteAxe: {
+				DisplayName: 苍翠钺
+				Tooltip:
+					'''
+					"饱含叶绿素，不知道把他种在地上能不能光合作用发芽"
+					"枝繁叶茂"
+					'''
+			}
+
 			Bright: {
 				DisplayName: 明
 				Tooltip: '''"零殇"'''
@@ -1380,6 +1389,8 @@ Mods: {
 			// DrillMissile.DisplayName: Drill Missile
 			// ChargedCrystalSpearProj2.DisplayName: Charged Crystal Spear Proj2
 			// whirlpoolProj.DisplayName: whirlpool Proj
+			// JungleSickleProj.DisplayName: Jungle Sickle Proj
+			// ChlorophyteAxeProj.DisplayName: Chlorophyte Axe Proj
 		}
 
 		NPCs: {
