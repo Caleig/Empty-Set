@@ -989,12 +989,12 @@ Mods: {
 
 			GelBoomerang: {
 				DisplayName: Gel boomerang
-				Tooltip: ""
+				Tooltip: Throws a boomerang that accelerates back
 			}
 
-			GelShuriken: {
-				DisplayName: Gel Shuriken
-				Tooltip: Throw a gel shuriken that is not controlled by gravity.
+			SunplateBoomerang: {
+				DisplayName: Sunplate Boomerang
+				Tooltip: Throws a boomerang that accelerates back
 			}
 
 			HellfireThrowingSpear: {
@@ -1393,6 +1393,7 @@ Mods: {
 			whirlpoolProj.DisplayName: whirlpool Proj
 			JungleSickleProj.DisplayName: Jungle Sickle Proj
 			ChlorophyteAxeProj.DisplayName: Chlorophyte Axe Proj
+			SunplateBoomerangProj.DisplayName: Sunplate Boomerang Proj
 		}
 
 		NPCs: {

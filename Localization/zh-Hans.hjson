@@ -990,13 +990,13 @@ Mods: {
 			}
 
 			GelBoomerang: {
-				DisplayName: 凝胶回旋镖
-				Tooltip: ""
+				// DisplayName: Gel boomerang
+				// Tooltip: Throws a boomerang that accelerates back
 			}
 
-			GelShuriken: {
-				DisplayName: 凝胶手里剑
-				Tooltip: 扔出一个不受重力控制的凝胶手里剑
+			SunplateBoomerang: {
+				DisplayName: 日盘回旋镖
+				Tooltip: 扔出一个会加速飞回的回旋镖
 			}
 
 			HellfireThrowingSpear: {
@@ -1391,6 +1391,7 @@ Mods: {
 			// whirlpoolProj.DisplayName: whirlpool Proj
 			// JungleSickleProj.DisplayName: Jungle Sickle Proj
 			// ChlorophyteAxeProj.DisplayName: Chlorophyte Axe Proj
+			// SunplateBoomerangProj.DisplayName: Sunplate Boomerang Proj
 		}
 
 		NPCs: {

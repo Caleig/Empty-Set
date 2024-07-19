@@ -33,7 +33,7 @@ public class RoamingUAV : ModNPC
         NPC.knockBackResist = 0.1f;
         NPC.HitSound = SoundID.NPCHit4;
         NPC.DeathSound = SoundID.NPCDeath14;
-        //NPC.value = 60f;
+        NPC.value = 40f;
         NPC.aiStyle = 2; // 战斗AI，重要的是选择匹配我们想要模仿的NPCID的aiStyle
         AIType = NPCID.None; // 执行AI代码时使用香草僵尸类型。(这也意味着它会尝试在白天消失)
                              //AnimationType = NPCID.DemonEye; // 执行动画代码时使用类型。重要的是在SetStaticDefaults匹配Main.npcFrameCount[NPC.type]。
@@ -44,8 +44,7 @@ public class RoamingUAV : ModNPC
     public override bool PreAI()
     {
         //if (NPC.life > NPC.lifeMax) NPC.life = NPC.lifeMax;
-        NPC.direction = (int)NPC.velocity.X;
-        NPC.spriteDirection = NPC.velocity.X < 0 ? 1 : -1;
+        NPC.rotation = NPC.velocity.ToRotation();
         return base.PreAI();
     }
     public override void FindFrame(int frameHeight)

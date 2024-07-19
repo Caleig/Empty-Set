@@ -32,7 +32,7 @@ class RoamingCar : ModNPC
         NPC.lifeMax = EmptySetUtils.GetNPCLifeMax(25, 50, 75);
         NPC.HitSound = SoundID.NPCHit4;
         NPC.DeathSound = SoundID.NPCDeath14;
-        //NPC.value = 60f;
+        NPC.value = 20f;
         NPC.knockBackResist = 0.9f;
         NPC.aiStyle = 26; // 战斗AI，重要的是选择匹配我们想要模仿的NPCID的aiStyle
 

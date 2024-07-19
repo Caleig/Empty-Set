@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "H06aGdBeliOWri1HXLg+cauWoSFCzEfEqhe8V14FpKAGquPWp+SAefpBAlydQ5vKk+NabJNxVsfgmM7N1WtgsQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Caleigh\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EmptySet\\EmptySet.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Caleigh\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

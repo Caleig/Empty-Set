@@ -30,10 +30,10 @@ public class RoamingTower : ModNPC
         NPC.lifeMax = EmptySetUtils.GetNPCLifeMax(30, 60, 90);
         NPC.defense = 7;
         NPC.damage = EmptySetUtils.GetNPCDamage(5, 10, 15);
-        NPC.knockBackResist = 1f;
+        NPC.knockBackResist = 0f;
         NPC.HitSound = SoundID.NPCHit4;
         NPC.DeathSound = SoundID.NPCDeath14;
-        //NPC.value = 60f;
+        NPC.value = 100f;
         NPC.aiStyle = 0;
     }
     int timer = 0;
