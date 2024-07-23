@@ -152,17 +152,28 @@ class EarthShaker: NPCStateMachine
 		}
 		else if (n.Timer1 < 100)
 		{
-			NPC.velocity = Vector2.Normalize(n.target.Center + new Vector2(0, -350) - NPC.Center) * 30;
-			if (Math.Abs(NPC.Center.X - n.target.Center.X) < 16 && Math.Abs(n.target.Center.Y - NPC.Center.Y - 350) < 16) n.Timer1 = 100;
+            for(int i = 0; i < 10; i++)
+			{
+                int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Frost);
+            }
+            if(NPC.velocity.Y < 20f)
+			{
+                NPC.velocity.Y -= 1f;
+            }
+            if (Math.Abs(NPC.Center.X - n.target.Center.X) < 16 && Math.Abs(n.target.Center.Y - NPC.Center.Y - 350) < 16) n.Timer1 = 100;
 		}
-		else if (n.Timer1 < 145)
+		else if (n.Timer1 < 140)
 		{
-			NPC.velocity = Vector2.Zero;
+            NPC.velocity = Vector2.Normalize(n.target.Center + new Vector2(0, -350) - NPC.Center) * 100;
 		}
-		else if (n.Timer1 == 145)
+        else if (n.Timer1 < 145)
+        {
+			NPC.velocity = Vector2.Zero;
+        }
+        else if (n.Timer1 == 145)
 		{
 			NPC.noTileCollide = false;
-			NPC.velocity.Y = 20f;
+			NPC.velocity.Y = 40f;
 		}
 		else
 		{
@@ -173,12 +184,12 @@ class EarthShaker: NPCStateMachine
 				{
 					SoundEngine.PlaySound(SoundID.Item14, NPC.position);
 					//落地时会在落点生成一个小冲击波（冲击波处会生成可以减速玩家的雾气）
-					Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X + (NPC.width / 2), NPC.Center.Y + 150), new(0, 0), ModContent.ProjectileType<ShockWaveProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
-					Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X - (NPC.width / 2), NPC.Center.Y + 150), new(0, 0), ModContent.ProjectileType<ShockWaveProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
+					Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X + (NPC.width / 2), NPC.Center.Y + 150), new Vector2(0, 0), ModContent.ProjectileType<ShockWaveProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
+					Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X - (NPC.width / 2), NPC.Center.Y + 150), new Vector2(0, 0), ModContent.ProjectileType<ShockWaveProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
 					for (int i = 0; i < 7; i++)
 					{
-						Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X + (NPC.width / 2 + i * 30), NPC.Center.Y + 150), new(0, 0), ModContent.ProjectileType<SlowDownMistProj>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
-						Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X - (NPC.width / 2 + i * 30), NPC.Center.Y + 150), new(0, 0), ModContent.ProjectileType<SlowDownMistProj>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
+						Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X + (NPC.width / 2 + i * 30), NPC.Center.Y + 150), new Vector2(0, 0), ModContent.ProjectileType<SlowDownMistProj>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
+						Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X - (NPC.width / 2 + i * 30), NPC.Center.Y + 150), new Vector2(0, 0), ModContent.ProjectileType<SlowDownMistProj>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
 					}
 				}
 				if (n.Timer2 >= 30)
@@ -409,8 +420,7 @@ class FakeNPC :ModNPC
         }
     }
 /// <summary>
-/// 召唤后出现在玩家正上方，周围顺时针环绕着充能晶体（8个）充能晶体在旋转过程中会不断释放激光，
-/// 释放过程中地震者缓慢上浮，释放5/7/8次后晶体会自动爆炸并发射一圈激光，激光数量为12，地震者迅速下砸（开头杀）
+/// 召唤后出现在玩家正上方，等待1.5秒后下落，落地召唤冲击波
 /// </summary>
 class SpawnState : NPCState
     {
@@ -420,71 +430,19 @@ class SpawnState : NPCState
         {
 		NPC = n.NPC;
 		n.Timer++;
-		if (n.Timer == 1)
-		{
-			for (int i = 0; i < projarr.Length; i++)
-			{
-				projarr[i] = Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center, Vector2.Zero,
-					ModContent.ProjectileType<ChargedCrystalProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).laserDamage), 0, NPC.target);
-			}
-			NPC.velocity = new(0, -0.2f);
-		}
-		else if (n.Count < ((EarthShaker)NPC.ModNPC).laserCount)
-		{
-			//充能水晶旋转
-			for (int i = 0; i < projarr.Length; i++)
-			{
-				if (Main.projectile[projarr[i]].active && Main.projectile[projarr[i]].type == ModContent.ProjectileType<ChargedCrystalProjectile>())
-				{
-					var t = n.Timer * 0.075f;
-					//projarr[i].velocity = Vector2.Zero;// 要把弹幕速度归零，否则圆会有一个位移
-					Main.projectile[projarr[i]].Center = NPC.Center + new Vector2((float)Math.Cos(t + (i + 1) * 3), (float)Math.Sin(t + (i + 1) * 3)) * 200f; // 半径r = 130，以玩家中心为圆心  //1 一排 2 三等分 3 2等分
-					Main.projectile[projarr[i]].timeLeft = 2;
-				}
-			}
-			//发射激光
-			if (n.Timer % ShootTime == 0)
-			{
-				for (int i = 0; i < projarr.Length; i++)
-				{
-					if (Main.projectile[projarr[i]].active && Main.projectile[projarr[i]].type == ModContent.ProjectileType<ChargedCrystalProjectile>())
-					{
-						Projectile.NewProjectile(Main.projectile[projarr[i]].GetSource_FromAI(), Main.projectile[projarr[i]].position,
-							(n.target.Center - Main.projectile[projarr[i]].Center).SafeNormalize(Vector2.UnitX) * 24f,
-							ModContent.ProjectileType<激光弹幕>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).laserDamage), 0f, NPC.target);
-						SoundEngine.PlaySound(SoundID.Item33, NPC.position); //激光声
-					}
-				}
-				n.Count++;
-			}
-
-			//跟随玩家并悬浮在头上 待优化加阻尼和最大X速度限制！！！
-			if (NPC.Center.X > n.target.Center.X)
-			{
-				if (NPC.velocity.X >= -6)
-				{
-					NPC.velocity.X -= 0.2f;
-				}
-			}
-			else if (NPC.Center.X < n.target.Center.X)
-			{
-				if (NPC.velocity.X <= 6)
-				{
-					NPC.velocity.X += 0.2f;
-				}
-			}
-		}
-		else if (n.Timer == (n.Count + 1) * ShootTime)
+		if (n.Timer == 90)
 		{
 			//下砸
 			NPC.velocity.Y = 20f;
 			NPC.velocity.X = 0f;
 		}
-		else if (n.Timer > (n.Count + 1) * ShootTime) 
+		else if (n.Timer > 90) 
 		{
 			if (NPC.velocity.Y == 0)
 			{
-				SoundEngine.PlaySound(SoundID.Item14, NPC.position);
+                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-NPC.width / 2, NPC.height / 2 - 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).bigShockWaveDamage), 0, Main.myPlayer, 1);
+                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(NPC.width / 2, NPC.height / 2 - 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).bigShockWaveDamage), 0, Main.myPlayer, 2);
+                SoundEngine.PlaySound(SoundID.Item14, NPC.position);
 				n.Timer = 0;
 				n.Count = 0;
 				n.SetState<NormalState>();
