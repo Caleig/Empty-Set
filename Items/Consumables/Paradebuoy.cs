@@ -50,7 +50,7 @@ public class Paradebuoy : ModItem
 
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
-                NPC.SpawnOnPlayer(player.whoAmI, type);
+                NPC.SpawnBoss((int)player.position.X, (int)player.position.Y - 50 * 16, type, player.whoAmI);
             }
             else
             {

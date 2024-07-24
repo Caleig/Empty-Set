@@ -1394,6 +1394,7 @@ Mods: {
 			JungleSickleProj.DisplayName: Jungle Sickle Proj
 			ChlorophyteAxeProj.DisplayName: Chlorophyte Axe Proj
 			SunplateBoomerangProj.DisplayName: Sunplate Boomerang Proj
+			BigShockWaveProjectile2.DisplayName: Big Shock Wave Projectile2
 		}
 
 		NPCs: {

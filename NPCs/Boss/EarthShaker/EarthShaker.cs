@@ -144,6 +144,68 @@ class EarthShaker: NPCStateMachine
 	/// <param name="n"></param>
 	public void BigJump(NPCStateMachine n)
 	{
+		if (Math.Abs(NPC.Center.Y - n.target.Center.Y  ) < 170)
+			NPC.noTileCollide = false;
+		else
+		{
+
+		NPC.noTileCollide = true; }
+        //NPC = n.NPC;
+        n.Timer1++;
+		if (n.Timer1 == 1)
+		{
+			NPC.noTileCollide = true;
+		}
+		else if (n.Timer1 < 100)
+		{
+            for(int i = 0; i < 10; i++)
+			{
+                int dust = Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Frost);
+            }
+            if(NPC.velocity.Y < 10f)
+			{
+                NPC.velocity.Y -= 1f;
+            }
+		}
+		else if (n.Timer1 < 130)
+		{
+            NPC.velocity = Vector2.Normalize(n.target.Center + new Vector2(0, -350) - NPC.Center) * 100;
+		}
+        else if (n.Timer1 < 145)
+        {
+			NPC.velocity = Vector2.Zero;
+        }
+        else if (n.Timer1 == 145)
+		{
+            NPC.velocity.Y = 20f;
+		}
+		else
+		{
+			if (NPC.velocity.Y == 0)
+			{
+				n.Timer2++;
+				if (n.Timer2 == 1)
+				{
+					SoundEngine.PlaySound(SoundID.Item14, NPC.position);
+					//落地时会在落点生成一个小冲击波（冲击波处会生成可以减速玩家的雾气）
+					for (int i = 0; i < 7; i++)
+					{
+						Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X + (NPC.width / 2 + i * 30), NPC.Center.Y + 150), new Vector2(0, 0), ModContent.ProjectileType<SlowDownMistProj>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
+						Projectile.NewProjectile(NPC.GetSource_FromAI(), new(NPC.Center.X - (NPC.width / 2 + i * 30), NPC.Center.Y + 150), new Vector2(0, 0), ModContent.ProjectileType<SlowDownMistProj>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).shockWaveDamage), 0, Main.myPlayer);
+					}
+				}
+				if (n.Timer2 >= 30)
+				{
+					NPC.noTileCollide = true;
+					n.Timer1 = 0;
+					n.Timer2 = 0;
+					n.NPCAttackStatesCount++;
+				}
+			}
+		}
+	}
+public void BigJump2(NPCStateMachine n)
+	{
 		//NPC = n.NPC;
 		n.Timer1++;
 		if (n.Timer1 == 1)
@@ -172,8 +234,9 @@ class EarthShaker: NPCStateMachine
         }
         else if (n.Timer1 == 145)
 		{
-			NPC.noTileCollide = false;
-			NPC.velocity.Y = 40f;
+
+            NPC.noTileCollide = NPC.Center.Y + 170 < n.target.Center.Y ? true : false;
+            NPC.velocity.Y = 40f;
 		}
 		else
 		{
@@ -202,6 +265,7 @@ class EarthShaker: NPCStateMachine
 			}
 		}
 	}
+
 
 	private bool moveToPosition(Vector2 vector)
 	{
@@ -438,10 +502,11 @@ class SpawnState : NPCState
 		}
 		else if (n.Timer > 90) 
 		{
-			if (NPC.velocity.Y == 0)
+            NPC.noTileCollide = NPC.Center.Y + 170 < n.target.Center.Y ? true : false;
+            if (NPC.velocity.Y == 0)
 			{
-                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-NPC.width / 2, NPC.height / 2 - 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).bigShockWaveDamage), 0, Main.myPlayer, 1);
-                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(NPC.width / 2, NPC.height / 2 - 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).bigShockWaveDamage), 0, Main.myPlayer, 2);
+                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(-NPC.width / 2, NPC.height / 2 - 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile2>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).bigShockWaveDamage), 0, Main.myPlayer, 1);
+                Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + new Vector2(NPC.width / 2, NPC.height / 2 - 80), Vector2.Zero, ModContent.ProjectileType<BigShockWaveProjectile2>(), EmptySetUtils.ScaledProjDamage(((EarthShaker)NPC.ModNPC).bigShockWaveDamage), 0, Main.myPlayer, 2);
                 SoundEngine.PlaySound(SoundID.Item14, NPC.position);
 				n.Timer = 0;
 				n.Count = 0;
@@ -960,7 +1025,7 @@ class AttackState4 : NPCAttackState
 		n.AttackTimer++;
 		if (n.NPCAttackStatesCount < 1)
 		{
-			((EarthShaker)NPC.ModNPC).BigJump(n);
+			((EarthShaker)NPC.ModNPC).BigJump2(n);
 		}
 		else 
 		{

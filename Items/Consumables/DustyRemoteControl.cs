@@ -54,7 +54,7 @@ public class DustyRemoteControl : ModItem
 
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
-                NPC.SpawnBoss((int) player.position.X, (int) player.position.Y - 25 * 16, type, player.whoAmI);
+                NPC.SpawnBoss((int) player.position.X, (int) player.position.Y - 50 * 16, type, player.whoAmI);
             }
             else
             {

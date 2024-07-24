@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 
 namespace EmptySet.Projectiles.Boss.EarthShaker
 {
-    internal class BigShockWaveProjectile:ModProjectile
+    internal class BigShockWaveProjectile2:ModProjectile
     {
 		public override void SetStaticDefaults()
 		{
@@ -50,7 +50,7 @@ namespace EmptySet.Projectiles.Boss.EarthShaker
 
             }
 
-            int frameSpeed = 5;
+            int frameSpeed = 3;
 
 			Projectile.frameCounter++;
 
