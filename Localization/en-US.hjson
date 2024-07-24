@@ -1123,37 +1123,46 @@ Mods: {
 
 			SingtheWoods: {
 				DisplayName: Singthe Woods
-				Tooltip: ""
+				Tooltip: 
+				'''
+				Green energy surrounds us,
+				"Absorbing the essence of nature"
+				'''
 			}
 
 			ImpurityMagicCrystal: {
 				DisplayName: Impurity Magic Crystal
-				Tooltip: ""
+				Tooltip: A crystal extracted from an unknown life form.
 			}
 
 			MagicCrystal: {
 				DisplayName: Magic Crystal
-				Tooltip: ""
+				Tooltip: "Gleaming with a subtle light."
 			}
 
 			ApprenticeStaves: {
 				DisplayName: Apprentice Staves
-				Tooltip: ""
+				Tooltip: "Directly attacking through the manipulation of magical particles."
 			}
 
 			BookofRocks: {
-				DisplayName: Bookof Rocks
-				Tooltip: ""
+				DisplayName: Book of Rocks
+				Tooltip: 
+				'''
+				"This book seems to seal a demon within, but who cares? As long as it's useful," 
+				said the furry creature that looked like a Shiba Inu.
+				'''
 			}
 
 			ScarletExplosiveBomb: {
 				DisplayName: Scarlet Explosive Bomb
-				Tooltip: ""
+				Tooltip: A tome of arcane knowledge, chronicling the mysteries of crimson magic.
+				
 			}
 
 			Broadsword: {
 				DisplayName: Broadsword
-				Tooltip: ""
+				Tooltip: "Killing one is not a loss, killing two is a gain."
 			}
 
 			Crystalfragments: {
