@@ -1456,6 +1456,7 @@ Mods: {
 			MoonCore.DisplayName: Moon Core
 			LifeCrystalSlime.DisplayName: Life Crystal Slime
 			ImpurityMagicCrystal.DisplayName: Impurity Magic Crystal
+			SandStormSlime.DisplayName: Sand Storm Slime
 		}
 
 		Tiles: {
