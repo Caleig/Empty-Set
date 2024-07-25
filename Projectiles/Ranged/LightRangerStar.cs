@@ -62,7 +62,7 @@ namespace EmptySet.Projectiles.Ranged
             float distanceMax = 200f;
             foreach (NPC npc in Main.npc)
             {
-                if (npc.active && !npc.friendly)
+                if (npc.CanBeChasedBy())
                 {
                     // 计算与投射物的距离
                     float currentDistance = Vector2.Distance(npc.Center, Projectile.Center);

@@ -32,12 +32,12 @@ namespace EmptySet.Items.Weapons.Magic
             Item.useTurn = true;
             Item.value = Item.sellPrice(0, 1, 0, 0);
             Item.value = Item.buyPrice(0, 1, 0, 0);
-            Item.damage = 6;
+            Item.damage = 12;
             Item.shootSpeed = 25f;
             Item.shoot = ModContent.ProjectileType<Projectiles.Magic.SingtheWoods>();
             Item.UseSound = SoundID.Item20;
             Item.staff[Item.type] = true;
-            Item.mana = 2;
+            Item.mana = 10;
             Item.scale = 1f;
         }
         public override void AddRecipes()

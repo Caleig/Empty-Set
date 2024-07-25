@@ -34,7 +34,7 @@ namespace EmptySet.Projectiles.Magic
             float distanceMax = 400f;
             foreach (NPC npc in Main.npc)
             {
-                if (npc.active && !npc.friendly)
+                if (npc.CanBeChasedBy())
                 {
                     // 计算与投射物的距离
                     float currentDistance = Vector2.Distance(npc.Center, Projectile.Center);

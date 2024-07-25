@@ -42,6 +42,11 @@ Mods: {
 				DisplayName: Speedfaster
 				Description: Mods.EmptySet.Buffs.Speedfaster.Description
 			}
+
+			Heartbroken: {
+				Description: Mods.EmptySet.Buffs.Heartbroken.Description
+				DisplayName: Heartbroken
+			}
 		}
 
 		Items: {
@@ -1123,11 +1128,11 @@ Mods: {
 
 			SingtheWoods: {
 				DisplayName: Singthe Woods
-				Tooltip: 
-				'''
-				Green energy surrounds us,
-				"Absorbing the essence of nature"
-				'''
+				Tooltip:
+					'''
+					Green energy surrounds us,
+					"Absorbing the essence of nature"
+					'''
 			}
 
 			ImpurityMagicCrystal: {
@@ -1137,32 +1142,31 @@ Mods: {
 
 			MagicCrystal: {
 				DisplayName: Magic Crystal
-				Tooltip: "Gleaming with a subtle light."
+				Tooltip: Gleaming with a subtle light.
 			}
 
 			ApprenticeStaves: {
 				DisplayName: Apprentice Staves
-				Tooltip: "Directly attacking through the manipulation of magical particles."
+				Tooltip: Directly attacking through the manipulation of magical particles.
 			}
 
 			BookofRocks: {
 				DisplayName: Book of Rocks
-				Tooltip: 
-				'''
-				"This book seems to seal a demon within, but who cares? As long as it's useful," 
-				said the furry creature that looked like a Shiba Inu.
-				'''
+				Tooltip:
+					'''
+					"This book seems to seal a demon within, but who cares? As long as it's useful," 
+					said the furry creature that looked like a Shiba Inu.
+					'''
 			}
 
 			ScarletExplosiveBomb: {
 				DisplayName: Scarlet Explosive Bomb
 				Tooltip: A tome of arcane knowledge, chronicling the mysteries of crimson magic.
-				
 			}
 
 			Broadsword: {
 				DisplayName: Broadsword
-				Tooltip: "Killing one is not a loss, killing two is a gain."
+				Tooltip: Killing one is not a loss, killing two is a gain.
 			}
 
 			Crystalfragments: {
@@ -1404,6 +1408,10 @@ Mods: {
 			ChlorophyteAxeProj.DisplayName: Chlorophyte Axe Proj
 			SunplateBoomerangProj.DisplayName: Sunplate Boomerang Proj
 			BigShockWaveProjectile2.DisplayName: Big Shock Wave Projectile2
+			SandRock.DisplayName: Sand Rock
+			LifeCrystalshards.DisplayName: Life Crystalshards
+			FirmFossil.DisplayName: Firm Fossil
+			CrystalProj.DisplayName: Crystal Proj
 		}
 
 		NPCs: {
@@ -1444,6 +1452,10 @@ Mods: {
 			ThunderstormEye.DisplayName: 雷暴之眼
 			FakeNPC.DisplayName: Fake N P C
 			RoamingTower.DisplayName: Roaming Tower
+			StormSlime.DisplayName: Storm Slime
+			MoonCore.DisplayName: Moon Core
+			LifeCrystalSlime.DisplayName: Life Crystal Slime
+			ImpurityMagicCrystal.DisplayName: Impurity Magic Crystal
 		}
 
 		Tiles: {

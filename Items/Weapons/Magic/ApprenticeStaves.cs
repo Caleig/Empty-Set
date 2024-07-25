@@ -33,7 +33,7 @@ namespace EmptySet.Items.Weapons.Magic
             Item.useTurn = false;
             Item.value = Item.sellPrice(0, 0, 21, 0);
             Item.value = Item.buyPrice(0, 0, 63, 0);
-            Item.damage = 35;
+            Item.damage = 8;
             Item.shootSpeed = 20f;
             Item.shoot = ModContent.ProjectileType<Projectiles.Magic.Magic1>();
             Item.UseSound = SoundID.Item20;
