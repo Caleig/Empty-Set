@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Threading;
+using EmptySet.NPCs.Boss.EarthShaker;
+using EmptySet.Projectiles.Summon;
+using EmptySet.Utils;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
@@ -27,12 +30,14 @@ namespace EmptySet.NPCs.Enemy
             base.SetDefaults();
             NPC.width = 32;
             NPC.height = 26;
-            NPC.damage = 12;
-            NPC.defense = 0;
+            NPC.damage = EmptySetUtils.GetNPCDamage(8, 16, 24);
+            NPC.defense = 3;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.value = 1000;
-            NPC.lifeMax = 60;
+            NPC.knockBackResist = EmptySetUtils.GetNPCknockBackResist(0.3f, 0.25f, 0.21f);
+            NPC.value = 50;
+            NPC.noGravity = true;
+            NPC.lifeMax = EmptySetUtils.GetNPCLifeMax(20, 40, 60);
 
             Main.npcFrameCount[NPC.type] = 9;
         }
@@ -53,61 +58,78 @@ namespace EmptySet.NPCs.Enemy
             {
                 case NPCState.Normal:
                 {
-                    if (_isFriendly)
-                    {
-                        var center = NPC.Center + NPC.velocity;//确定圆心位置
-                        var pos = center + rad.ToRotationVector2() * 50;//确定半径
-                        NPC.velocity = Vector2.Normalize(pos - NPC.Center) * 2f;
-                        if(NPC.collideX)
+                        if (_isFriendly)
                         {
-                            NPC.velocity.X = NPC.oldVelocity.X * -5f;
-                        }
-                        if(NPC.collideY)
-                        {
-                            NPC.velocity.Y = NPC.oldVelocity.Y * -5f;
-                        }
-                    }
-                    else
-                    {
-                        Player player = Main.player[NPC.target];
-                        float distance = Vector2.Distance(NPC.Center, player.Center);
-                        if (distance < 150)//过近尝试远离 禁！止！贴！贴！
-                        {
-							AfterUFmove = true;
-                            NPC.velocity = -Vector2.Normalize(player.Center - NPC.Center) * Accelerate;
-                            if (Accelerate < 10) Accelerate += 0.1f;
-                        }
-                        else if (distance > 300)//过远尝试靠近 让！我！康！康！
-                        {
-							AfterUFmove = true;
-                            NPC.velocity = Vector2.Normalize(player.Center - NPC.Center) * Accelerate;
-                            if (Accelerate < 10) Accelerate += 0.2f;
+                            NPC.velocity.Y += 0.2f;
+                            NPC.TargetClosest();
+                            Player player = Main.player[NPC.target];
+                            NPC.velocity.X = Vector2.Normalize(player.Center - NPC.Center).X * 2;
+                            if (NPC.collideX)
+                            {
+                                if (NPC.velocity.Y > -2f)
+                                {
+                                    NPC.velocity.Y -= 0.4f;
+                                }
+                            }
                         }
                         else
                         {
-                            if (Accelerate > 2) Accelerate -= 0.5f;
+                            /*NPC.TargetClosest();
+                            Player player = Main.player[NPC.target];
+                            float distance = Vector2.Distance(NPC.Center, player.Center);
+                            if(distance == 300)
+                            {
+                                
+                            }
+                            else if (distance < 150)//过近尝试远离 禁！止！贴！贴！
+                            {
+                                AfterUFmove = true;
+                                NPC.velocity = -Vector2.Normalize(player.Center - NPC.Center) * Accelerate;
+                                if (Accelerate < 10) Accelerate += 0.02f;
+                            }
+                            else if (distance > 300)//过远尝试靠近 让！我！康！康！
+                            {
+                                NPC.velocity = Vector2.Zero;
+                                /*AfterUFmove = true;
+                                NPC.velocity = Vector2.Normalize(player.Center - NPC.Center) * Accelerate;
+                                if (Accelerate < 10) Accelerate += 0.1f;
+                            }
+                            else
+                            {
+                                if (Accelerate > 2) Accelerate -= 0.5f;
+                            }*/
+                            SwitchState((int)NPCState.shoot);
+                            Timer++;
                         }
-                        SwitchState((int)NPCState.shoot);
-                        Timer++;
-                    }
                     break;
                 }
                 case NPCState.shoot:
                 {
-					shoot = true;
-                    Player player = Main.player[NPC.target];
+                        NPC.velocity.Y += 0.2f;
+                        NPC.TargetClosest();
+                        Player player = Main.player[NPC.target];
+                        NPC.velocity.X = Vector2.Normalize(player.Center - NPC.Center).X * 2;
+                        if (NPC.collideX)
+                        {
+                            if (NPC.velocity.Y > -2f)
+                            {
+                                NPC.velocity.Y -= 0.4f;
+                            }
+                        }
+                        shoot = true;
                     NPC.rotation = 0;
                     float distance = Vector2.Distance(NPC.Center, player.Center);
                     if (Timer >= 80 || (distance <= 300 && distance >= 150 && Timer >= 40))
                     {
-                        Vector2 ShootVelocity = player.Center - NPC.Center;
+                        Vector2 ShootVelocity = Vector2.Normalize(player.Center - NPC.Center) * 7f;
                         //ShootVelocity *= 0.5f;
                         for(int i = 0; i < 15; i++)
                         {
-                            Dust dust = Dust.NewDustDirect(NPC.position, 40, 40, ModContent.DustType<Dusts.Magic1>(), 0, 0, 0, default, 1.3f);
+                            Dust dust = Dust.NewDustDirect(NPC.position, 40, 40, DustID.GemSapphire, 0, 0, 0, default, 1.3f);
                             dust.noGravity = true;                        
                         }
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.position, ShootVelocity, ModContent.ProjectileType<Projectiles.MonsterProj.CrystalProj>(), 9, 3);
+                        Projectile pro = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.position, ShootVelocity, ModContent.ProjectileType<Projectiles.MonsterProj.CrystalProj>(), EmptySetUtils.GetNPCDamage(12, 24, 36), 3);
+                            pro.friendly = false;
                         Timer = 0;
                     }
                     SwitchState((int)NPCState.Normal);
@@ -245,8 +267,7 @@ namespace EmptySet.NPCs.Enemy
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             base.ModifyNPCLoot(npcLoot);
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Materials.ImpurityMagicCrystal>(), 4));
-            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Materials.MagicCrystal>(), 50));
+            npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Materials.ImpurityMagicCrystal>(), 3, 1, 2));
         }
     }
 }

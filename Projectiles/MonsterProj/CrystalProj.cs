@@ -51,10 +51,11 @@ namespace EmptySet.Projectiles.MonsterProj
 
 		public override void AI()
 		{
-			for(int i = 0; i < 1; i++)
+			for(int i = 0; i < 2; i++)
 			{
-				Dust dust = Dust.NewDustDirect(Projectile.Center, 10, 10, DustID.BlueCrystalShard, 0, 0);
-			}
+                Dust dust = Dust.NewDustDirect(Projectile.position, 4, 4, DustID.GemSapphire, 0, 0, 0, default, 1.3f);
+                dust.noGravity = true;
+            }
 		}
     }
 }
