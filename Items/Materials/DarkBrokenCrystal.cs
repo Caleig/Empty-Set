@@ -23,8 +23,8 @@ public class DarkBrokenCrystal : ModItem
     {
         Item.maxStack = 999;
         Item.width = 14;
-        Item.height = 16;
+        Item.height = 18;
         Item.rare = ItemRarityID.Orange;
-        Item.value = Item.sellPrice(0,0,35,0);
+        Item.value = Item.sellPrice(0,0,15,0);
     }
 }
