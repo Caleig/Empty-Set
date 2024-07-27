@@ -396,7 +396,7 @@ Mods: {
 
 			DarkBrokenCrystal: {
 				DisplayName: Dark Broken Crystal
-				Tooltip: '''"Broken crystals composed of blood"'''
+				Tooltip: '''"Flowing, condensing, crystallizing"'''
 			}
 
 			EternityAshBar: {
@@ -414,9 +414,9 @@ Mods: {
 				Tooltip: '''"Fel Shadow Tiles"'''
 			}
 
-			FlamtaintBar: {
-				DisplayName: Flamtaint Bar
-				Tooltip: '''"It give out sanguine sparks"'''
+			Flamtaint: {
+				DisplayName: Flamtaint
+				Tooltip: '''"resurgent"'''
 			}
 
 			GoldFragments: {
@@ -1035,6 +1035,37 @@ Mods: {
 				DisplayName: Night's Throwing Spear
 				Tooltip: An additional shadow spear will be fired when critically hit.
 			}
+
+			ViridSteel: {
+				DisplayName: Virid Steel
+				Tooltip: "[c/96ff0a:-Produced by Vered Steel-]"
+			}
+
+			ArdorBlossom: {
+				DisplayName: Ardor Blossom
+				Tooltip: "[c/ff9696:-Hellterfly's Dream-]"
+			}
+
+			DepravedBlood: {
+				DisplayName: Depraved Blood
+				Tooltip: "[c/ff2864:-Blood levy-]"
+			}
+
+			EvilFire: {
+				DisplayName: Evil Fire
+				Tooltip: "[c/96ff96:-Scorching Bones, Blazing Soul-]"
+			}
+
+			FrenziedFlame: {
+				DisplayName: Frenzied Flame
+				Tooltip: "[c/b428ff:-Raze The Skies-]"
+			}
+
+			Blazing: {
+				DisplayName: Blazing
+				Tooltip: "[c/ffaf00:-Hast thou ever beheld the fierce sun burst asunder before thine eyes?-]"
+			}
+
 
 			PinkGelFlybackBlade: {
 				DisplayName: Pink Gel Flyback Blade
