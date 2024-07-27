@@ -71,7 +71,7 @@ namespace EmptySet.NPCs.Enemy
                             NPC.velocity.X *= 0.9f;
                         }
                         Timer++;
-                        if (Timer > (Main.expertMode?45:60))
+                        if (Timer > (Main.expertMode?30:45))
                         {
                             Timer = 0;
                             if (_JumpTime == 1)
@@ -88,9 +88,8 @@ namespace EmptySet.NPCs.Enemy
                             else
                             {
                                 _jumpHigh += 1;
-                                if (_jumpHigh > 2) _jumpHigh = 0;
                                 NPC.velocity.X = NPC.ai[2] * 3;// 提供初始跳跃速度
-                                if (_jumpHigh == 2) NPC.velocity.Y = -8;
+                                if (_jumpHigh%3== 2) NPC.velocity.Y = -8;
                                 else NPC.velocity.Y = -6;
                                 SwitchState((int)NPCState.Jump);
                             }
@@ -119,31 +118,60 @@ namespace EmptySet.NPCs.Enemy
                     }
                 case NPCState.Jump:
                     {
-                        NPC.velocity.X = NPC.ai[2] * 3;
-                        if (NPC.collideY)
+                        Timer++;
+                        NPC.velocity.X = NPC.ai[2] * 5;
+                        Player player = Main.player[NPC.target];
+                        if ((NPC.collideY && NPC.position.Y > player.position.Y - 160) || Timer > 180)
                         {
                             SwitchState((int)NPCState.Ready);
+
+                            if (Main.rand.NextBool())
+                            {
+                                for (int i = 0; i < 9; i++)
+                                {
+                                    Vector2 ShootVelocity2 = new Vector2(0, -8).RotatedBy(Math.PI / 4.5f * i);
+                                    Projectile Proj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, ShootVelocity2, ModContent.ProjectileType<Projectiles.MonsterProj.SandRock>(), NPC.damage, 10);
+                                    Proj.scale = 1;
+                                }
+                            }
+                            else
+                            {
+                                Vector2 ShootVelocity;
+                                ShootVelocity = player.position - NPC.Center;
+                                ShootVelocity.Normalize();
+                                for (int i = 0; i < (Main.expertMode ? (Main.getGoodWorld ? 5 : 3) : 2); i++)
+                                {
+                                    Vector2 ShootVelocity2 = ShootVelocity.RotatedBy((Main.rand.NextFloat(1f) - 0.5) * Math.PI / 6) * (Main.expertMode ? 6 : 5);
+                                    Projectile Proj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, ShootVelocity2, ModContent.ProjectileType<Projectiles.MonsterProj.FirmFossil>(), NPC.damage / 4, 10);
+                                    Proj.scale = 2;
+                                }
+                            
+                            }
                         }
                         break;
                     }
                 case NPCState.shoot:
                     {
+                        Timer++;
+                        if (Timer % 25 == 0)
+                        {
                             Player player = Main.player[NPC.target];
                             Vector2 ShootVelocity = player.Center - NPC.Center;
                             ShootVelocity /= ShootVelocity.Length();
                             ShootVelocity *= 10f;
                             float r = (float)Math.Atan2(ShootVelocity.Y, ShootVelocity.X);
-                            int Count = disorder ? 2 : 1;
+                            int Count = 2;
 
-                            for (int i = -Count; i <= Count; i++)
+                            for (int i = -Count; i <= 1; i++)
 
                             {
-                                float r2 = r + i * MathHelper.Pi / (disorder ? 24f : 18f);
-                                Vector2 shootVel = r2.ToRotationVector2() * 7.5f;
-                                Projectile proj=Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.position, shootVel, ModContent.ProjectileType<Projectiles.MonsterProj.FirmFossil>(), NPC.damage/4, 10);
-                            proj.scale = 2;
+                                float r2 = r + i * MathHelper.Pi / 15f;
+                                Vector2 shootVel = r2.ToRotationVector2() * 5.5f;
+                                Projectile proj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, shootVel, ModContent.ProjectileType<Projectiles.MonsterProj.FirmFossil>(), NPC.damage / 4, 10);
+                                proj.scale = 2;
                             }
-                        SwitchState((int)NPCState.Ready);
+                        }
+                        if(Timer>45)SwitchState((int)NPCState.Ready);
                         break;
                     }
                 case NPCState.move:
@@ -155,25 +183,25 @@ namespace EmptySet.NPCs.Enemy
                         {
                             for (int i = 0; i < 8; i++)
                             {
-                                Vector2 Pos = PlayerPos + new Vector2(550, 0).RotatedBy(Math.PI / 4 * i);
-                                Dust.NewDustDirect(Pos, 10, 10, ModContent.DustType<Dusts.Magic1>(), 0, 0);
+                                Vector2 Pos = PlayerPos + new Vector2(90-Timer, 0).RotatedBy(Math.PI / 4 * i);
+                                Dust.NewDustDirect(Pos, 10, 10, 124, 0, 0);
                             }
                         }
                         if (Timer >= 90)
                         {
                             Timer = 0;
                             NPC.scale = 2;
-                            NPC.position = PlayerPos + new Vector2(0, -150);
+                            NPC.position = PlayerPos - new Vector2(NPC.width / 2, NPC.height+20);
                             NPC.ai[2] = Main.rand.NextBool() ? -1 : 1;
                             NPC.direction = (int)NPC.ai[2];
                             SwitchState((int)NPCState.Normal);
                             if (Main.expertMode)
                             {
-                                for (int i = 0; i < 3; i++)
+                                for (int i = 0; i < 4; i++)
                                 {
-                                    Vector2 ShootVelocity2 = new Vector2(0, -8).RotatedBy(Math.PI / 1.5f * i);
-                                    Projectile Proj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, ShootVelocity2, ModContent.ProjectileType<Projectiles.MonsterProj.SandRock>(), NPC.damage, 10);
-                                    Proj.scale = 1;
+                                    Vector2 ShootVelocity2 = new Vector2(0, -8).RotatedBy(Math.PI / 2 * i);
+                                    Projectile Proj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, ShootVelocity2, ModContent.ProjectileType<Projectiles.MonsterProj.SandRock>(), NPC.damage / 4, 10);
+                                    Proj.scale = 1.5f;
                                 }
                             }
                             Timer = 0;
