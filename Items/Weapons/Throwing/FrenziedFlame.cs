@@ -30,13 +30,13 @@ public class FrenziedFlame : ModItem
         Item.width = 48; //已精确测量
         Item.height = 50;
 
-        Item.damage = 120;
+        Item.damage = 110;
         Item.crit = 27;
 
         Item.knockBack = 7;
         Item.useStyle = ItemUseStyleID.Shoot;
-        Item.useTime = 10;
-        Item.useAnimation = 10;
+        Item.useTime = 13;
+        Item.useAnimation = 13;
 
         Item.DamageType = DamageClass.Throwing;
         Item.noMelee = true;
@@ -47,8 +47,16 @@ public class FrenziedFlame : ModItem
         Item.shoot = ModContent.ProjectileType<FrenziedFlameProj>();
         Item.shootSpeed = 80f;
     }
+
+    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+    {
+        Projectile.NewProjectileDirect(source, position, velocity.RotatedBy(MathHelper.ToRadians(-5f)), type, damage, knockback, player.whoAmI);
+        Projectile.NewProjectileDirect(source, position, velocity.RotatedBy(MathHelper.ToRadians(5f)), type, damage, knockback, player.whoAmI);
+        return false;
+    }
+
     public override bool CanUseItem(Player player)
-        => player.ownedProjectileCounts[Item.shoot] < 2;
+        => player.ownedProjectileCounts[Item.shoot] < 4;
     public override void AddRecipes() => CreateRecipe()
         .AddIngredient(ItemID.Ectoplasm,10)
         .AddIngredient<EvilFire>()
