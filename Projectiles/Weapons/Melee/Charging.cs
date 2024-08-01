@@ -11,11 +11,15 @@ using EmptySet.Projectiles.Melee;
 using EmptySet.Common.Effects.Item;
 using EmptySet.Items.Weapons.Magic;
 using EmptySet.Extensions;
+using Terraria.Audio;
 
 namespace EmptySet.Projectiles.Weapons.Melee
 {
     public class Charging : ModProjectile
     {
+        float d;
+        float r = 0;
+        float r2;
         public override void SetDefaults()
         {
             Projectile.friendly = true;
@@ -43,6 +47,16 @@ namespace EmptySet.Projectiles.Weapons.Melee
             }
             if(Projectile.localAI[0] == 300)
             {
+                for (int i = 0; i < 50; i++)
+                {
+
+                    r += MathHelper.TwoPi / 50;
+                    d = 14;
+                    Vector2 velocity = new Vector2((float)Math.Cos(r), (float)Math.Sin(r)) * 10f;
+                    Dust dust2 = Dust.NewDustPerfect(player.Center, DustID.YellowStarDust, velocity, 0, Color.White, 2f);
+                    dust2.noGravity = true;
+                }
+                SoundEngine.PlaySound(SoundID.Item93);
                 player.AddBuff(ModContent.BuffType<Buffs.Lightning>(), 180);
                 Projectile.localAI[0] = 0;
                 Projectile.Kill();

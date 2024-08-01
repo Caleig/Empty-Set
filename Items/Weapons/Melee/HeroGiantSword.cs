@@ -23,7 +23,7 @@ namespace EmptySet.Items.Weapons.Melee
             Item.useTime = 28;
             Item.useAnimation = 28;
             Item.reuseDelay = 40 - (int)((player.GetAttackSpeed(DamageClass.Melee) - 1f) * 40);
-            Item.useStyle = ItemUseStyleID.Swing;
+            Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
             Item.noUseGraphic = true;
             Item.knockBack = 8;

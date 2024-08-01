@@ -132,23 +132,24 @@ namespace EmptySet.Projectiles.Weapons.Melee
         }
         public void Generate(Vector2 vector2, NPC target)
         {
-            Vector2 vector21 = Vector2.Normalize(target.Center - vector2);
+            ;
+            float distance = (vector2.Y - target.Center.Y);
             // 根节点生成，朝向0，粗细1，长度随机50中选
-            root = new Node(0, 3f, 10f);
+            root = new Node(0, 2f, 12f);
             root = _build(root, false);
         }
         private Node _build(Node node, bool isMain)
         {
             // 终止条件：树枝太细了，或者太短了
-            if (node.size < 0.1f || node.length < 1) return node;
-            float r = isMain ? MathHelper.Pi / 3f : MathHelper.Pi / 120f;
-            Node main = new Node(rand(r), node.size * 0.95f, node.length);
+            if (node.size < 0.6f || node.length < 1) return node;
+            float r = isMain ? MathHelper.Pi / 6f : MathHelper.Pi / 120f;
+            Node main = new Node(rand(r), node.size * 0.98f, node.length);
             node.children.Add(_build(main, isMain));
             // 只有较小的几率出分支
-            if (rand2() > 0.98f)
+            if (rand2() > 1.5f)
             {
                 // 生成分支的时候长度变化不大，但是大小变化很大
-                Node child = new Node(rand(MathHelper.Pi / 3f), node.size * 0.5f, node.length);
+                Node child = new Node(rand(MathHelper.Pi / 6f), node.size * 0.5f, node.length);
                 node.children.Add(_build(child, false));
             }
             return node;
@@ -164,7 +165,7 @@ namespace EmptySet.Projectiles.Weapons.Melee
             // 类似激光的线性绘制方法，绘制出树枝
             for (float i = 0; i <= node.length; i += 0.04f)
             {
-                Main.spriteBatch.Draw(ModContent.Request<Texture2D>("BTLc/Projectiles/Marksman/1").Value, pos + unit * i, new Rectangle(0, 0, 1, 1), Color.White * 0.5f, 0,
+                Main.spriteBatch.Draw(ModContent.Request<Texture2D>("EmptySet/Projectiles/Weapons/Melee/1").Value, pos + unit * i, new Rectangle(0, 0, 1, 1), Color.White * 0.5f, 0,
                     new Vector2(0.5f, 0.5f), Math.Max(node.size * 7, 0.2f), SpriteEffects.None, 0f);
             }
             // 递归到子节点进行绘制

@@ -86,7 +86,7 @@ namespace EmptySet.Projectiles.Weapons.Melee
                 {
                     startVector = Vector2.UnitX.RotatedBy(-TotalRadians / 2) * Pro2PlrDis;
                 }
-                VerticalScaling = Main.rand.NextFloat(Main.rand.NextFloat(0.3f, 1f), 1f);
+                VerticalScaling = Main.rand.NextFloat(1f, 1f);
                 Projectile.localAI[1] = 1;
             }
             if (Pdir == -1)
@@ -107,6 +107,8 @@ namespace EmptySet.Projectiles.Weapons.Melee
             Projectile.position = player.Center + v1;
             Projectile.rotation = Rot;
             Projectile.velocity = v2.RotatedBy(MathHelper.PiOver2) / v2.Length();
+            player.headRotation = Rot;
+            player.headVelocity = Projectile.velocity;
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
