@@ -28,7 +28,7 @@ namespace EmptySet.Projectiles.Weapons.Melee
             Projectile.penetrate = 1;
             Projectile.timeLeft = 5;
             Projectile.ignoreWater = true;
-            Projectile.tileCollide = true;
+            Projectile.tileCollide = false;
             Projectile.damage = 4;
             Projectile.light = 0.5f;
             Projectile.scale = 1.3f;

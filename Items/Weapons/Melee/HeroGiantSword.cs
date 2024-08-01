@@ -26,9 +26,9 @@ namespace EmptySet.Items.Weapons.Melee
             Item.useStyle = ItemUseStyleID.Swing;
             Item.noMelee = true;
             Item.noUseGraphic = true;
-            Item.knockBack = 6;
-            Item.value = 20000;
-            Item.rare = 5;
+            Item.knockBack = 8;
+            Item.value = 120000;
+            Item.rare = 6;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
             Item.channel = true;
