@@ -60,7 +60,6 @@ namespace EmptySet.Projectiles.Magic
             projectile.width = projectile.height = (int)(80 * Projectile.scale);
             projectile.usesLocalNPCImmunity = false;
             projectile.timeLeft = 5;
-            projectile.Center = new Vector2(Projectile.Hitbox.X, Projectile.Hitbox.Y);
         }
     }
 }

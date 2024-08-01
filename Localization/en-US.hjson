@@ -47,6 +47,11 @@ Mods: {
 				Description: Mods.EmptySet.Buffs.Heartbroken.Description
 				DisplayName: Heartbroken
 			}
+
+			Lightning: {
+				DisplayName: Lightning
+				Description: Mods.EmptySet.Buffs.Lightning.Description
+			}
 		}
 
 		Items: {
@@ -1066,7 +1071,6 @@ Mods: {
 				Tooltip: "[c/ffaf00:-Hast thou ever beheld the fierce sun burst asunder before thine eyes?-]"
 			}
 
-
 			PinkGelFlybackBlade: {
 				DisplayName: Pink Gel Flyback Blade
 				Tooltip: Throw out a powder gel fly-back blade that can penetrate the enemy, and stack up to 5 blades.
@@ -1253,6 +1257,16 @@ Mods: {
 
 			ChargedController: {
 				DisplayName: Charged Controller
+				Tooltip: ""
+			}
+
+			FlamtaintBar: {
+				DisplayName: Flamtaint Bar
+				Tooltip: ""
+			}
+
+			HeroGiantSword: {
+				DisplayName: Hero Giant Sword
 				Tooltip: ""
 			}
 		}
@@ -1443,6 +1457,18 @@ Mods: {
 			LifeCrystalshards.DisplayName: Life Crystalshards
 			FirmFossil.DisplayName: Firm Fossil
 			CrystalProj.DisplayName: Crystal Proj
+			HeroGiantSword.DisplayName: Hero Giant Sword
+			Lightning.DisplayName: Lightning
+			ArdorBlossomProj.DisplayName: Ardor Blossom Proj
+			BlazingProj.DisplayName: Blazing Proj
+			FlameBallExplode.DisplayName: Flame Ball Explode
+			DepravedBloodProj.DisplayName: Depraved Blood Proj
+			EvilFireProj.DisplayName: Evil Fire Proj
+			FrenziedFlameProj.DisplayName: Frenzied Flame Proj
+			FrenziedExplode.DisplayName: Frenzied Explode
+			ViridSteelProj.DisplayName: Virid Steel Proj
+			Charging.DisplayName: Charging
+			LightningBoom.DisplayName: Lightning Boom
 		}
 
 		NPCs: {

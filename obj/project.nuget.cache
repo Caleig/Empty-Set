@@ -1,13 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dMTwCnJCTFs=",
+  "dgSpecHash": "M1ygTcFjX0s=",
   "success": true,
   "projectFilePath": "C:\\Users\\Caleigh\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\EmptySet\\EmptySet.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Caleigh\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512",
-    "C:\\Users\\Caleigh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.32\\microsoft.windowsdesktop.app.ref.6.0.32.nupkg.sha512",
-    "C:\\Users\\Caleigh\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.32\\microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
-    "C:\\Users\\Caleigh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.32\\microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
+    "C:\\Users\\Caleigh\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],
   "logs": []
 }

@@ -47,60 +47,14 @@ Mods: {
 				// Description: Mods.EmptySet.Buffs.Heartbroken.Description
 				// DisplayName: Heartbroken
 			}
+
+			Lightning: {
+				// DisplayName: Lightning
+				// Description: Mods.EmptySet.Buffs.Lightning.Description
+			}
 		}
 
 		Items: {
-		DemonHand: {
-				DisplayName: 魔之手
-				Tooltip: 
-				'''
-				“这本书似乎封印着一个恶魔，不过谁在乎呢？好用就行”
-				那只看起来像柴犬的兽人如是说到
-				'''
-			}
-
-			SingtheWoods: {
-				DisplayName: 林之咏
-				Tooltip:
-					'''
-					绿色能量环绕在周围
-					“吸收自然精华”
-					'''
-			}
-
-			ImpurityMagicCrystal: {
-				DisplayName: 杂质魔晶
-				Tooltip: 从一种未知生命体身上取下的水晶
-			}
-
-			MagicCrystal: {
-				DisplayName: 原魔晶
-				Tooltip: 闪烁着微光
-			}
-
-			ApprenticeStaves: {
-				DisplayName: 学徒法杖
-				Tooltip: 通过操控魔法粒子直接进行攻击
-			}
-
-			BookofRocks: {
-				DisplayName: 沙暴之书
-				Tooltip:
-					'''
-					“这东西似乎封印着一个恶魔，但谁在乎呢？好用就行”
-					那个长得像柴犬的兽人如是说道
-					'''
-			}
-
-			ScarletExplosiveBomb: {
-				DisplayName: 猩红爆弹
-				Tooltip: 充满魔法粒子，寄宿着神秘的猩红恶魔
-			}
-
-			Broadsword: {
-				DisplayName: 大刀
-				Tooltip: 杀一个不亏，杀两个赚了
-			}
 			EnergyDynamite: {
 				DisplayName: 充能爆弹
 				Tooltip:
@@ -1303,6 +1257,16 @@ Mods: {
 				// DisplayName: Charged Controller
 				// Tooltip: ""
 			}
+
+			FlamtaintBar: {
+				// DisplayName: Flamtaint Bar
+				// Tooltip: ""
+			}
+
+			HeroGiantSword: {
+				// DisplayName: Hero Giant Sword
+				// Tooltip: ""
+			}
 		}
 
 		Projectiles: {
@@ -1491,6 +1455,18 @@ Mods: {
 			// LifeCrystalshards.DisplayName: Life Crystalshards
 			// FirmFossil.DisplayName: Firm Fossil
 			// CrystalProj.DisplayName: Crystal Proj
+			// HeroGiantSword.DisplayName: Hero Giant Sword
+			// Lightning.DisplayName: Lightning
+			// ArdorBlossomProj.DisplayName: Ardor Blossom Proj
+			// BlazingProj.DisplayName: Blazing Proj
+			// FlameBallExplode.DisplayName: Flame Ball Explode
+			// DepravedBloodProj.DisplayName: Depraved Blood Proj
+			// EvilFireProj.DisplayName: Evil Fire Proj
+			// FrenziedFlameProj.DisplayName: Frenzied Flame Proj
+			// FrenziedExplode.DisplayName: Frenzied Explode
+			// ViridSteelProj.DisplayName: Virid Steel Proj
+			// Charging.DisplayName: Charging
+			// LightningBoom.DisplayName: Lightning Boom
 		}
 
 		NPCs: {

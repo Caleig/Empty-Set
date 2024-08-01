@@ -32,8 +32,8 @@ namespace EmptySet.Projectiles.Magic
             Projectile.ai[0] += 8f;
             for (int i = 0; i < 20; i++)
             {
-                float num1 = Main.rand.Next(-27, 28);
-                float num2 = Main.rand.Next(-27, 28);
+                float num1 = Main.rand.Next(-79, 80);
+                float num2 = Main.rand.Next(-79, 80);
                 float num3 = (float)Math.Sqrt(num1 * num1 + num2 * num2);
                 num3 = Main.rand.Next(9, 18) / num3;
                 num1 *= num3;
