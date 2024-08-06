@@ -40,7 +40,7 @@ public class 寒川 : ModItem
         Item.damage = 31;
         Item.knockBack = KnockBackLevel.BeHigher;
         Item.crit = 4;
-        Item.UseSound = SoundID.Item12;
+        Item.UseSound = SoundID.Item20;
         Item.mana = 15;
 
         Item.autoReuse = true;
@@ -76,13 +76,7 @@ public class 寒川 : ModItem
         }
         if (Main.mouseRight)
         {
-            var offset_y = 650;
-            var offset_x = 50;
-            //var offset1 = (MathHelper.ToRadians(-90f) * Vector2.One.Length()).ToRotationVector2() * 14;
-            //var offset2 = (MathHelper.ToRadians(90f) * Vector2.One.Length()).ToRotationVector2() * 14;
-            var pos = Main.MouseWorld;
-            Projectile.NewProjectile(source, new Vector2(pos.X - offset_x, pos.Y - offset_y), new Vector2(0,3), ProjectileID.BallofFrost, damage, knockback, player.whoAmI);
-            Projectile.NewProjectile(source, new Vector2(pos.X + offset_x, pos.Y - offset_y), new Vector2(0,3), ProjectileID.BallofFrost, damage, knockback, player.whoAmI);
+            Projectile.NewProjectile(source, position, velocity/2, ModContent.ProjectileType<MoonProj>(), damage, KnockBackLevel.BeLower, player.whoAmI);
             return false;
         }
         return false;
