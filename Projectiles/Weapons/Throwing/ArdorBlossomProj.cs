@@ -24,7 +24,7 @@ public class ArdorBlossomProj : ModProjectile
         Projectile.width = 46; //已精确测量
         Projectile.height = 40;
         Projectile.friendly = true; 
-        Projectile.penetrate = 9 + 1;
+        Projectile.penetrate = 6 + 1;
         Projectile.timeLeft = 11 * EmptySet.Frame;
 
 		Projectile.ignoreWater = false;

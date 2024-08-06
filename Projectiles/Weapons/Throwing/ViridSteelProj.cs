@@ -24,7 +24,7 @@ public class ViridSteelProj : ModProjectile
         Projectile.width = 48; //已精确测量
         Projectile.height = 40;
         Projectile.friendly = true;
-        Projectile.penetrate = 6 + 1;
+        Projectile.penetrate = 2 + 1;
         Projectile.timeLeft = 10 * EmptySet.Frame;
 
 		Projectile.ignoreWater = false;
