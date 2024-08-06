@@ -31,7 +31,7 @@ public class EvilFire : ModItem
         Item.height = 50;
 
         Item.damage = 65;
-        Item.crit = 21;
+        Item.crit = 12;
 
         Item.knockBack = 7;
         Item.useStyle = ItemUseStyleID.Shoot;

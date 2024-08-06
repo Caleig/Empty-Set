@@ -31,7 +31,7 @@ public class ArdorBlossom : ModItem
         Item.height = 40;
 
         Item.damage = 66;
-        Item.crit = 21;
+        Item.crit = 10;
 
         Item.knockBack = 3;
         Item.useStyle = ItemUseStyleID.Shoot;

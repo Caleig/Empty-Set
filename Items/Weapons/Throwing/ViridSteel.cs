@@ -29,7 +29,7 @@ public class ViridSteel : ModItem
         Item.height = 40;
 
         Item.damage = 30;
-        Item.crit = 9;
+        Item.crit = 5;
 
         Item.knockBack = 2;
         Item.useStyle = ItemUseStyleID.Shoot;

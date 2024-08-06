@@ -31,7 +31,7 @@ public class DepravedBlood : ModItem
         Item.height = 60;
 
         Item.damage = 150;
-        Item.crit = 27;
+        Item.crit = 17;
 
         Item.knockBack = 6;
         Item.useStyle = ItemUseStyleID.Shoot;

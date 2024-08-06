@@ -31,7 +31,7 @@ public class FrenziedFlame : ModItem
         Item.height = 50;
 
         Item.damage = 110;
-        Item.crit = 27;
+        Item.crit = 15;
 
         Item.knockBack = 7;
         Item.useStyle = ItemUseStyleID.Shoot;
