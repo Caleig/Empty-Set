@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmptySet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4aae9c951c86f8a8cb0f9e3d4d8b3a0517626f80")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8d5bc232e45ddb14bf538056f32a921b351387f")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmptySet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmptySet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

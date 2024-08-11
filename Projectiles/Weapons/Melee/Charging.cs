@@ -25,16 +25,18 @@ namespace EmptySet.Projectiles.Weapons.Melee
             Projectile.friendly = true;
             Projectile.ownerHitCheck = true;
             Projectile.penetrate = -1;
-            Projectile.Size = new(50);
+            Projectile.Size = new(0);
             Projectile.tileCollide = false;
             Projectile.DamageType = DamageClass.MeleeNoSpeed;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
-            Projectile.timeLeft = 300;
+            Projectile.damage = 0;
+            Projectile.timeLeft = 2;
         }
         public override void AI()
         {
             Player player = Main.player[Projectile.owner];
+            Projectile.Center = player.Center;
             Dust dust = Dust.NewDustDirect((Main.player[Projectile.owner].position + new Vector2(9, 0)), 16, 15, DustID.YellowStarDust);
             dust.velocity.Y = -10;
             if (player.HeldItem.type == ModContent.ItemType<Items.Weapons.Melee.HeroGiantSword>() && Main.mouseRight)
@@ -45,7 +47,7 @@ namespace EmptySet.Projectiles.Weapons.Melee
                 player.itemAnimation = 2;
                 
             }
-            if(Projectile.localAI[0] == 300)
+            if (Projectile.localAI[0] == 300)
             {
                 for (int i = 0; i < 50; i++)
                 {
@@ -56,12 +58,18 @@ namespace EmptySet.Projectiles.Weapons.Melee
                     Dust dust2 = Dust.NewDustPerfect(player.Center, DustID.YellowStarDust, velocity, 0, Color.White, 2f);
                     dust2.noGravity = true;
                 }
-                SoundEngine.PlaySound(SoundID.Item93);
-                player.AddBuff(ModContent.BuffType<Buffs.Lightning>(), 180);
-                Projectile.localAI[0] = 0;
+                player.GetModPlayer<LightningEffect>().Lightning = true;
+                //player.AddBuff(ModContent.BuffType<Buffs.Lightning>(), 180);
                 Projectile.Kill();
+                SoundEngine.PlaySound(SoundID.Item93);
+
             }
             base.AI();
+        }
+        public override void OnKill(int timeLeft)
+        {
+            Projectile.localAI[0] = 0;
+            base.OnKill(timeLeft);
         }
         public override void PostDraw(Color lightColor)
         {

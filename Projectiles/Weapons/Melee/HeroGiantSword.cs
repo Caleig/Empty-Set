@@ -13,6 +13,7 @@ using Mono.Cecil;
 using EmptySet.Projectiles.Melee;
 using EmptySet.Extensions;
 using Terraria.Audio;
+using EmptySet.Common.Effects.Item;
 
 namespace EmptySet.Projectiles.Weapons.Melee
 {
@@ -109,6 +110,11 @@ namespace EmptySet.Projectiles.Weapons.Melee
             Projectile.velocity = v2.RotatedBy(MathHelper.PiOver2) / v2.Length();
             player.headRotation = Rot;
             player.headVelocity = Projectile.velocity;
+            if(player.GetModPlayer<LightningEffect>().Lightning)
+            {
+                player.AddBuff(ModContent.BuffType<Buffs.Lightning>(), 180);
+                player.GetModPlayer<LightningEffect>().Lightning = false;
+            }
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
