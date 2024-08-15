@@ -23,8 +23,8 @@ public class ChlorophyteBow : ModItem
     }
     public override void SetDefaults()
     {
-        Item.width = 38;
-        Item.height = 80;
+        Item.width = 30;
+        Item.height = 68;
         Item.useStyle = ItemUseStyleID.Shoot;
         Item.useTime = UseSpeedLevel.VeryFastSpeed;
         Item.useAnimation = UseSpeedLevel.VeryFastSpeed;
