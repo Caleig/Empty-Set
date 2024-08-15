@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using EmptySet.Tiles;
+using EmptySet.Utils;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -38,12 +40,10 @@ public class SoulOfPolymerization : ModItem
 
     public override void AddRecipes() => CreateRecipe()
         .AddIngredient(ItemID.SoulofSight)
-        .AddIngredient(ItemID.SoulofFlight)
         .AddIngredient(ItemID.SoulofFright)
         .AddIngredient(ItemID.SoulofMight)
         .AddIngredient(ItemID.SoulofNight)
         .AddIngredient(ItemID.SoulofLight)
-        .AddIngredient<RaySoul>()
-        .AddTile(TileID.DemonAltar)
+        .AddTile(ModContent.TileType<FusioninstrumentTile>())
         .Register();
 }
