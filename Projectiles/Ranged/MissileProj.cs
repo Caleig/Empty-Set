@@ -74,6 +74,7 @@ public class MissileProj : ModProjectile
 	}
     public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
     {
+        SoundEngine.PlaySound(SoundID.Item62, Projectile.position);
         modifiers.ScalingArmorPenetration += 3 ;
         modifiers.FinalDamage.Flat = 540;
         base.ModifyHitNPC(target, ref modifiers);
