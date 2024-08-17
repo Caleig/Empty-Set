@@ -942,6 +942,16 @@ Mods: {
 					'''
 			}
 
+			ON157: {
+				DisplayName: ON157
+				Tooltip:
+					'''
+					[c/05c8ff:-Charged-]
+					"Right-clicking costs 9 energy to launch a small missile"
+					"Fragmented!"
+					'''
+			}
+
 			CruisingController: {
 				DisplayName: Cruising Controller
 				Tooltip: ""
@@ -1507,6 +1517,11 @@ Mods: {
 			ChargedProj.DisplayName: Charged Proj
 			FugitiveProj.DisplayName: Fugitive Proj
 			CircularSawProj.DisplayName: Circular Saw Proj
+			ChargedProjExplode.DisplayName: Charged Proj Explode
+			missile.DisplayName: missile
+			MissileProj.DisplayName: Missile Proj
+			SpilledProj.DisplayName: Spilled Proj
+			SpilledExplode.DisplayName: Spilled Explode
 		}
 
 		NPCs: {
