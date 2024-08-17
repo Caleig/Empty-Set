@@ -30,7 +30,7 @@ public class MissileProj : ModProjectile
     {
         Projectile.localAI[0]++;
         Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
-        if (Projectile.localAI[0] == 81) Projectile.velocity *= 6.3f;
+        if (Projectile.localAI[0] == 66) Projectile.velocity *= 9.9f;
         if (Main.rand.NextBool(2))
         {
             dust = Dust.NewDustDirect(Projectile.position + new Vector2(0, 12).RotatedBy(Projectile.rotation), 1, 1, DustID.Electric);
