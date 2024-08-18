@@ -106,6 +106,7 @@ Mods: {
 				DisplayName: Bloodletting Knife
 				Tooltip:
 					'''
+					[c/d2a0ff:Contaminate]
 					10% increased damage
 					10% increased critcal strike chance
 					"A dagger used by worshippers of the ancient gods"
@@ -281,6 +282,7 @@ Mods: {
 				DisplayName: Ulcer Pupil
 				Tooltip:
 					'''
+					[c/d2a0ff:Contaminate]
 					Increases armor penetration by 10
 					"This thing is disgusting."
 					'''
@@ -299,6 +301,25 @@ Mods: {
 			苦寒吊坠: {
 				DisplayName: 苦寒吊坠
 				Tooltip: ""
+			}
+
+			KeenKnife: {
+				DisplayName: Keen knife
+				Tooltip:
+					'''
+					Slightly increases damage and attack speed
+					"Still sharp."
+					'''
+			}
+
+			BlueEyE: {
+				DisplayName: Blue EyE
+				Tooltip:
+					'''
+					+5Increases armor
+					+5%Critical strike chance
+					"Always feel as if the stone is seemingly looking at me."
+					'''
 			}
 
 			AbyssCore: {
@@ -514,6 +535,15 @@ Mods: {
 					'''
 					It is used for polymerization, and can also be used as an altar
 					[c/05c8ff:【All in one】]
+					'''
+			}
+
+			Purifier: {
+				DisplayName: 净化仪
+				Tooltip:
+					'''
+					Used to decontaminate contaminated props(Need Purification Powder)
+					"Purge!"
 					'''
 			}
 
@@ -1576,6 +1606,7 @@ Mods: {
 			崩溃祭坛Tile.MapEntry: 崩溃祭坛
 			缭乱砾岩Tile.MapEntry: 缭乱砾岩
 			FusioninstrumentTile.MapEntry: Fusioninstrument
+			PurifierTile.MapEntry: Purifier
 		}
 
 		UI.Energy: Energy

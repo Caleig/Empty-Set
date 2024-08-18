@@ -114,7 +114,7 @@ Mods: {
 				DisplayName: 放血短刀
 				Tooltip:
 					'''
-					古神信徒曾用于祭祀的匕首
+					[c/d2a0ff:污染]
 					增加玩家10%的全属性伤害与10%的暴击率,但代价是什么呢？
 					"传闻信徒们会用刀划开手臂，用自己的鲜血来祭祀神明。"
 					'''
@@ -283,6 +283,7 @@ Mods: {
 				DisplayName: 溃烂瞳孔
 				Tooltip:
 					'''
+					[c/d2a0ff:污染]
 					增加10点盔甲穿透力
 					"这玩意可真恶心"
 					'''
@@ -301,6 +302,24 @@ Mods: {
 			苦寒吊坠: {
 				DisplayName: 苦寒吊坠
 				Tooltip: ""
+			}
+
+			KeenKnife: {
+				DisplayName: 利锐佩刀
+				Tooltip:
+					'''
+					略微增加全属性伤害与攻击速度
+					"锋利依旧"
+					'''
+			}
+
+			BlueEyE: {
+				DisplayName: 蓝眼石
+				Tooltip:
+					'''
+					增加盔甲穿透与暴击率
+					"总感觉这石头似乎在看着我"
+					'''
 			}
 
 			AbyssCore: {
@@ -516,6 +535,15 @@ Mods: {
 					'''
 					用于合成聚合相关，也可当作祭坛使用
 					[c/05c8ff:【万构合一】]
+					'''
+			}
+
+			Purifier: {
+				DisplayName: 净化仪
+				Tooltip:
+					'''
+					用于净化被污染的物品（需要净化粉）
+					"净化！"
 					'''
 			}
 
@@ -1579,6 +1607,7 @@ Mods: {
 			崩溃祭坛Tile.MapEntry: 崩溃祭坛
 			缭乱砾岩Tile.MapEntry: 缭乱砾岩
 			FusioninstrumentTile.MapEntry: 聚合魔仪
+			PurifierTile.MapEntry: 净化台
 		}
 
 		UI.Energy: 能量
