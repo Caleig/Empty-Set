@@ -55,22 +55,7 @@ Mods: {
 		}
 
 		Items: {
-		CopperBulletItem: {
-				DisplayName: 铜质弹丸
-				Tooltip: 所以为什么到了未来还要用大口径的铜质弹丸
-			}
-
-			LeadBulletItem: {
-				DisplayName: 铅质弹丸
-				Tooltip: 多么古老的弹药啊
-			}
-
-			TinBulletItem: {
-				DisplayName: 锡质弹丸
-				Tooltip: 配合枪使用更佳哦~
-			}
-
-			CrystalBreastPlate: {
+		CrystalBreastPlate: {
 				DisplayName: 魔晶胸甲
 				Tooltip: 木甲附魔过后的产物
 			}
@@ -202,41 +187,6 @@ Mods: {
 					“吸收自然精华”
 					'''
 			}
-
-			BambooBlunderBuss: {
-				DisplayName: 竹制火铳
-				Tooltip: 用竹子做火铳真的不会炸膛吗
-			}
-
-			Bonebow: {
-				DisplayName: 骨弓
-				Tooltip: 每诞生一把骨弓，就会有一个骷髅被杀害，没有买卖就没有伤害（bushi）
-			}
-
-			Vinebow: {
-				DisplayName: 藤蔓弓
-				// Tooltip: ""
-			}
-
-			CaidanZuolun: {
-				DisplayName: 彩弹左轮
-				Tooltip:
-					'''
-					究竟是左轮变了心，还是彩弹枪出了轨
-					当连续攻击5次以上时可右键使用特殊功能
-					漫游左轮表示很赞
-					'''
-			}
-
-			IronBlunderBuss: {
-				DisplayName: 三眼铳
-				Tooltip:
-					'''
-					铳口如鸟铳大，可容铅弹三钱
-					————《武备要略》
-					'''
-			}
-
 			Broadsword: {
 				DisplayName: 大刀
 				Tooltip:
@@ -280,8 +230,8 @@ Mods: {
 				DisplayName: 沙暴之书
 				Tooltip: 
 				'''
-				“看上去好像寄宿着一只恶魔，不过谁在乎呢？好用就行”
-				那只看上去像是柴犬的兽人如是说道
+				“似乎寄宿着一只恶魔，但谁在乎呢？好用就行”
+				一只长得像柴犬的兽人如是说道
 				'''
 			}
 
@@ -1776,6 +1726,17 @@ Mods: {
 			// ViridSteelProj.DisplayName: Virid Steel Proj
 			// Charging.DisplayName: Charging
 			// LightningBoom.DisplayName: Lightning Boom
+			// MoonExplode.DisplayName: Moon Explode
+			// MoonProj.DisplayName: Moon Proj
+			// ChargedExplode.DisplayName: Charged Explode
+			// ChargedProj.DisplayName: Charged Proj
+			// FugitiveProj.DisplayName: Fugitive Proj
+			// CircularSawProj.DisplayName: Circular Saw Proj
+			// ChargedProjExplode.DisplayName: Charged Proj Explode
+			// missile.DisplayName: missile
+			// MissileProj.DisplayName: Missile Proj
+			// SpilledProj.DisplayName: Spilled Proj
+			// SpilledExplode.DisplayName: Spilled Explode
 		}
 
 		NPCs: {
