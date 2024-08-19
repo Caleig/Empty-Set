@@ -1,12 +1,14 @@
-﻿using Microsoft.Xna.Framework;
+﻿using EmptySet.Common.Players;
 using EmptySet.Common.Systems;
 using EmptySet.Items.Materials;
+using EmptySet.Projectiles.Ranged;
 using EmptySet.Utils;
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace EmptySet.Items.Weapons.Ranged;
@@ -16,6 +18,7 @@ namespace EmptySet.Items.Weapons.Ranged;
 /// </summary>
 public class Clamour : ModItem
 {
+    private int EnergyCost = 5;
     public override void SetStaticDefaults()
     {
         // DisplayName.SetDefault("Clamour");
@@ -26,15 +29,15 @@ public class Clamour : ModItem
         Item.width = 64;
         Item.height = 26;
         Item.useStyle = ItemUseStyleID.Shoot;
-        Item.useTime = UseSpeedLevel.ExtremeSpeed + 1;
-        Item.useAnimation = UseSpeedLevel.ExtremeSpeed + 1;
+        Item.useTime = UseSpeedLevel.ExtremeSpeed + 3;
+        Item.useAnimation = UseSpeedLevel.ExtremeSpeed + 3;
         Item.autoReuse = true;
         Item.DamageType = DamageClass.Ranged;
         Item.noMelee = true;
         Item.damage = 5;
         Item.knockBack = KnockBackLevel.None + 0.5f;
         Item.crit = 4 - 4;
-        Item.value = Item.sellPrice(0, 8, 0, 0);
+        Item.value = Item.sellPrice(0, 10, 0, 0);
         Item.rare = ItemRarityID.Blue;
         Item.UseSound = SoundID.Item11;
 
@@ -42,24 +45,35 @@ public class Clamour : ModItem
         Item.shootSpeed = 9f;
         Item.useAmmo = AmmoID.Bullet;
     }
-
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
+        if (Main.mouseLeft)
+        {
         var offset = Main.rand.NextFloat(MathHelper.ToRadians(-3f), MathHelper.ToRadians(3f));
         var vel = velocity.RotatedBy(offset);
         Projectile.NewProjectile(source, position, vel, type, damage, knockback, Main.myPlayer);
         return false;
-    }
-    public override void OnConsumeAmmo(Item ammo, Player player)
-    {
-        if (Main.rand.NextBool(10))
-            ammo.stack--;
+        }
+        if (Main.mouseRight)
+        {
+            var myEnergier = player.GetModPlayer<EnergyPlayer>();
+            if (myEnergier.Consume(EnergyCost))
+            {
+            Projectile.NewProjectileDirect(source, position, velocity.RotatedBy(MathHelper.ToRadians(-5f)), type, damage, knockback, player.whoAmI);
+            Projectile.NewProjectileDirect(source, position, velocity.RotatedBy(MathHelper.ToRadians(-2f)), type, damage, knockback, player.whoAmI);
+            Projectile.NewProjectileDirect(source, position, velocity.RotatedBy(MathHelper.ToRadians(5f)), type, damage, knockback, player.whoAmI);
+            Projectile.NewProjectileDirect(source, position, velocity.RotatedBy(MathHelper.ToRadians(2f)), type, damage, knockback, player.whoAmI);
+            }
+        }
+        return false;
     }
 
+    public override Vector2? HoldoutOffset() => new Vector2(-5f, 0);
+    public override bool AltFunctionUse(Player player) => player.GetModPlayer<EnergyPlayer>().CanConsume(EnergyCost);
     public override void AddRecipes() => CreateRecipe()
         .AddIngredient(ItemID.Minishark)
-        .AddIngredient(ModContent.ItemType<ChargedCrystal>(), 20)
-        .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.EvilBar),4)
-        .AddTile(TileID.Anvils)
+        .AddIngredient(ModContent.ItemType<Easyparts>(), 3)
+        .AddIngredient(324, 1)
+        .AddTile(TileID.HeavyWorkBench)
         .Register();
 }

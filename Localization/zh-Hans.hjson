@@ -348,7 +348,7 @@ Mods: {
 				DisplayName: 放血短刀
 				Tooltip:
 					'''
-					古神信徒曾用于祭祀的匕首
+					[c/d2a0ff:污染]
 					增加玩家10%的全属性伤害与10%的暴击率,但代价是什么呢？
 					"传闻信徒们会用刀划开手臂，用自己的鲜血来祭祀神明。"
 					'''
@@ -517,6 +517,7 @@ Mods: {
 				DisplayName: 溃烂瞳孔
 				Tooltip:
 					'''
+					[c/d2a0ff:污染]
 					增加10点盔甲穿透力
 					"这玩意可真恶心"
 					'''
@@ -535,6 +536,24 @@ Mods: {
 			苦寒吊坠: {
 				DisplayName: 苦寒吊坠
 				Tooltip: ""
+			}
+
+			KeenKnife: {
+				DisplayName: 利锐佩刀
+				Tooltip:
+					'''
+					略微增加全属性伤害与攻击速度
+					"锋利依旧"
+					'''
+			}
+
+			BlueEyE: {
+				DisplayName: 蓝眼石
+				Tooltip:
+					'''
+					增加盔甲穿透与暴击率
+					"总感觉这石头似乎在看着我"
+					'''
 			}
 
 			AbyssCore: {
@@ -709,6 +728,11 @@ Mods: {
 					'''
 			}
 
+			Easyparts: {
+				DisplayName: 简易电子元件
+				Tooltip: 没有直接报废就算成功
+			}
+
 			寒川碎块: {
 				DisplayName: 寒川碎块
 				Tooltip: ""
@@ -737,6 +761,24 @@ Mods: {
 			缭乱砾岩: {
 				DisplayName: 缭乱砾岩
 				Tooltip: ""
+			}
+
+			Fusioninstrument: {
+				DisplayName: 聚合魔仪
+				Tooltip:
+					'''
+					用于合成聚合相关，也可当作祭坛使用
+					[c/05c8ff:【万构合一】]
+					'''
+			}
+
+			Purifier: {
+				DisplayName: 净化仪
+				Tooltip:
+					'''
+					用于净化被污染的物品（需要净化粉）
+					"净化！"
+					'''
 			}
 
 			CorruptionFlails: {
@@ -880,6 +922,16 @@ Mods: {
 			DesertedTomahawk: {
 				DisplayName: 荒芜战斧
 				Tooltip: +3范围
+			}
+
+			Fugitive: {
+				Tooltip:
+					'''
+					[c/05c8ff:-充能-]
+					"右键时消耗6点能量发射猩红锯片"
+					"死亡之轮"
+					'''
+				DisplayName: 亡命死锯
 			}
 
 			EternityAshSickle: {
@@ -1040,7 +1092,12 @@ Mods: {
 
 			Clamour: {
 				DisplayName: 喧嚣
-				Tooltip: 攻击时有10%消耗双倍弹药"我看了电视！新买的电视！"
+				Tooltip:
+					'''
+					[c/05c8ff:-充能-]
+					"右键时消耗5点能量进行一次散射"
+					"火力不足恐惧症的福音"
+					'''
 			}
 
 			CloudsBow: {
@@ -1145,7 +1202,23 @@ Mods: {
 
 			WindStorm: {
 				DisplayName: 风暴
-				Tooltip: 具有将火枪子弹转化为充能弹的能力
+				Tooltip:
+					'''
+					[c/05c8ff:-充能-]
+					"将火枪子弹转化为充能弹"
+					"右键时消耗4点能量发射能量爆弹"
+					"砰！"
+					'''
+			}
+
+			ON157: {
+				DisplayName: ON157
+				Tooltip:
+					'''
+					[c/05c8ff:-充能-]
+					"右键时消耗9点能量发射微型导弹"
+					"支离破碎!"
+					'''
 			}
 
 			CruisingController: {
@@ -1516,6 +1589,7 @@ Mods: {
 			SlowDownMistProj.DisplayName: 雾气
 			钻地导弹.DisplayName: 钻地导弹
 			ExplodeProjectile.DisplayName: Explode Projectile
+			// Explode.DisplayName: Explode
 			IcicleProjectile.DisplayName: 冰锥
 			LeavesBallProjectile.DisplayName: 叶球
 			PoisonousGogProjectile.DisplayName: 毒物
@@ -1694,6 +1768,7 @@ Mods: {
 			// ArdorBlossomProj.DisplayName: Ardor Blossom Proj
 			// BlazingProj.DisplayName: Blazing Proj
 			// FlameBallExplode.DisplayName: Flame Ball Explode
+			// FlameBall.DisplayName: Flame Ball
 			// DepravedBloodProj.DisplayName: Depraved Blood Proj
 			// EvilFireProj.DisplayName: Evil Fire Proj
 			// FrenziedFlameProj.DisplayName: Frenzied Flame Proj
@@ -1701,8 +1776,6 @@ Mods: {
 			// ViridSteelProj.DisplayName: Virid Steel Proj
 			// Charging.DisplayName: Charging
 			// LightningBoom.DisplayName: Lightning Boom
-			// MoonProj.DisplayName: Moon Proj
-			// MoonExplode.DisplayName: Moon Explode
 		}
 
 		NPCs: {
@@ -1756,6 +1829,8 @@ Mods: {
 			TelescopeTile.MapEntry: 望远镜
 			崩溃祭坛Tile.MapEntry: 崩溃祭坛
 			缭乱砾岩Tile.MapEntry: 缭乱砾岩
+			FusioninstrumentTile.MapEntry: 聚合魔仪
+			PurifierTile.MapEntry: 净化台
 		}
 
 		UI.Energy: 能量
