@@ -1469,6 +1469,8 @@ Mods: {
 			ViridSteelProj.DisplayName: Virid Steel Proj
 			Charging.DisplayName: Charging
 			LightningBoom.DisplayName: Lightning Boom
+			MoonProj.DisplayName: Moon Proj
+			MoonExplode.DisplayName: Moon Explode
 		}
 
 		NPCs: {

@@ -144,7 +144,7 @@ class EarthShaker: NPCStateMachine
 	/// <param name="n"></param>
 	public void BigJump(NPCStateMachine n)
 	{
-		if (Math.Abs(NPC.Center.Y - n.target.Center.Y  ) < 170)
+		if (NPC.position.Y + NPC.height > n.target.Center.Y - 170f)
 			NPC.noTileCollide = false;
 		else
 		{
@@ -206,8 +206,15 @@ class EarthShaker: NPCStateMachine
 	}
 public void BigJump2(NPCStateMachine n)
 	{
-		//NPC = n.NPC;
-		n.Timer1++;
+        if (NPC.position.Y + NPC.height > n.target.Center.Y - 170f)
+            NPC.noTileCollide = false;
+        else
+        {
+
+            NPC.noTileCollide = true;
+        }
+        //NPC = n.NPC;
+        n.Timer1++;
 		if (n.Timer1 == 1)
 		{
 			NPC.noTileCollide = true;
@@ -497,7 +504,7 @@ class SpawnState : NPCState
 		if (n.Timer == 90)
 		{
 			//下砸
-			NPC.velocity.Y = 20f;
+			NPC.velocity.Y = 30f;
 			NPC.velocity.X = 0f;
 		}
 		else if (n.Timer > 90) 

@@ -55,6 +55,240 @@ Mods: {
 		}
 
 		Items: {
+		CopperBulletItem: {
+				DisplayName: 铜质弹丸
+				Tooltip: 所以为什么到了未来还要用大口径的铜质弹丸
+			}
+
+			LeadBulletItem: {
+				DisplayName: 铅质弹丸
+				Tooltip: 多么古老的弹药啊
+			}
+
+			TinBulletItem: {
+				DisplayName: 锡质弹丸
+				Tooltip: 配合枪使用更佳哦~
+			}
+
+			CrystalBreastPlate: {
+				DisplayName: 魔晶胸甲
+				Tooltip: 木甲附魔过后的产物
+			}
+
+			HeavyironBreastplate: {
+				DisplayName: 重型铁胸甲
+				Tooltip: 更多的铁，更强的护甲
+			}
+
+			FallingStarArmor: {
+				DisplayName: 坠星装甲
+				Tooltip: 你的身体微微发光
+			}
+
+			FallingStarFoots: {
+				DisplayName: 坠星护腿
+				Tooltip: 你走过的地方吸引了无数萤火虫
+			}
+
+			FallingStarHalmet: {
+				DisplayName: 坠星头盔
+				Tooltip: 散发出光芒
+			}
+
+			CrystalLeggings: {
+				DisplayName: 魔晶护胫
+				Tooltip: 散发着魔力的光辉
+			}
+
+			HeavyironLeggings: {
+				DisplayName: 重型铁护腿
+				Tooltip: 更多的铁，更大的重量
+			}
+
+			CrystalMagic: {
+				DisplayName: 魔法棱镜
+				Tooltip: 我们至今不知道玩家为什么要把棱镜套在头上,甚至还很好用（？）
+			}
+
+			BambooCloak: {
+				DisplayName: 竹制蓑衣
+				Tooltip: 用竹子制作的盔甲，防御力不强
+			}
+
+			BambooHat: {
+				DisplayName: 竹制斗笠
+				Tooltip: 用竹子制作的盔甲，防御力不强
+			}
+
+			BambooLeggings: {
+				DisplayName: 竹制护胫
+				Tooltip: 用竹子制作的盔甲，防御力不强
+			}
+
+			HeavyironHelmet: {
+				DisplayName: 重型铁头盔
+				Tooltip: 更多的铁，对颈椎更大的压力
+			}
+
+			PasteBoots: {
+				DisplayName: 浆糊靴子
+				Tooltip:
+					'''
+					移动速度-6%
+					伤害减免+4%
+					寸步难行...
+					'''
+			}
+
+			PasteMask: {
+				DisplayName: 浆糊面具
+				Tooltip:
+					'''
+					移动速度-4%
+					伤害减免+6%
+					难以呼吸...
+					'''
+			}
+
+			PasteShirt: {
+				DisplayName: 浆糊衬衫
+				Tooltip:
+					'''
+					移动速度-10%
+					伤害减免+7%
+					唔,好粘,恶心!
+					'''
+			}
+
+			CrystalSummon: {
+				DisplayName: 魔晶头饰
+				Tooltip: 魔力在头顶盘旋
+			}
+
+			ImpurityMagicCrystal: {
+				DisplayName: 杂质魔晶
+				Tooltip: 从一种未知生命体身上取下的水晶
+			}
+
+			MagicCrystal: {
+				DisplayName: 原魔晶
+				Tooltip: 闪烁着微光
+			}
+
+			NightIngot: {
+				DisplayName: 永夜锭
+				// Tooltip: ""
+			}
+
+			ApprenticeStaves: {
+				DisplayName: 学徒法杖
+				Tooltip: 通过操控魔法粒子直接进行攻击
+			}
+
+			DemonHand: {
+				DisplayName: 魔之手
+				Tooltip:
+					'''
+					“这本书似乎封印着一个恶魔，不过谁在乎呢？好用就行”
+					那只看起来像柴犬的兽人如是说到
+					'''
+			}
+
+			SingtheWoods: {
+				DisplayName: 林之咏
+				Tooltip:
+					'''
+					绿色能量环绕在周围
+					“吸收自然精华”
+					'''
+			}
+
+			BambooBlunderBuss: {
+				DisplayName: 竹制火铳
+				Tooltip: 用竹子做火铳真的不会炸膛吗
+			}
+
+			Bonebow: {
+				DisplayName: 骨弓
+				Tooltip: 每诞生一把骨弓，就会有一个骷髅被杀害，没有买卖就没有伤害（bushi）
+			}
+
+			Vinebow: {
+				DisplayName: 藤蔓弓
+				// Tooltip: ""
+			}
+
+			CaidanZuolun: {
+				DisplayName: 彩弹左轮
+				Tooltip:
+					'''
+					究竟是左轮变了心，还是彩弹枪出了轨
+					当连续攻击5次以上时可右键使用特殊功能
+					漫游左轮表示很赞
+					'''
+			}
+
+			IronBlunderBuss: {
+				DisplayName: 三眼铳
+				Tooltip:
+					'''
+					铳口如鸟铳大，可容铅弹三钱
+					————《武备要略》
+					'''
+			}
+
+			Broadsword: {
+				DisplayName: 大刀
+				Tooltip:
+					'''
+					刀柄上镶嵌的水晶发着红光
+					右键向前冲刺并附带伤害
+					左键蓄力攻击
+					'''
+			}
+
+			DesertGodSword: {
+				DisplayName: 荒漠神凝剑
+				// Tooltip: ""
+			}
+
+			MagiccrystalBZ: {
+				DisplayName: 魔晶鞭
+				Tooltip:
+					'''
+					用魔晶做的鞭子，他们好像能自动粘在一起
+					左键蓄力，蓄力时间与鞭子长度成正比
+					'''
+			}
+
+			PeachwoodSword: {
+				DisplayName: 桃木剑
+				Tooltip: 神秘的东方力量
+			}
+
+			Disorder: {
+				DisplayName: 混乱之核
+				Tooltip: 现在，你有能力控制这个世界，但前提是你有能力活下去……
+			}
+
+			ScarletExplosiveBomb: {
+				DisplayName: 猩红爆弹
+				Tooltip: 一本法书，记载着神秘的猩红魔法
+			}
+
+			BookofRocks: {
+				DisplayName: 沙暴之书
+				Tooltip: 
+				'''
+				“看上去好像寄宿着一只恶魔，不过谁在乎呢？好用就行”
+				那只看上去像是柴犬的兽人如是说道
+				'''
+			}
+
+			SandStormBow: {
+				// DisplayName: Sand Storm Bow
+				// Tooltip: ""
+			}
 			EnergyDynamite: {
 				DisplayName: 充能爆弹
 				Tooltip:
@@ -1467,6 +1701,8 @@ Mods: {
 			// ViridSteelProj.DisplayName: Virid Steel Proj
 			// Charging.DisplayName: Charging
 			// LightningBoom.DisplayName: Lightning Boom
+			// MoonProj.DisplayName: Moon Proj
+			// MoonExplode.DisplayName: Moon Explode
 		}
 
 		NPCs: {
