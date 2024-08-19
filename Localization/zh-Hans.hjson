@@ -55,190 +55,6 @@ Mods: {
 		}
 
 		Items: {
-		CrystalBreastPlate: {
-				DisplayName: 魔晶胸甲
-				Tooltip: 木甲附魔过后的产物
-			}
-
-			HeavyironBreastplate: {
-				DisplayName: 重型铁胸甲
-				Tooltip: 更多的铁，更强的护甲
-			}
-
-			FallingStarArmor: {
-				DisplayName: 坠星装甲
-				Tooltip: 你的身体微微发光
-			}
-
-			FallingStarFoots: {
-				DisplayName: 坠星护腿
-				Tooltip: 你走过的地方吸引了无数萤火虫
-			}
-
-			FallingStarHalmet: {
-				DisplayName: 坠星头盔
-				Tooltip: 散发出光芒
-			}
-
-			CrystalLeggings: {
-				DisplayName: 魔晶护胫
-				Tooltip: 散发着魔力的光辉
-			}
-
-			HeavyironLeggings: {
-				DisplayName: 重型铁护腿
-				Tooltip: 更多的铁，更大的重量
-			}
-
-			CrystalMagic: {
-				DisplayName: 魔法棱镜
-				Tooltip: 我们至今不知道玩家为什么要把棱镜套在头上,甚至还很好用（？）
-			}
-
-			BambooCloak: {
-				DisplayName: 竹制蓑衣
-				Tooltip: 用竹子制作的盔甲，防御力不强
-			}
-
-			BambooHat: {
-				DisplayName: 竹制斗笠
-				Tooltip: 用竹子制作的盔甲，防御力不强
-			}
-
-			BambooLeggings: {
-				DisplayName: 竹制护胫
-				Tooltip: 用竹子制作的盔甲，防御力不强
-			}
-
-			HeavyironHelmet: {
-				DisplayName: 重型铁头盔
-				Tooltip: 更多的铁，对颈椎更大的压力
-			}
-
-			PasteBoots: {
-				DisplayName: 浆糊靴子
-				Tooltip:
-					'''
-					移动速度-6%
-					伤害减免+4%
-					寸步难行...
-					'''
-			}
-
-			PasteMask: {
-				DisplayName: 浆糊面具
-				Tooltip:
-					'''
-					移动速度-4%
-					伤害减免+6%
-					难以呼吸...
-					'''
-			}
-
-			PasteShirt: {
-				DisplayName: 浆糊衬衫
-				Tooltip:
-					'''
-					移动速度-10%
-					伤害减免+7%
-					唔,好粘,恶心!
-					'''
-			}
-
-			CrystalSummon: {
-				DisplayName: 魔晶头饰
-				Tooltip: 魔力在头顶盘旋
-			}
-
-			ImpurityMagicCrystal: {
-				DisplayName: 杂质魔晶
-				Tooltip: 从一种未知生命体身上取下的水晶
-			}
-
-			MagicCrystal: {
-				DisplayName: 原魔晶
-				Tooltip: 闪烁着微光
-			}
-
-			NightIngot: {
-				DisplayName: 永夜锭
-				// Tooltip: ""
-			}
-
-			ApprenticeStaves: {
-				DisplayName: 学徒法杖
-				Tooltip: 通过操控魔法粒子直接进行攻击
-			}
-
-			DemonHand: {
-				DisplayName: 魔之手
-				Tooltip:
-					'''
-					“这本书似乎封印着一个恶魔，不过谁在乎呢？好用就行”
-					那只看起来像柴犬的兽人如是说到
-					'''
-			}
-
-			SingtheWoods: {
-				DisplayName: 林之咏
-				Tooltip:
-					'''
-					绿色能量环绕在周围
-					“吸收自然精华”
-					'''
-			}
-			Broadsword: {
-				DisplayName: 大刀
-				Tooltip:
-					'''
-					刀柄上镶嵌的水晶发着红光
-					右键向前冲刺并附带伤害
-					左键蓄力攻击
-					'''
-			}
-
-			DesertGodSword: {
-				DisplayName: 荒漠神凝剑
-				// Tooltip: ""
-			}
-
-			MagiccrystalBZ: {
-				DisplayName: 魔晶鞭
-				Tooltip:
-					'''
-					用魔晶做的鞭子，他们好像能自动粘在一起
-					左键蓄力，蓄力时间与鞭子长度成正比
-					'''
-			}
-
-			PeachwoodSword: {
-				DisplayName: 桃木剑
-				Tooltip: 神秘的东方力量
-			}
-
-			Disorder: {
-				DisplayName: 混乱之核
-				Tooltip: 现在，你有能力控制这个世界，但前提是你有能力活下去……
-			}
-
-			ScarletExplosiveBomb: {
-				DisplayName: 猩红爆弹
-				Tooltip: 一本法书，记载着神秘的猩红魔法
-			}
-
-			BookofRocks: {
-				DisplayName: 沙暴之书
-				Tooltip: 
-				'''
-				“似乎寄宿着一只恶魔，但谁在乎呢？好用就行”
-				一只长得像柴犬的兽人如是说道
-				'''
-			}
-
-			SandStormBow: {
-				// DisplayName: Sand Storm Bow
-				// Tooltip: ""
-			}
 			EnergyDynamite: {
 				DisplayName: 充能爆弹
 				Tooltip:
@@ -1412,51 +1228,47 @@ Mods: {
 			}
 
 			DemonHand: {
-				// DisplayName: Demon Hand
-				// Tooltip: ""
+				DisplayName: 魔之手
+				Tooltip: 恶魔之手
 			}
 
 			SingtheWoods: {
-				// DisplayName: Singthe Woods
-				/* Tooltip:
-					'''
-					Green energy surrounds us,
-					"Absorbing the essence of nature"
-					''' */
+				DisplayName: 林之咏
+				Tooltip: 绿色能量环绕在你的周围
 			}
 
 			ImpurityMagicCrystal: {
-				// DisplayName: Impurity Magic Crystal
-				// Tooltip: A crystal extracted from an unknown life form.
+				DisplayName: 杂质魔晶
+				Tooltip: 这水晶似乎有着某种不为人知的能量
 			}
 
 			MagicCrystal: {
-				// DisplayName: Magic Crystal
-				// Tooltip: Gleaming with a subtle light.
+				DisplayName: 纯净魔晶
+				Tooltip: 他在发亮
 			}
 
 			ApprenticeStaves: {
-				// DisplayName: Apprentice Staves
-				// Tooltip: Directly attacking through the manipulation of magical particles.
+				DisplayName: 学徒法杖
+				Tooltip: 直接操控魔法粒子进行攻击
 			}
 
 			BookofRocks: {
-				// DisplayName: Book of Rocks
-				/* Tooltip:
+				DisplayName: 沙暴之书
+				Tooltip:
 					'''
-					"This book seems to seal a demon within, but who cares? As long as it's useful," 
-					said the furry creature that looked like a Shiba Inu.
-					''' */
+					“这里面似乎寄宿着一只恶魔，不过谁在乎呢？好用就行”
+					一只看上去像是柴犬的兽人如是说道
+					'''
 			}
 
 			ScarletExplosiveBomb: {
-				// DisplayName: Scarlet Explosive Bomb
-				// Tooltip: A tome of arcane knowledge, chronicling the mysteries of crimson magic.
+				DisplayName: 猩红爆弹
+				Tooltip: 记载着古老的猩红魔法
 			}
 
 			Broadsword: {
-				// DisplayName: Broadsword
-				// Tooltip: Killing one is not a loss, killing two is a gain.
+				DisplayName: 大刀
+				Tooltip: 简单有效且低价
 			}
 
 			Crystalfragments: {
@@ -1511,8 +1323,8 @@ Mods: {
 			}
 
 			ChargedController: {
-				// DisplayName: Charged Controller
-				// Tooltip: ""
+				DisplayName: Charged Controller
+				Tooltip: ""
 			}
 
 			FlamtaintBar: {
@@ -1521,8 +1333,8 @@ Mods: {
 			}
 
 			HeroGiantSword: {
-				// DisplayName: Hero Giant Sword
-				// Tooltip: ""
+				DisplayName: 英雄大剑
+				Tooltip: ""
 			}
 		}
 
