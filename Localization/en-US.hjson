@@ -1339,6 +1339,20 @@ Mods: {
 				DisplayName: Hero Giant Sword
 				Tooltip: ""
 			}
+
+			Precautions: {
+				DisplayName: Precautions
+				Tooltip:
+					'''
+					1:There is no multi-person adaptation
+					2:No BossCheklistMod adaptation
+					boss【EarthShaker】，Paradebuoy
+					（To be done）boss【JungleHunter】，HoneyBait
+					（To be done）boss【SandStormSlime】，NO
+					（To be done）boss【LavaHunter】，LavaShimmerLamp
+					Two evil bosses in Hardmode，AbyssCore
+					'''
+			}
 		}
 
 		Projectiles: {
