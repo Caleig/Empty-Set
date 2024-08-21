@@ -92,11 +92,11 @@ namespace EmptySet.NPCs.Boss.FrozenCore
         private void DiffSelector()
         {
             NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 32000 : Main.expertMode ? 24000 : 12000);
-            NPC.defense = Main.masterMode ? 12 : Main.expertMode ? 10 : 10;
+            NPC.defense = Main.masterMode ? 12 : Main.expertMode ? 12 : 12;
             NPC.knockBackResist = Main.masterMode ? 0f : Main.expertMode ? 0f : 0f;
-            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 75 : Main.expertMode ? 50 : 40);
-            frostBoltDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 60 : Main.expertMode ? 45 : 35);
-            icicleDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 85 : Main.expertMode ? 65 : 50);
+            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 100 : Main.expertMode ? 75 : 50);
+            frostBoltDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 100 : Main.expertMode ? 75 : 50);
+            icicleDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 140 : Main.expertMode ? 115 : 70);
         }
         
         protected override void AIBefore(NPCStateMachine n)
