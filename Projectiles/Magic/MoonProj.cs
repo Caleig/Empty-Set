@@ -31,7 +31,7 @@ public class MoonProj : ModProjectile
         Projectile.tileCollide = false;
 		Projectile.ignoreWater = false;
         Projectile.aiStyle = -3;
-        Projectile.DamageType = DamageClass.Throwing;
+        Projectile.DamageType = DamageClass.Magic;
         DrawOffsetX = -4;
     }
     public override void AI() 
