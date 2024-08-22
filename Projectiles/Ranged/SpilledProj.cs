@@ -19,7 +19,7 @@ public class SpilledProj : ModProjectile
         Projectile.scale = 0.9f;
         Projectile.penetrate = 1;
         Projectile.friendly = true;
-        Projectile.DamageType = DamageClass.Melee;
+        Projectile.DamageType = DamageClass.Ranged;
         Projectile.timeLeft = 6 * EmptySet.Frame;
         Projectile.light = 0.35f;
     }
