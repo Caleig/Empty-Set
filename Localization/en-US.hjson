@@ -1007,6 +1007,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Scrapthrowingknives: {
+				DisplayName: Scrapthrowingknives
+				Tooltip: Metal scrap
+			}
+
 			AdamantiteBoomerang: {
 				DisplayName: Adamantite Boomerang
 				Tooltip: 100% crit chance when per fifth use.
@@ -1572,6 +1577,7 @@ Mods: {
 			SpilledProj.DisplayName: Spilled Proj
 			SpilledExplode.DisplayName: Spilled Explode
 			CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
+			ScrapthrowingknivesProj.DisplayName: Scrapthrowingknives Proj
 		}
 
 		NPCs: {

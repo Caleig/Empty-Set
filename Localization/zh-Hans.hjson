@@ -1012,6 +1012,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Scrapthrowingknives: {
+				DisplayName: 碎片投刀
+				Tooltip: 金属废料
+			}
+
 			AdamantiteBoomerang: {
 				DisplayName: 精金回旋镖
 				Tooltip: 第五次攻击时必定暴击
@@ -1570,6 +1575,7 @@ Mods: {
 			// SpilledProj.DisplayName: Spilled Proj
 			// SpilledExplode.DisplayName: Spilled Explode
 			// CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
+			// ScrapthrowingknivesProj.DisplayName: Scrapthrowingknives Proj
 		}
 
 		NPCs: {
