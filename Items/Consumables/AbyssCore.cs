@@ -26,8 +26,8 @@ public class AbyssCore : ModItem
 
     public override void SetDefaults()
     {
-        Item.width = 40;
-        Item.height = 36;
+        Item.width = 24;
+        Item.height = 38;
         Item.maxStack = 20;
         Item.value = Item.sellPrice(0,0,0,0);
         Item.rare = ItemRarityID.Blue;
