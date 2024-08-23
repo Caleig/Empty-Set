@@ -1191,6 +1191,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			CloudsShuriken: {
+				DisplayName: Clouds Shuriken
+				Tooltip: Opposites attract
+			}
+
 			冰川之破: {
 				DisplayName: 冰川之破
 				Tooltip: ""
@@ -1566,6 +1571,7 @@ Mods: {
 			MissileProj.DisplayName: Missile Proj
 			SpilledProj.DisplayName: Spilled Proj
 			SpilledExplode.DisplayName: Spilled Explode
+			CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
 		}
 
 		NPCs: {
