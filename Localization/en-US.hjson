@@ -592,7 +592,7 @@ Mods: {
 
 			FlightLeaves: {
 				DisplayName: FlightLeaves
-				Tooltip: Launch the leaves
+				Tooltip: Falling autumn leaves
 			}
 
 			GelStaff: {
