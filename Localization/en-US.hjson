@@ -1012,6 +1012,11 @@ Mods: {
 				Tooltip: Metal scrap
 			}
 
+			FangofCthulhu: {
+				DisplayName: Fang of Cthulhu
+				Tooltip: A hand good teeth
+			}
+
 			AdamantiteBoomerang: {
 				DisplayName: Adamantite Boomerang
 				Tooltip: 100% crit chance when per fifth use.
@@ -1578,6 +1583,7 @@ Mods: {
 			SpilledExplode.DisplayName: Spilled Explode
 			CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
 			ScrapthrowingknivesProj.DisplayName: Scrapthrowingknives Proj
+			FangofCthulhuProj.DisplayName: Fangof Cthulhu Proj
 		}
 
 		NPCs: {

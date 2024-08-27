@@ -1017,6 +1017,11 @@ Mods: {
 				Tooltip: 金属废料
 			}
 
+			FangofCthulhu: {
+				DisplayName: 克苏鲁之牙
+				Tooltip: 一手好牙
+			}
+
 			AdamantiteBoomerang: {
 				DisplayName: 精金回旋镖
 				Tooltip: 第五次攻击时必定暴击
@@ -1576,6 +1581,7 @@ Mods: {
 			// SpilledExplode.DisplayName: Spilled Explode
 			// CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
 			// ScrapthrowingknivesProj.DisplayName: Scrapthrowingknives Proj
+			// FangofCthulhuProj.DisplayName: Fangof Cthulhu Proj
 		}
 
 		NPCs: {
