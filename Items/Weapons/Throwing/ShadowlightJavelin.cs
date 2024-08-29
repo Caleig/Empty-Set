@@ -27,11 +27,11 @@ public class ShadowlightJavelin : ModItem
         Item.height = 84;
         Item.rare = ItemRarityID.LightRed;
         Item.value = Item.sellPrice(0, 9, 0, 0);
-        Item.damage = 51;
-        Item.crit = 7;
+        Item.damage = 50;
+        Item.crit = 4;
         Item.knockBack = KnockBackLevel.Normal;
-        Item.useTime = UseSpeedLevel.FastSpeed - 3;
-        Item.useAnimation = UseSpeedLevel.FastSpeed - 3;
+        Item.useTime = 35;
+        Item.useAnimation = 35;
         Item.DamageType = DamageClass.Throwing;
         Item.useStyle = ItemUseStyleID.Swing;
         Item.UseSound = SoundID.Item1;
