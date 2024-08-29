@@ -625,6 +625,11 @@ Mods: {
 				Tooltip: Shoot a tungsten steel projectile, Penetrability up to 3
 			}
 
+			TungstenSteelShotgun: {
+				DisplayName: Tungsten Steel Shotgun
+				Tooltip: Shoot multiple steel bullets
+			}
+
 			Wither: {
 				DisplayName: Wither
 				Tooltip: Shoot three Wither Projectile,Poison 5 seconds when crit
@@ -1584,6 +1589,8 @@ Mods: {
 			CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
 			ScrapthrowingknivesProj.DisplayName: Scrapthrowingknives Proj
 			FangofCthulhuProj.DisplayName: Fangof Cthulhu Proj
+			TungstenSteelExplode.DisplayName: Tungsten Steel Explode
+			TungstenSteelProj.DisplayName: Tungsten Steel Proj
 		}
 
 		NPCs: {

@@ -625,6 +625,11 @@ Mods: {
 				Tooltip: 发射一个钨钢矢，最多可穿透3个敌怪
 			}
 
+			TungstenSteelShotgun: {
+				DisplayName: 钨钢魔霰
+				Tooltip: 发射多枚钨钢矢
+			}
+
 			Wither: {
 				DisplayName: 枯萎
 				Tooltip: 发射3个枯萎弹幕，暴击时造成5秒“中毒”buff
@@ -1582,6 +1587,8 @@ Mods: {
 			// CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
 			// ScrapthrowingknivesProj.DisplayName: Scrapthrowingknives Proj
 			// FangofCthulhuProj.DisplayName: Fangof Cthulhu Proj
+			// TungstenSteelExplode.DisplayName: Tungsten Steel Explode
+			// TungstenSteelProj.DisplayName: Tungsten Steel Proj
 		}
 
 		NPCs: {
