@@ -814,7 +814,7 @@ Mods: {
 
 			TungstenSteelSword: {
 				DisplayName: 钨钢剑
-				Tooltip: '''"暴击时回复少量生命值"'''
+				Tooltip: "[c/96ff0a:-维瑞德钢铁公司出品-]"
 			}
 
 			冷彻: {

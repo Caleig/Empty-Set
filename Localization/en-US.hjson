@@ -813,7 +813,7 @@ Mods: {
 
 			TungstenSteelSword: {
 				DisplayName: Tungsten Steel Sword
-				Tooltip: Heal player when crit.
+				Tooltip: "[c/96ff0a:-Produced by Vered Steel-]"
 			}
 
 			冷彻: {
