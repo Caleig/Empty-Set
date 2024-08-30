@@ -30,11 +30,11 @@ public class TungstenSteelSword : ModItem
 
         //Item.scale = 1.1f;
         Item.crit = 4-4;
-        Item.damage = 24;
+        Item.damage = 35;
 
         Item.knockBack = KnockBackLevel.Normal;
-        Item.useTime = UseSpeedLevel.FastSpeed + 2;
-        Item.useAnimation = UseSpeedLevel.FastSpeed + 2;
+        Item.useTime = 33;
+        Item.useAnimation = 33;
 
         Item.DamageType = DamageClass.Melee;
         Item.useStyle = ItemUseStyleID.Swing;
@@ -43,7 +43,7 @@ public class TungstenSteelSword : ModItem
         Item.autoReuse = true;
 
         Item.shoot = ModContent.ProjectileType<TungstenSteelSwordProj>();
-        Item.shootSpeed = 11f;
+        Item.shootSpeed = 15f;
     }
 
     public override void AddRecipes() => CreateRecipe()
