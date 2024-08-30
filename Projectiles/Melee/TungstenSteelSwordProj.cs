@@ -48,20 +48,21 @@ public class TungstenSteelSwordProj : ModProjectile
             Projectile.velocity *= 0.9f;
             Projectile.Opacity -= 0.05f;
         }
+        else if(_HitTime2 > 0)
+            {
+                Projectile.velocity *= 0.9f;
+                Projectile.Opacity -= 0.05f;
+        }
         if (Projectile.Opacity < 0)
+        {
             Projectile.Kill();
+            _HitTime2 = 0;
+        }
+            
     }
     public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
     {
-        _HitTime2++;
-        if (_HitTime2 >= 3)
-        {
-            Main.player[Projectile.owner].HealEffect(5);
-            Main.player[Projectile.owner].statLife += 5;
-        }
-        else
-        {
-        }
+        _HitTime2 = 1;
     }
     public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
     {
