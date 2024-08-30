@@ -93,7 +93,7 @@ internal class LightRanger : ModItem
         return false;
     }
 
-
+    public override Vector2? HoldoutOffset() => new Vector2(-9f, 0);
     public override void AddRecipes() => CreateRecipe()
         .AddIngredient<EternityAshShortBow>()
         .AddIngredient(ItemID.SoulofLight,3)

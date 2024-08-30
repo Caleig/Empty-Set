@@ -592,7 +592,7 @@ Mods: {
 
 			FlightLeaves: {
 				DisplayName: FlightLeaves
-				Tooltip: Launch the leaves
+				Tooltip: Falling autumn leaves
 			}
 
 			GelStaff: {
@@ -623,6 +623,11 @@ Mods: {
 			TungstenSteelStaff: {
 				DisplayName: Tungsten Steel Staff
 				Tooltip: Shoot a tungsten steel projectile, Penetrability up to 3
+			}
+
+			TungstenSteelShotgun: {
+				DisplayName: Tungsten Steel Shotgun
+				Tooltip: Shoot multiple steel bullets
 			}
 
 			Wither: {
@@ -1007,6 +1012,16 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Scrapthrowingknives: {
+				DisplayName: Scrapthrowingknives
+				Tooltip: Metal scrap
+			}
+
+			FangofCthulhu: {
+				DisplayName: Fang of Cthulhu
+				Tooltip: A hand good teeth
+			}
+
 			AdamantiteBoomerang: {
 				DisplayName: Adamantite Boomerang
 				Tooltip: 100% crit chance when per fifth use.
@@ -1191,6 +1206,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			CloudsShuriken: {
+				DisplayName: Clouds Shuriken
+				Tooltip: Opposites attract
+			}
+
 			冰川之破: {
 				DisplayName: 冰川之破
 				Tooltip: ""
@@ -1338,6 +1358,20 @@ Mods: {
 			HeroGiantSword: {
 				DisplayName: Hero Giant Sword
 				Tooltip: ""
+			}
+
+			Precautions: {
+				DisplayName: Precautions
+				Tooltip:
+					'''
+					1:There is no multi-person adaptation
+					2:No BossCheklistMod adaptation
+					boss【EarthShaker】，Paradebuoy
+					（To be done）boss【JungleHunter】，HoneyBait
+					（To be done）boss【SandStormSlime】，NO
+					（To be done）boss【LavaHunter】，LavaShimmerLamp
+					Two evil bosses in Hardmode，AbyssCore
+					'''
 			}
 		}
 
@@ -1552,6 +1586,11 @@ Mods: {
 			MissileProj.DisplayName: Missile Proj
 			SpilledProj.DisplayName: Spilled Proj
 			SpilledExplode.DisplayName: Spilled Explode
+			CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
+			ScrapthrowingknivesProj.DisplayName: Scrapthrowingknives Proj
+			FangofCthulhuProj.DisplayName: Fangof Cthulhu Proj
+			TungstenSteelExplode.DisplayName: Tungsten Steel Explode
+			TungstenSteelProj.DisplayName: Tungsten Steel Proj
 		}
 
 		NPCs: {

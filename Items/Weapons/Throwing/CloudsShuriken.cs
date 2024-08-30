@@ -1,5 +1,6 @@
 ﻿using EmptySet.Items.Materials;
 using EmptySet.Projectiles.Throwing;
+using EmptySet.Projectiles.Weapons.Throwing;
 using EmptySet.Utils;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -10,42 +11,47 @@ using Terraria.ModLoader;
 namespace EmptySet.Items.Weapons.Throwing;
 
 /// <summary>
-/// 暗影焰投矛
+/// 阴云磁刃
 /// </summary>
-public class ShadowlightJavelin : ModItem
+public class CloudsShuriken : ModItem
 {
     public override void SetStaticDefaults()
     {
-        // DisplayName.SetDefault("Shadowlight Javelin");
-        
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
 
     public override void SetDefaults()
     {
-        Item.width = 84;
-        Item.height = 84;
-        Item.rare = ItemRarityID.LightRed;
-        Item.value = Item.sellPrice(0, 9, 0, 0);
-        Item.damage = 50;
+        Item.rare = ItemRarityID.Green;
+        Item.value = Item.sellPrice(0, 1, 30, 0);
+
+        Item.width = 46;
+        Item.height = 46;
+
+        Item.damage = 15;
         Item.crit = 4;
-        Item.knockBack = KnockBackLevel.Normal;
+
+        Item.knockBack = 2;
+        Item.useStyle = ItemUseStyleID.Shoot;
         Item.useTime = 35;
         Item.useAnimation = 35;
+
         Item.DamageType = DamageClass.Throwing;
-        Item.useStyle = ItemUseStyleID.Swing;
-        Item.UseSound = SoundID.Item1;
         Item.noMelee = true;
         Item.noUseGraphic = true;
         Item.autoReuse = true;
-        Item.shoot = ModContent.ProjectileType<ShadowlightJavelinProj>();
-        Item.shootSpeed = 10f;
+
+        Item.UseSound = SoundID.Item77;
+        Item.shoot = ModContent.ProjectileType<CloudsShurikenProj>();
+        Item.shootSpeed = 5f;
     }
 
     public override void AddRecipes() => CreateRecipe()
-        .AddIngredient(ModContent.ItemType<ShadowlightSparkle>(), 8)
-        .AddIngredient(ItemID.HellstoneBar, 9)
-        //.AddIngredient(ItemID.ShadowFlameKnife)
+        .AddIngredient(ModContent.ItemType<RaySoul>(), 3)
+        .AddIngredient(ItemID.RainCloud, 10)
+        .AddIngredient(ItemID.Cloud, 7)
         .AddTile(TileID.Anvils)
         .Register();
+
 }
+

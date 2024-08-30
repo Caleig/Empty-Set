@@ -91,12 +91,12 @@ namespace EmptySet.NPCs.Boss.FrozenCore
 
         private void DiffSelector()
         {
-            NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 40000 : Main.expertMode ? 32000 : 20000);
-            NPC.defense = Main.masterMode ? 15 : Main.expertMode ? 12 : 12;
+            NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 32000 : Main.expertMode ? 24000 : 12000);
+            NPC.defense = Main.masterMode ? 12 : Main.expertMode ? 12 : 12;
             NPC.knockBackResist = Main.masterMode ? 0f : Main.expertMode ? 0f : 0f;
-            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 75 : Main.expertMode ? 50 : 40);
-            frostBoltDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 60 : Main.expertMode ? 45 : 35);
-            icicleDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 85 : Main.expertMode ? 65 : 50);
+            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 100 : Main.expertMode ? 75 : 50);
+            frostBoltDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 100 : Main.expertMode ? 75 : 50);
+            icicleDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 140 : Main.expertMode ? 115 : 70);
         }
         
         protected override void AIBefore(NPCStateMachine n)
@@ -109,11 +109,11 @@ namespace EmptySet.NPCs.Boss.FrozenCore
         /// <param name="n"></param>
         public void Move(NPCStateMachine n) 
         {
-            NPC.rotation += 0.15f;
+            NPC.rotation += 0.1f;
             float dis_x = n.target.Center.X - n.NPC.Center.X;
             float dis_y = n.target.Center.Y - n.NPC.Center.Y;
             float dis = (float)Math.Sqrt(dis_x * dis_x + dis_y * dis_y);
-            dis = 6f / dis;
+            dis = 0f / dis;
             NPC.velocity.X = dis_x * dis;
             NPC.velocity.Y = dis_y * dis;
         }
@@ -249,7 +249,7 @@ namespace EmptySet.NPCs.Boss.FrozenCore
             }
             else if (n.Timer <= 8 * 60) 
             {
-                NPC.alpha -= 4;
+                NPC.alpha -= 2;
             }
             //生成完毕
             else
@@ -408,7 +408,7 @@ namespace EmptySet.NPCs.Boss.FrozenCore
         {
             NPC = n.NPC;
             n.AttackTimer++;
-            if (n.Count < 4)
+            if (n.Count < 2)
             {
                 if (n.AttackTimer % 30 == 0)
                 {
@@ -471,7 +471,7 @@ namespace EmptySet.NPCs.Boss.FrozenCore
             n.Timer1++;
             if (n.Timer1 == 1)
             {
-                t = Main.rand.Next(540, 900);
+                t = Main.rand.Next(180, 360);
             }
             else if (n.Timer1 == t)
             {
@@ -479,7 +479,7 @@ namespace EmptySet.NPCs.Boss.FrozenCore
                 vector2 = n.target.Center;
                 if (b) SoundEngine.PlaySound(SoundID.Item4, n.target.position);
             }
-            else if (n.Timer1 > t && n.Timer1 < t + 4 * 60)
+            else if (n.Timer1 > t && n.Timer1 < t + 2 * 60)
             {
                 if (b)
                 {

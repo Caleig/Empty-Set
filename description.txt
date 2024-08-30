@@ -1,1 +1,23 @@
-Empty SetØ is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+作者的话：目前版本属于beta版，很多地方都还没适配和完善，请见谅（悲）
+无多人适配！！！无多人适配！！！无多人适配！！！
+There is no multi-person adaptation!!!There is no multi-person adaptation!!!There is no multi-person adaptation!!!
+Empty SetØ[空集}
+语言支持(Language support)：中文，English
++150物品
++25个生物（包含4个boss和2个没做完的长直boss）
+复活了投手
+1个没做完的地形
+modQQ群聊：1159458903，159205295
+--------------------------------------------------
+主创：明邪236（Insania)
+[兼后备紧急画师，后备紧急代码]
+
+代码：凯莉（Kelly，Caleigh），超威蓝猫，Name15536，Socan丶
+
+主画师：ATsUK0#CHTH0LLY，我不到啊
+
+乐师：粉红杀皇大猫猫
+
+数值平衡兼bug测试：炸虾球
+
+其余参与人员：扇走烦恼！（GLC），Alone_413501，青鲨，脱尘

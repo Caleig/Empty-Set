@@ -592,7 +592,7 @@ Mods: {
 
 			FlightLeaves: {
 				DisplayName: 飞叶
-				Tooltip: 发射叶子
+				Tooltip: 落叶纷飞
 			}
 
 			GelStaff: {
@@ -623,6 +623,11 @@ Mods: {
 			TungstenSteelStaff: {
 				DisplayName: 钨钢法杖
 				Tooltip: 发射一个钨钢矢，最多可穿透3个敌怪
+			}
+
+			TungstenSteelShotgun: {
+				DisplayName: 钨钢魔霰
+				Tooltip: 发射多枚钨钢矢
 			}
 
 			Wither: {
@@ -1012,6 +1017,16 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Scrapthrowingknives: {
+				DisplayName: 碎片投刀
+				Tooltip: 金属废料
+			}
+
+			FangofCthulhu: {
+				DisplayName: 克苏鲁之牙
+				Tooltip: 一手好牙
+			}
+
 			AdamantiteBoomerang: {
 				DisplayName: 精金回旋镖
 				Tooltip: 第五次攻击时必定暴击
@@ -1192,6 +1207,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			CloudsShuriken: {
+				DisplayName: 阴云磁刃
+				Tooltip: 异极相吸
+			}
+
 			冰川之破: {
 				DisplayName: 冰川之破
 				Tooltip: ""
@@ -1335,6 +1355,21 @@ Mods: {
 			HeroGiantSword: {
 				DisplayName: 英雄大剑
 				Tooltip: ""
+			}
+
+			Precautions: {
+				DisplayName: 注意事项
+				Tooltip:
+					'''
+					1：无多人适配
+					2：目前没适配boss列表mod所以我自己标了
+					撼地重械（召唤物巡游信标）
+					【未完】枯森骸虫（召唤物蜜汁饵食）
+					【未完】沙暴史莱姆（无召唤物）
+					【未完】熔岩游猎者（唤物熔岩微光灯）
+					血影屠戮者，腐化水晶：（召唤物暗渊晶核）
+					相关群聊：1159458903,159205295
+					'''
 			}
 		}
 
@@ -1549,6 +1584,11 @@ Mods: {
 			// MissileProj.DisplayName: Missile Proj
 			// SpilledProj.DisplayName: Spilled Proj
 			// SpilledExplode.DisplayName: Spilled Explode
+			// CloudsShurikenProj.DisplayName: Clouds Shuriken Proj
+			// ScrapthrowingknivesProj.DisplayName: Scrapthrowingknives Proj
+			// FangofCthulhuProj.DisplayName: Fangof Cthulhu Proj
+			// TungstenSteelExplode.DisplayName: Tungsten Steel Explode
+			// TungstenSteelProj.DisplayName: Tungsten Steel Proj
 		}
 
 		NPCs: {

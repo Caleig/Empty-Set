@@ -62,7 +62,7 @@ public class Paradebuoy : ModItem
     }
 
     public override void AddRecipes() => CreateRecipe()
-        .AddIngredient(ModContent.ItemType<Crystalfragments>(), 5)
+        .AddIngredient(ModContent.ItemType<Crystalfragments>(), 3)
         .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.CopperOrTin), 4)
         .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.IronOrLead), 6)
         .AddTile(TileID.Anvils)

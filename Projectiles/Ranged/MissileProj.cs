@@ -23,7 +23,7 @@ public class MissileProj : ModProjectile
         Projectile.tileCollide = false;
 		Projectile.ignoreWater = false;
         Projectile.timeLeft = (int)(6.5 * EmptySet.Frame);
-        Projectile.DamageType = DamageClass.Throwing;
+        Projectile.DamageType = DamageClass.Ranged;
         DrawOffsetX = -4;
     }
     public override void AI() 
