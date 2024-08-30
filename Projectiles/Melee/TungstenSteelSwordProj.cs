@@ -22,7 +22,7 @@ public class TungstenSteelSwordProj : ModProjectile
     private int frametime = 0;
     public override void SetStaticDefaults()
     {
-        ProjectileID.Sets.TrailCacheLength[Projectile.type] = 3;
+        ProjectileID.Sets.TrailCacheLength[Projectile.type] = 4;
         ProjectileID.Sets.TrailingMode[Projectile.type] = 2;
         base.SetStaticDefaults();
     }
@@ -42,7 +42,7 @@ public class TungstenSteelSwordProj : ModProjectile
     }
     public override void AI()
     {
-        Projectile.rotation += 0.2f * Projectile.direction;
+        Projectile.rotation += 0.3f * Projectile.direction;
         if (Projectile.timeLeft < (11.5f * EmptySet.Frame))
         {
             Projectile.velocity *= 0.9f;
