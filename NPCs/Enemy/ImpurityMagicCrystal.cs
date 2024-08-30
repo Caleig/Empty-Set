@@ -119,8 +119,8 @@ namespace EmptySet.NPCs.Enemy
                         shoot = true;
                     NPC.rotation = 0;
                     float distance = Vector2.Distance(NPC.Center, player.Center);
-                    if (Timer >= 80 || (distance <= 300 && distance >= 150 && Timer >= 40))
-                    {
+                    if (Timer >= 150)// || (distance <= 300 && distance >= 150 && Timer >= 0)
+                        {
                         Vector2 ShootVelocity = Vector2.Normalize(player.Center - NPC.Center) * 7f;
                         //ShootVelocity *= 0.5f;
                         for(int i = 0; i < 15; i++)

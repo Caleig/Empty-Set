@@ -62,7 +62,9 @@ namespace EmptySet.NPCs.Enemy
             {
                 _isFriendly = true;
             }
-            switch((NPCState)State)
+            if(!NPC.dontTakeDamage && NPC.lastInteraction != -1)
+                _isFriendly = false;
+            switch ((NPCState)State)
             {
                 case NPCState.Normal://初始化
                 {
@@ -137,9 +139,8 @@ namespace EmptySet.NPCs.Enemy
                         ShootVelocity /= ShootVelocity.Length();
                         ShootVelocity *= 10f;
                         float r = (float)Math.Atan2(ShootVelocity.Y, ShootVelocity.X);
-                            int Count = disorder ? 2 : 1;
 
-                            for (int i = -Count; i <= Count; i++)
+                            for (int i = -1; i <= 1; i++)
 
                             {
                                 float r2 = r + i * MathHelper.Pi / (disorder ? 24f : 18f);
@@ -169,12 +170,14 @@ namespace EmptySet.NPCs.Enemy
             }              
         }
         public override void OnHitByItem(Player player, Item item, NPC.HitInfo hit, int damageDone)
-        {       
+        {
             _isFriendly = false;
+            base.OnHitByItem(player, item, hit, damageDone);
         }
         public override void OnHitByProjectile(Projectile projectile, NPC.HitInfo hit, int damageDone)
         {
             _isFriendly = false;
+            base.OnHitByProjectile(projectile, hit, damageDone);
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)//自然刷新
         {
