@@ -15,19 +15,41 @@ public class TungstenSteelSwordProj : ModProjectile
 {
     int _HitTime = 0;
     int _HitTime2 = 0;
+    private Texture2D tex;
+    private Vector2[] oldPosi = new Vector2[3];
+    private Vector2[] oldVec = new Vector2[3];
+    private float[] oldRot = new float[3];
+    private int frametime = 0;
+    public override void SetStaticDefaults()
+    {
+        ProjectileID.Sets.TrailCacheLength[Projectile.type] = 3;
+        ProjectileID.Sets.TrailingMode[Projectile.type] = 2;
+        base.SetStaticDefaults();
+    }
     public override void SetDefaults()
     {
         Projectile.width = 26; //已精确测量
         Projectile.height = 46;
         Projectile.friendly = true;
-        Projectile.penetrate = 2 + 1;
+        Projectile.penetrate = 3 + 1;
         Projectile.DamageType = DamageClass.Melee;
         Projectile.tileCollide = false;
         Projectile.timeLeft = (12 * EmptySet.Frame);
+        Projectile.alpha = 50;
+        Projectile.Opacity = 0.6f;
+        tex = ModContent.Request<Texture2D>("EmptySet/Projectiles/Melee/TungstenSteelSwordProj").Value;
+        
     }
     public override void AI()
     {
-        Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(0f);
+        Projectile.rotation += 0.2f * Projectile.direction;
+        if (Projectile.timeLeft < (11.5f * EmptySet.Frame))
+        {
+            Projectile.velocity *= 0.9f;
+            Projectile.Opacity -= 0.05f;
+        }
+        if (Projectile.Opacity < 0)
+            Projectile.Kill();
     }
     public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
     {
