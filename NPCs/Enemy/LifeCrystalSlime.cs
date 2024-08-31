@@ -172,11 +172,13 @@ namespace EmptySet.NPCs.Enemy
         public override void OnHitByItem(Player player, Item item, NPC.HitInfo hit, int damageDone)
         {
             _isFriendly = false;
+            hit.HitDirection = -hit.HitDirection;
             base.OnHitByItem(player, item, hit, damageDone);
         }
         public override void OnHitByProjectile(Projectile projectile, NPC.HitInfo hit, int damageDone)
         {
             _isFriendly = false;
+             hit.HitDirection = -hit.HitDirection;
             base.OnHitByProjectile(projectile, hit, damageDone);
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)//自然刷新

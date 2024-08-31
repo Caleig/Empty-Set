@@ -20,9 +20,10 @@ namespace EmptySet.Items.Weapons.Melee
             Item.DamageType = DamageClass.Melee;
             Item.width = 108;
             Item.height = 108;
-            Item.useTime = 28;
-            Item.useAnimation = 28;
+            
             Item.reuseDelay = 40 - (int)((player.GetAttackSpeed(DamageClass.Melee) - 1f) * 40);
+            Item.useTime = 28;
+            Item.useAnimation = Item.useTime- Item.reuseDelay;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
             Item.noUseGraphic = true;
