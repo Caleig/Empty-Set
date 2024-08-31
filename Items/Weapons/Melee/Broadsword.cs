@@ -28,7 +28,7 @@ namespace EmptySet.Items.Weapons.Melee
         }
         public override void SetDefaults()
         {
-            Item.damage = 70;
+            Item.damage = 23;
             Item.DamageType = DamageClass.Melee;
             Item.width = 40;
             Item.height = 40;
