@@ -84,7 +84,7 @@ namespace EmptySet.NPCs.Boss.LavaHunter
                 Music = MusicLoader.GetMusicSlot(Mod, "Assets/Music/RequiemOfScourge");
             }
         }
-        float maxSpeed = 8;
+        float maxSpeed = 20;
         float turnSpeed=0.08f;
         float acceleration=0.08f;
         int npcDamage = 0;
