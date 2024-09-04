@@ -337,6 +337,11 @@ Mods: {
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
 			}
 
+			EarthShakerChestPlaced: {
+				DisplayName: EarthShakerChest(Placed)
+				Tooltip: ""
+			}
+
 			Firework1: {
 				DisplayName: Firework
 				Tooltip: Let's watch the fireworks.
@@ -361,9 +366,19 @@ Mods: {
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
 			}
 
+			JungleHunterChestPlaced: {
+				DisplayName: JungleHunterChest(Placed)
+				Tooltip: ""
+			}
+
 			LavaHunterChest: {
 				DisplayName: Treasure Bag (Lava Hunter)
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			LavaHunterChestPlaced: {
+				DisplayName: LavaHunterChest(Placed)
+				Tooltip: ""
 			}
 
 			LavaShimmerLamp: {
@@ -1646,6 +1661,9 @@ Mods: {
 			缭乱砾岩Tile.MapEntry: 缭乱砾岩
 			FusioninstrumentTile.MapEntry: Fusioninstrument
 			PurifierTile.MapEntry: Purifier
+			LavaHunterChestTile.MapEntry: Lava Hunter Chest Tile
+			EarthShakerChestTile.MapEntry: Earth Shaker Chest Tile
+			JungleHunterChestTile.MapEntry: Jungle Hunter Chest Tile
 		}
 
 		UI.Energy: Energy

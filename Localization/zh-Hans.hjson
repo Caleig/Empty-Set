@@ -333,8 +333,13 @@ Mods: {
 			}
 
 			EarthShakerChest: {
-				DisplayName: 宝藏匣 (大地震撼者)
+				DisplayName: 宝藏匣 (撼地重械)
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			EarthShakerChestPlaced: {
+				DisplayName: 撼地重械匣(可放置)
+				Tooltip: ""
 			}
 
 			Firework1: {
@@ -357,13 +362,23 @@ Mods: {
 			}
 
 			JungleHunterChest: {
-				DisplayName: 宝藏匣 (丛林游猎者)
+				DisplayName: 宝藏匣 (枯森骸虫)
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			JungleHunterChestPlaced: {
+				DisplayName: 枯森骸虫匣(可放置)
+				Tooltip: ""
 			}
 
 			LavaHunterChest: {
 				DisplayName: 宝藏匣 (熔岩游猎者)
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			LavaHunterChestPlaced: {
+				DisplayName: 熔岩游猎者匣(可放置)
+				Tooltip: ""
 			}
 
 			LavaShimmerLamp: {
@@ -1644,6 +1659,9 @@ Mods: {
 			缭乱砾岩Tile.MapEntry: 缭乱砾岩
 			FusioninstrumentTile.MapEntry: 聚合魔仪
 			PurifierTile.MapEntry: 净化台
+			// LavaHunterChestTile.MapEntry: Lava Hunter Chest Tile
+			// EarthShakerChestTile.MapEntry: Earth Shaker Chest Tile
+			// JungleHunterChestTile.MapEntry: Jungle Hunter Chest Tile
 		}
 
 		UI.Energy: 能量
