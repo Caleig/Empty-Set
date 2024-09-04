@@ -1,4 +1,5 @@
 ﻿using EmptySet.Common.Abstract.Items;
+using EmptySet.Items.Placeable;
 using EmptySet.Items.Accessories;
 using EmptySet.Items.Materials;
 using EmptySet.Items.Weapons.Magic;
@@ -31,4 +32,9 @@ public class LavaHunterChest : BossBag
         itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<MoltenDebris>(), 100,7,11));
         itemLoot.Add(ItemDrop.GetItemDropRule(ItemID.GoldCoin, 100, 6, 10));
     }
+
+    public override void AddRecipes() => CreateRecipe()
+        .AddIngredient(ModContent.ItemType<LavaHunterChestPlaced>(),1)
+        .AddTile(TileID.HeavyWorkBench)
+        .Register();
 }

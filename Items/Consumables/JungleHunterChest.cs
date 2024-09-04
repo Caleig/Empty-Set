@@ -1,4 +1,5 @@
 ﻿using EmptySet.Common.Abstract.Items;
+using EmptySet.Items.Placeable;
 using EmptySet.Items.Accessories;
 using EmptySet.Items.Weapons.Magic;
 using EmptySet.Items.Weapons.Melee;
@@ -36,4 +37,9 @@ public class JungleHunterChest : BossBag
         itemLoot.Add(ItemDrop.GetItemDropRule(ModContent.ItemType<FangsNecklace>(), 100));
         itemLoot.Add(ItemDrop.GetItemDropRule(ItemID.GoldCoin, 100,2,4));
     }
+
+    public override void AddRecipes() => CreateRecipe()
+        .AddIngredient(ModContent.ItemType<JungleHunterChestPlaced>(),1)
+        .AddTile(TileID.HeavyWorkBench)
+        .Register();
 }

@@ -1,4 +1,5 @@
 ﻿using EmptySet.Common.Abstract.Items;
+using EmptySet.Items.Placeable;
 using EmptySet.Items.Accessories;
 using EmptySet.Items.Materials;
 using EmptySet.Items.Weapons.Magic;
@@ -29,4 +30,9 @@ public class EarthShakerChest : BossBag
         itemLoot.Add(ItemDrop.GetItemDropRule<EarthSharkerAmulet>(100));
         itemLoot.Add(ItemDrop.GetItemDropRule(ItemID.GoldCoin, 100, 2, 3));
     }
+
+    public override void AddRecipes() => CreateRecipe()
+        .AddIngredient(ModContent.ItemType<EarthShakerChestPlaced>(),1)
+        .AddTile(TileID.HeavyWorkBench)
+        .Register();
 }
