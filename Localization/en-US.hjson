@@ -29,7 +29,7 @@ Mods: {
 			}
 
 			TungstenSteelControllerBuff: {
-				DisplayName: 钨钢无人机
+				DisplayName: Cast Steel
 				Description: 文案里面没写
 			}
 
@@ -501,12 +501,8 @@ Mods: {
 			}
 
 			TungstenSteelBar: {
-				DisplayName: Tungsten Steel Bar
-				Tooltip:
-					'''
-					Tungsten steel is an alloy that exists in reality.
-					So it nothing with wulfrum in calamity.
-					'''
+				DisplayName: Cast Steel
+				Tooltip: Deep calcination
 			}
 
 			Easyparts: {
@@ -636,12 +632,12 @@ Mods: {
 			}
 
 			TungstenSteelStaff: {
-				DisplayName: Tungsten Steel Staff
+				DisplayName: Cast Steel Staff
 				Tooltip: Shoot a tungsten steel projectile, Penetrability up to 3
 			}
 
 			TungstenSteelShotgun: {
-				DisplayName: Tungsten Steel Shotgun
+				DisplayName: Cast Steel Shotgun
 				Tooltip: Shoot multiple steel bullets
 			}
 
@@ -827,7 +823,7 @@ Mods: {
 			}
 
 			TungstenSteelSword: {
-				DisplayName: Tungsten Steel Sword
+				DisplayName: Cast Steel Sword
 				Tooltip: "[c/96ff0a:-Produced by Vered Steel-]"
 			}
 
@@ -1018,7 +1014,7 @@ Mods: {
 			}
 
 			TungstenSteelController: {
-				DisplayName: Tungsten Steel Controller
+				DisplayName: Cast Steel Controller
 				Tooltip: ""
 			}
 
@@ -1212,7 +1208,7 @@ Mods: {
 			}
 
 			TungstenSteelCard: {
-				DisplayName: Tungsten Steel Card
+				DisplayName: Cast Steel Card
 				Tooltip: ""
 			}
 

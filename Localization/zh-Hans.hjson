@@ -29,7 +29,7 @@ Mods: {
 			}
 
 			TungstenSteelControllerBuff: {
-				DisplayName: 钨钢无人机
+				DisplayName: 铸钢无人机
 				Description: 文案里面没写
 			}
 
@@ -501,12 +501,8 @@ Mods: {
 			}
 
 			TungstenSteelBar: {
-				DisplayName: 钨钢锭
-				Tooltip:
-					'''
-					钨钢是一种现实中存在的合金，
-					所以这玩意与灾厄的钨钢没有半毛钱关系
-					'''
+				DisplayName: 铸钢
+				Tooltip: 千锤百炼
 			}
 
 			Easyparts: {
@@ -636,12 +632,12 @@ Mods: {
 			}
 
 			TungstenSteelStaff: {
-				DisplayName: 钨钢法杖
+				DisplayName: 铸钢法杖
 				Tooltip: 发射一个钨钢矢，最多可穿透3个敌怪
 			}
 
 			TungstenSteelShotgun: {
-				DisplayName: 钨钢魔霰
+				DisplayName: 铸钢魔霰
 				Tooltip: 发射多枚钨钢矢
 			}
 
@@ -828,7 +824,7 @@ Mods: {
 			}
 
 			TungstenSteelSword: {
-				DisplayName: 钨钢剑
+				DisplayName: 铸钢剑
 				Tooltip: "[c/96ff0a:-维瑞德钢铁公司出品-]"
 			}
 
@@ -1023,7 +1019,7 @@ Mods: {
 			}
 
 			TungstenSteelController: {
-				DisplayName: 钨钢控制器
+				DisplayName: 铸钢控制器
 				Tooltip: ""
 			}
 
@@ -1213,7 +1209,7 @@ Mods: {
 			}
 
 			TungstenSteelCard: {
-				DisplayName: 钨钢牌
+				DisplayName: 铸钢牌
 				Tooltip: ""
 			}
 
