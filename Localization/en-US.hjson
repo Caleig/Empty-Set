@@ -641,6 +641,11 @@ Mods: {
 				Tooltip: Shoot multiple steel bullets
 			}
 
+			Tungstemerald: {
+				DisplayName: Tungstemerald
+				Tooltip: "[c/96ff0a:-Produced by Vered Steel-]"
+			}
+
 			Wither: {
 				DisplayName: Wither
 				Tooltip: Shoot three Wither Projectile,Poison 5 seconds when crit
@@ -649,6 +654,11 @@ Mods: {
 			寒川: {
 				DisplayName: 寒川
 				Tooltip: ""
+			}
+
+			AbyssCannon: {
+				DisplayName: Abyss Cannon
+				Tooltip: Something seems to be missing?
 			}
 
 			ArbitralSword: {

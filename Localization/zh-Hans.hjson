@@ -641,6 +641,11 @@ Mods: {
 				Tooltip: 发射多枚钨钢矢
 			}
 
+			Tungstemerald: {
+				DisplayName: 钨翠
+				Tooltip: "[c/96ff0a:-维瑞德钢铁公司出品-]"
+			}
+
 			Wither: {
 				DisplayName: 枯萎
 				Tooltip: 发射3个枯萎弹幕，暴击时造成5秒“中毒”buff
@@ -649,6 +654,11 @@ Mods: {
 			寒川: {
 				DisplayName: 寒川
 				Tooltip: ""
+			}
+
+			AbyssCannon: {
+				DisplayName: 深谙魔炮
+				Tooltip: 似乎缺了点什么？
 			}
 
 			ArbitralSword: {
