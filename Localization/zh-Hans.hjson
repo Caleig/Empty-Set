@@ -662,8 +662,8 @@ Mods: {
 			}
 
 			ArbitralSword: {
-				DisplayName: 仲裁巨剑
-				Tooltip: '''"仲裁罪恶，撕碎你的敌人"'''
+				DisplayName: 仲裁
+				Tooltip: '''"撕裂万物"'''
 			}
 
 			Banisher: {
@@ -1610,6 +1610,10 @@ Mods: {
 			// FangofCthulhuProj.DisplayName: Fangof Cthulhu Proj
 			// TungstenSteelExplode.DisplayName: Tungsten Steel Explode
 			// TungstenSteelProj.DisplayName: Tungsten Steel Proj
+			// arbitration.DisplayName: arbitration
+			// arbitration2.DisplayName: arbitration2
+			// arbitrationProj.DisplayName: arbitration Proj
+			// arbitrationProj2.DisplayName: arbitration Proj2
 		}
 
 		NPCs: {

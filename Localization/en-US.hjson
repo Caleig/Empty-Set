@@ -663,7 +663,7 @@ Mods: {
 
 			ArbitralSword: {
 				DisplayName: Arbitral Sword
-				Tooltip: '''"Arbitrate sin and tear up your enemies"'''
+				Tooltip: '''"Crush everything"'''
 			}
 
 			Banisher: {
@@ -1612,6 +1612,10 @@ Mods: {
 			FangofCthulhuProj.DisplayName: Fangof Cthulhu Proj
 			TungstenSteelExplode.DisplayName: Tungsten Steel Explode
 			TungstenSteelProj.DisplayName: Tungsten Steel Proj
+			arbitration.DisplayName: arbitration
+			arbitration2.DisplayName: arbitration2
+			arbitrationProj.DisplayName: arbitration Proj
+			arbitrationProj2.DisplayName: arbitration Proj2
 		}
 
 		NPCs: {
