@@ -37,5 +37,6 @@ public class StarterBox : ModItem
         player.QuickSpawnItem(source, ItemID.IceTorch, 50);
         player.QuickSpawnItem(source, ItemID.SilverCoin, 10);
         player.QuickSpawnItem(source, ModContent.ItemType<Items.Accessories.TheAsylumoftheStarGod>());
+        player.QuickSpawnItem(source, ModContent.ItemType<Items.Weapons.TEST.Precautions>());
     }
 }
