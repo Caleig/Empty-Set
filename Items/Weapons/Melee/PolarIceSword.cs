@@ -1,4 +1,5 @@
-﻿using EmptySet.Utils;
+﻿using Microsoft.Xna.Framework;
+using EmptySet.Utils;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -35,9 +36,18 @@ public class PolarIceSword : ModItem
     }
 
     public override void AddRecipes() => CreateRecipe()
-        .AddIngredient(ItemID.Katana, 2)
-        .AddIngredient(ItemID.Shiverthorn)
-        .AddIngredient(ItemID.IceBlock, 4)
+        .AddIngredient(ItemID.Katana)
+        .AddIngredient(ItemID.Shiverthorn, 2)
+        .AddIngredient(ItemID.IceBlock, 12)
         .AddTile(TileID.Anvils)
         .Register();
+    public override void MeleeEffects(Player player, Rectangle hitbox)
+    {
+        if (Main.GameUpdateCount % 3 == 0)
+        {
+        Dust d = Dust.NewDustDirect(hitbox.TopLeft(), hitbox.Width, hitbox.Height, DustID.IceTorch);
+        d.velocity = Vector2.Zero;
+        d.noGravity = true;
+        }
+    }
 }

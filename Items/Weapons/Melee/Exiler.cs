@@ -1,4 +1,5 @@
-﻿using EmptySet.Common.Effects.Item;
+﻿using Microsoft.Xna.Framework;
+using EmptySet.Common.Effects.Item;
 using EmptySet.Common.Systems;
 using EmptySet.Utils;
 using Terraria;
@@ -47,4 +48,13 @@ public class Exiler : ModItem
         .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.GoldBroadsword))
         .AddTile(TileID.DemonAltar)
         .Register();
+    public override void MeleeEffects(Player player, Rectangle hitbox)
+    {
+        if (Main.GameUpdateCount % 3 == 0)
+        {
+        Dust d = Dust.NewDustDirect(hitbox.TopLeft(), hitbox.Width, hitbox.Height, DustID.SilverCoin, Scale: Main.rand.NextFloat(1f, 2f));
+        d.velocity = Vector2.Zero;
+        d.noGravity = true;
+        }
+    }
 }
