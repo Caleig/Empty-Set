@@ -37,7 +37,7 @@ public class ON157 : ModItem
         Item.knockBack = 6;
         Item.crit = 6;
         Item.value = Item.sellPrice(0, 6, 6, 6);
-        Item.rare = ItemRarityID.Pink;
+        Item.rare = ItemRarityID.Yellow;
         Item.UseSound = SoundID.Item38;
 
         Item.shoot = ProjectileID.Bullet;
@@ -46,7 +46,7 @@ public class ON157 : ModItem
     }
     //public override Vector2? HoldoutOffset() => new Vector2(-5f, 0);
     public override void AddRecipes() => CreateRecipe()
-        .AddIngredient(ItemID.OnyxBlaster) //燧发枪
+        .AddIngredient(ItemID.OnyxBlaster)
         .AddIngredient(ModContent.ItemType<WindStorm>(), 1)
         .AddIngredient(ModContent.ItemType<SoulOfPolymerization>(), 2)
         .AddTile(ModContent.TileType<FusioninstrumentTile>())
