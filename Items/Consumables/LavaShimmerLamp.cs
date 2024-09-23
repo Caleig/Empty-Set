@@ -27,6 +27,7 @@ public class LavaShimmerLamp : ModItem
         Item.width = 22;
         Item.height = 30;
         Item.maxStack = 1;
+        Item.UseSound = SoundID.Item105;
         Item.value = Item.sellPrice(0, 1, 60, 0);
         Item.rare = ItemRarityID.Green;
         Item.useAnimation = UseSpeedLevel.NormalSpeed + 2;
@@ -50,13 +51,9 @@ public class LavaShimmerLamp : ModItem
             int type = ModContent.NPCType<LavaHunter>();
 
             if (Main.netMode != NetmodeID.MultiplayerClient)
-            {
-                NPC.SpawnBoss((int)player.position.X, (int)player.position.Y - 25 * 16, type, player.whoAmI);
-            }
+                NPC.SpawnBoss((int)(player.position.X + 1200), (int)(player.position.Y + 1200), type, Main.myPlayer);
             else
-            {
                 NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, number: player.whoAmI, number2: type);
-            }
         }
         return true;
     }
