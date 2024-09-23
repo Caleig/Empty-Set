@@ -62,11 +62,11 @@ namespace EmptySet.NPCs.Boss.LavaHunter
 
         public override void SetDefaults()
         {
-            NPC.width = 130;
-            NPC.height = 154;
+            NPC.width = 128;
+            NPC.height = 130;
             NPC.damage = 105;
             NPC.defense = 14;
-            NPC.lifeMax = 15000;
+            NPC.lifeMax = 36000;
             NPC.HitSound = SoundID.NPCHit41;
             NPC.DeathSound = SoundID.NPCDeath14;
             NPC.noGravity = true;
@@ -91,11 +91,11 @@ namespace EmptySet.NPCs.Boss.LavaHunter
         int lavaDamage = 0;
         public override bool PreAI()
         {
-            NPC.lifeMax = Main.masterMode ? 15000 : Main.expertMode ? 12000 : 9000;
-            NPC.defense = Main.masterMode ? 14 : Main.expertMode ? 12 : 10;
-            NPC.damage = Main.masterMode ? 105 : Main.expertMode ? 85 : 65;
+            NPC.lifeMax = Main.masterMode ? 36000 : Main.expertMode ? 21000 : 18000;
+            NPC.defense = Main.masterMode ? 12 : Main.expertMode ? 10 : 10;
+            NPC.damage = Main.masterMode ? 140 : Main.expertMode ? 105 : 70;
             if (NPC.life > NPC.lifeMax) NPC.life = NPC.lifeMax;
-            npcDamage = Main.masterMode ? 220 : Main.expertMode ? 180 : 140;
+            npcDamage = Main.masterMode ? 160 : Main.expertMode ? 120 : 80;
             lavaDamage = Main.masterMode ? 110 : Main.expertMode ? 90 : 60;
             return base.PreAI();
         }
@@ -105,33 +105,32 @@ namespace EmptySet.NPCs.Boss.LavaHunter
             if (!spawned) spawn();
             findPlayer();
 
-            if (NPC.life <= NPC.lifeMax*0.65) 
+            if (NPC.life <= NPC.lifeMax*0.8)
             {
                 if (solarFragmentTimer == 1) 
                 {
-                    for (int i = 0; i < 4; i++) 
+                    for (int i = 0; i < 4; i++)
                     {
                         int npc = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, NPCID.SolarGoop);
-                        Main.npc[npc].velocity = NPC.velocity.RotatedBy(MathHelper.ToRadians(-45+30*i)) *1.2f;
+                        Main.npc[npc].velocity = NPC.velocity.RotatedBy(MathHelper.ToRadians(-45+30*i)) *1.8f;
                         Main.npc[npc].damage = npcDamage;
                     }
                 }
-                if (solarFragmentTimer >= 60 * 5) solarFragmentTimer = 0;
+                if (solarFragmentTimer >= 60 * 1) solarFragmentTimer = 0;
                 solarFragmentTimer++;
             }
-            if (NPC.life <= NPC.lifeMax * 0.5)
+            if (NPC.life <= NPC.lifeMax * 0.1)
             {
                 isDash = true;
             }
-            if (NPC.life <= NPC.lifeMax * 0.4) 
+            if (NPC.life <= NPC.lifeMax * 0.5)
             {
                 lavaProjTimer++;
-                if (lavaProjTimer > 9 * 60) 
+                if (lavaProjTimer > 5 * 60)
                 {
-                    SoundEngine.PlaySound(SoundID.Roar, player.position);
-                    for (int i = -1; i < 6; i++) 
+                    for (int i = -1; i < 10; i++)
                     {
-                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center + new Vector2(i * 4 * 16 * (player.velocity.X > 0 ? 1 : -1), -40 * 16), Vector2.Zero, ModContent.ProjectileType<LavaProj>(), EmptySetUtils.ScaledProjDamage(lavaDamage), 0, Main.myPlayer);
+                        Projectile.NewProjectile(NPC.GetSource_FromAI(), player.Center + new Vector2(i * 6 * 32 * (player.velocity.X > 0 ? 1 : -1), -40 * 16), Vector2.Zero, ModContent.ProjectileType<LavaProj>(), EmptySetUtils.ScaledProjDamage(lavaDamage), 0, Main.myPlayer);
                     }
                     lavaProjTimer = 0;
                 }
@@ -417,7 +416,6 @@ namespace EmptySet.NPCs.Boss.LavaHunter
                         num195 = 20f;
                     }
                     NPC.soundDelay = (int)num195;
-                    SoundEngine.PlaySound(SoundID.Roar, NPC.position);
                 }
                 num193 = (float)System.Math.Sqrt((double)(num191 * num191 + num192 * num192));
                 float num196 = System.Math.Abs(num191);
@@ -542,12 +540,12 @@ namespace EmptySet.NPCs.Boss.LavaHunter
             float rotationDifference = MathHelper.WrapAngle(NPC.velocity.ToRotation() - NPC.DirectionTo(player.Center).ToRotation());
             bool inFrontOfMe = Math.Abs(rotationDifference) < MathHelper.ToRadians(90 / 2);
 
-            if (NPC.Distance(player.Center) > 1200f) 
+            if (NPC.Distance(player.Center) > 1200f)
             {
                 turnSpeed *= 2f;
                 accel *= 2f;
 
-                if (inFrontOfMe && maxSpeed < 30f) 
+                if (inFrontOfMe && maxSpeed < 30f)
                     maxSpeed = 30f;
             }
 

@@ -7,7 +7,7 @@ public class LavaHunterTail : LavaHunterBody
     public override void SetDefaults()
     {
         base.SetDefaults();
-        NPC.width = 98;
+        NPC.width = 85;
         NPC.height = 58;
         NPC.damage = 90;
         NPC.defense = 25;

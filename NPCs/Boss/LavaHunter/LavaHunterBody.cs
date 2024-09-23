@@ -27,11 +27,11 @@ public class LavaHunterBody : ModNPC
 
     public override void SetDefaults()
     {
-        NPC.width = 92;
-        NPC.height = 78;
+        NPC.width = 106;
+        NPC.height = 98;
         NPC.damage = 95;
         NPC.defense = 30;
-        NPC.lifeMax = 15000;
+        NPC.lifeMax = 36000;
         NPC.HitSound = SoundID.NPCHit4;
         NPC.DeathSound = SoundID.NPCDeath14;
         NPC.noGravity = true;
@@ -94,8 +94,8 @@ public class LavaHunterBody : ModNPC
         NPC.rotation = (float)Math.Atan2(npcToPlayerY, npcToPlayerX);
         var normOfNpcToPlayer = (float)Math.Sqrt(npcToPlayerX * npcToPlayerX + npcToPlayerY * npcToPlayerY);
         normOfNpcToPlayer = NPC.type == ModContent.NPCType<LavaHunterTail>()
-            ? (normOfNpcToPlayer - NPC.width + 30) / normOfNpcToPlayer
-            : (normOfNpcToPlayer - NPC.width + 30) / normOfNpcToPlayer;
+            ? (normOfNpcToPlayer - NPC.width + 15) / normOfNpcToPlayer
+            : (normOfNpcToPlayer - NPC.width + 15) / normOfNpcToPlayer;
         npcToPlayerX *= normOfNpcToPlayer;
         npcToPlayerY *= normOfNpcToPlayer;
         NPC.velocity = Vector2.Zero;
@@ -104,7 +104,7 @@ public class LavaHunterBody : ModNPC
 
         NPC.timeLeft = segment.timeLeft;
 
-        if (head.life <= head.lifeMax * 0.85)
+        if (head.life <= head.lifeMax * 0.90)
         {
             if (timer == 1) 
             {
@@ -112,13 +112,7 @@ public class LavaHunterBody : ModNPC
                 Main.npc[npc].velocity= Main.player[head.target].position - NPC.position;
                 Main.npc[npc].damage = npcDamage;
             }
-            if (timer == 21) 
-            {
-                int npc = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, NPCID.BurningSphere);
-                Main.npc[npc].velocity = Main.player[head.target].position - NPC.position;
-                Main.npc[npc].damage = npcDamage;
-            }
-            if (timer >= 60*3)timer = 0;
+            if (timer >= 60*5)timer = 0;
             timer++;
         }
     }
