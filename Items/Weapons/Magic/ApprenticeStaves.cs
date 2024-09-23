@@ -25,8 +25,8 @@ namespace EmptySet.Items.Weapons.Magic
             Item.useTime = 10;
             Item.useAnimation = 30;
             Item.useStyle = 5;
-            Item.width = 40;
-            Item.height = 40;
+            Item.width = 46;
+            Item.height = 46;
             Item.DamageType = DamageClass.Magic;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.Green;
