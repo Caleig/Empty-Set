@@ -30,7 +30,7 @@ public class TungstenSteelSword : ModItem
 
         //Item.scale = 1.1f;
         Item.crit = 4-4;
-        Item.damage = 35;
+        Item.damage = 30;
 
         Item.knockBack = KnockBackLevel.Normal;
         Item.useTime = 33;
