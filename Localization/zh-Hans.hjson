@@ -864,7 +864,13 @@ Mods: {
 
 			Bright: {
 				DisplayName: 明
-				Tooltip: '''"零殇"'''
+				Tooltip:
+					'''
+					[c/05c8ff:-充能-]
+					"将火枪子弹转化为夜明弹"
+					"右键时消耗5点能量发射一枚耀星"
+					"洞穿那天穹的幻影！"
+					'''
 			}
 
 			ChargedBow: {
@@ -1614,6 +1620,8 @@ Mods: {
 			// arbitration2.DisplayName: arbitration2
 			// arbitrationProj.DisplayName: arbitration Proj
 			// arbitrationProj2.DisplayName: arbitration Proj2
+			// Nih2.DisplayName: Nih2
+			// Nih.DisplayName: Nih
 		}
 
 		NPCs: {

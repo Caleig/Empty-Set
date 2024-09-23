@@ -859,7 +859,13 @@ Mods: {
 
 			Bright: {
 				DisplayName: Bright
-				Tooltip: '''"Zero ruin"'''
+				Tooltip:
+					'''
+					[c/05c8ff:-Charged-]
+					"convert musket bullets into Luminite Bullet"
+					"Right-click to spend 5 energy to launch an bright star"
+					"Piercing the illusion of the heavenly vault！"
+					'''
 			}
 
 			ChargedBow: {
@@ -1616,6 +1622,8 @@ Mods: {
 			arbitration2.DisplayName: arbitration2
 			arbitrationProj.DisplayName: arbitration Proj
 			arbitrationProj2.DisplayName: arbitration Proj2
+			Nih2.DisplayName: Nih2
+			Nih.DisplayName: Nih
 		}
 
 		NPCs: {
