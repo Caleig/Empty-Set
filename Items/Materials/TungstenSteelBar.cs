@@ -1,4 +1,6 @@
 ﻿using EmptySet.Common.Systems;
+using EmptySet.Tiles;
+using EmptySet.Utils;
 using Terraria.GameContent.Creative;
 using Terraria;
 using Terraria.ID;
@@ -28,12 +30,10 @@ public class TungstenSteelBar : ModItem
         Item.value = Item.sellPrice(0,0,20,0);
     }
 
-    public override void AddRecipes() => CreateRecipe(3)
-        .AddIngredient(ItemID.TungstenBar)
-        .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.IronOrLead))
-        .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.CopperOrTin))
-        .AddIngredient(ModContent.ItemType<MetalFragment>())
-        .AddTile(TileID.Hellforge)
-        .AddTile(TileID.Anvils)
+    public override void AddRecipes() => CreateRecipe(2)
+        .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.SliverOrTungsten))
+        .AddRecipeGroup(MyRecipeGroup.Get(MyRecipeGroupId.CopperOrTin),2 )
+        .AddIngredient<Flamepollen>()
+        .AddTile(ModContent.TileType<SteelprocessingstationTile>())
         .Register();
 }
