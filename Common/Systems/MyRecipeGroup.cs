@@ -22,6 +22,7 @@ public class MyRecipeGroup : ModSystem
     private static (string name, RecipeGroup rg)[] RecipeGroups =
     {
         ("CopperOrTin", new(() => "铜锭或者锡锭", ItemID.CopperBar, ItemID.TinBar)),
+        ("CopperAnvil", new(() => "铁砧或者铅砧", ItemID.IronAnvil, ItemID.LeadAnvil)),
         ("EvilBar", new(() => "任何邪恶金属锭", ItemID.CrimtaneBar, ItemID.DemoniteBar)),
         ("GoldBroadsword", new(() => "任何金阔剑", ItemID.GoldBroadsword, ItemID.PlatinumBroadsword)),
         ("EvilFlyingBlade", new(() => "任何邪恶飞刃", ModContent.ItemType<CrimtaneFlyingBlade>())),
@@ -55,6 +56,7 @@ public class MyRecipeGroup : ModSystem
 public enum MyRecipeGroupId
 {
     CopperOrTin,
+    CopperAnvil,
     EvilBar,
     GoldBroadsword,
     EvilFlyingBlade,
