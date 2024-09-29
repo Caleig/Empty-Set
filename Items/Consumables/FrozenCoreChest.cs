@@ -1,4 +1,5 @@
 ﻿using EmptySet.Common.Abstract.Items;
+using EmptySet.Items.Placeable;
 using EmptySet.Items.Accessories;
 using EmptySet.Items.Materials;
 using EmptySet.Items.Weapons.Throwing;
@@ -27,4 +28,9 @@ public class FrozenCoreChest : BossBag
         itemLoot.Add(ItemDrop.GetItemDropRule<ChillCrystal>(50));
         itemLoot.Add(ItemDrop.GetItemDropRule(ItemID.GoldCoin, 100,23,31));
     }
+
+    public override void AddRecipes() => CreateRecipe()
+        .AddIngredient(ModContent.ItemType<FrozenCoreChestPlaced>(),1)
+        .AddTile(TileID.HeavyWorkBench)
+        .Register();
 }
