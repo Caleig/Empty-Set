@@ -57,23 +57,23 @@ namespace EmptySet.NPCs.Boss.JungleHunter
         {
             float PercentageOfLife = (float)NPC.life / (float)NPC.lifeMax;
             if (!spawned) spawn();
-            if (PercentageOfLife < 0.25)
+            if (PercentageOfLife < 0.5)
             {
                 n.allowNPCStates1AI = true;
                 n.SetState<AttackState3>();
             }
 
-            if (PercentageOfLife < 0.3) 
+            if (PercentageOfLife < 0.3)
             {
                 n.SetState<MoveState2>();
             }
 
-            if (PercentageOfLife < 0.45)
+            if (PercentageOfLife < 0.4)
             {
                 n.SetState<AttackState2>();
                 n.allowNPCAttackStatesAI = true;
             }
-            else if (PercentageOfLife < 0.7)
+            else if (PercentageOfLife < 0.9)
             {
                 n.SetState<AttackState1>();
                 n.allowNPCAttackStatesAI = true;
@@ -86,8 +86,8 @@ namespace EmptySet.NPCs.Boss.JungleHunter
             MinSegmentLength = 30;
             MaxSegmentLength = 30;
             //设置速度和加速度
-            MoveSpeed = 5.5f;
-            Acceleration = 0.4f;
+            MoveSpeed = 22f;
+            Acceleration = 0.2f;
         }
 
         public override void SetStaticDefaults()
@@ -101,13 +101,17 @@ namespace EmptySet.NPCs.Boss.JungleHunter
                 PortraitScale = 0.8f,
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, drawModifier);
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Confused] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.BoneJavelin] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.BloodButcherer] = true;
         }
 
         public override void SetDefaults()
         {
             InitializeProperties();
-            NPC.width = 102;
-            NPC.height = 146;
+            NPC.width = 94;
+            NPC.height = 110;
 
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
@@ -129,12 +133,12 @@ namespace EmptySet.NPCs.Boss.JungleHunter
 
         public void InitializeProperties()
         {
-            NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 15200 : Main.expertMode ? 11700 : 7700);
-            NPC.defense = Main.masterMode ? 7 : Main.expertMode ? 5 : 3;
+            NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 18000 : Main.expertMode ? 12000 : 9000);
+            NPC.defense = Main.masterMode ? 7 : Main.expertMode ? 5 : 5;
             NPC.knockBackResist = Main.masterMode ? 0f : Main.expertMode ? 0f : 0f;
-            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 140 : Main.expertMode ? 110 : 80);
-            witherDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 60 : Main.expertMode ? 45 : 35);
-            LeavesBallDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 85 : Main.expertMode ? 65 : 50);
+            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 160 : Main.expertMode ? 120 : 80);
+            witherDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 250 : Main.expertMode ? 75 : 50);
+            LeavesBallDamage = EmptySetUtils.ScaledProjDamage(Main.masterMode ? 300 : Main.expertMode ? 90 : 60);
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -186,11 +190,11 @@ namespace EmptySet.NPCs.Boss.JungleHunter
 
         public void Wither(Player target)
         {
-            int r = Main.rand.Next(1, 45);
+            int r = Main.rand.Next(1, 60);
             for (int i = 0; i < witherPosition.Length; i++)
             {
                 witherPos = target.Center + witherPosition[i].RotatedBy(MathHelper.ToRadians(r)) * 20;
-                witherVelocity = (target.Center - witherPos).SafeNormalize(Vector2.UnitX) * 4;
+                witherVelocity = (target.Center - witherPos).SafeNormalize(Vector2.UnitX) * 5;
                 int projectile = Projectile.NewProjectile(NPC.GetSource_FromAI(), witherPos, witherVelocity, ModContent.ProjectileType<WitherProjectile>(), EmptySetUtils.ScaledProjDamage(witherDamage), 0, target.whoAmI);
                 Main.projectile[projectile].timeLeft = 600;
             }
@@ -257,13 +261,17 @@ namespace EmptySet.NPCs.Boss.JungleHunter
                 Hide = true
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, value);
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Confused] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.BoneJavelin] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.BloodButcherer] = true;
         }
 
         public override void SetDefaults()
         {
             InitializeProperties();
-            NPC.width = 60;//60
-            NPC.height = 92;
+            NPC.width = 42;//60
+            NPC.height = 58;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.noGravity = true;
@@ -282,9 +290,9 @@ namespace EmptySet.NPCs.Boss.JungleHunter
 
         public void InitializeProperties()
         {
-            NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 15200 : Main.expertMode ? 11700 : 7700);
-            NPC.defense = Main.masterMode ? 12 : Main.expertMode ? 11 : 9;
-            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 65 : Main.expertMode ? 45 : 25);
+            NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 18000 : Main.expertMode ? 12000 : 9000);
+            NPC.defense = Main.masterMode ? 10 : Main.expertMode ? 8 : 8;
+            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 60 : Main.expertMode ? 45 : 30);
         }
 
         public override void Init() { }
@@ -304,13 +312,17 @@ namespace EmptySet.NPCs.Boss.JungleHunter
                 Hide = true
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, value);
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Poisoned] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.Confused] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.BoneJavelin] = true;
+        NPCID.Sets.SpecificDebuffImmunity[Type][BuffID.BloodButcherer] = true;
         }
 
         public override void SetDefaults()
         {
             InitializeProperties();
-            NPC.width = 35;//35
-            NPC.height = 52;
+            NPC.width = 50;//35
+            NPC.height = 58;
       
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
@@ -329,9 +341,9 @@ namespace EmptySet.NPCs.Boss.JungleHunter
 
         public void InitializeProperties()
         {
-            NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 152 : Main.expertMode ? 11700 : 7700);
-            NPC.defense = Main.masterMode ? 9 : Main.expertMode ? 7 : 5;
-            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 100 : Main.expertMode ? 80 : 60);
+            NPC.lifeMax = EmptySetUtils.ScaledNPCMaxLife(Main.masterMode ? 18000 : Main.expertMode ? 12000 : 9000);
+            NPC.defense = Main.masterMode ? 12 : Main.expertMode ? 9 : 9;
+            NPC.damage = EmptySetUtils.ScaledNPCDamage(Main.masterMode ? 100 : Main.expertMode ? 75 : 50);
         }
 
         public override void Init() { }
@@ -363,7 +375,7 @@ namespace EmptySet.NPCs.Boss.JungleHunter
                         onfloor = true;
                         break;
                     }
-                    else 
+                    else
                     {
                         onfloor = false;
                     }
@@ -374,7 +386,7 @@ namespace EmptySet.NPCs.Boss.JungleHunter
             {
                 jungleHunterHead.CanFly = true;
             }
-            else 
+            else
             {
                 jungleHunterHead.CanFly = false;
             }
@@ -391,7 +403,7 @@ namespace EmptySet.NPCs.Boss.JungleHunter
             NPC = n.NPC;
             jungleHunterHead = (JungleHunterHead)NPC.ModNPC;
             jungleHunterHead.CanFly = true;
-            jungleHunterHead.MoveSpeed = 9f;
+            jungleHunterHead.MoveSpeed = 25f;
             jungleHunterHead.Acceleration = 0.2f;
         }
     }
