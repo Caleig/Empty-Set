@@ -352,6 +352,11 @@ Mods: {
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
 			}
 
+			FrozenCoreChestPlaced: {
+				DisplayName: FrozenCoreChest(Placed)
+				Tooltip: ""
+			}
+
 			HoneyBait: {
 				DisplayName: Honey Bait
 				Tooltip:
@@ -505,6 +510,11 @@ Mods: {
 				Tooltip: Deep calcination
 			}
 
+			Flamepollen: {
+				DisplayName: Flamepollen
+				Tooltip: Excellent accelerant
+			}
+
 			Easyparts: {
 				DisplayName: Easyparts
 				Tooltip: Not directly scrapped is considered a success
@@ -550,12 +560,17 @@ Mods: {
 			}
 
 			Purifier: {
-				DisplayName: 净化仪
+				DisplayName: Purifier
 				Tooltip:
 					'''
 					Used to decontaminate contaminated props(Need Purification Powder)
 					"Purge!"
 					'''
+			}
+
+			Steelprocessingstation: {
+				DisplayName: Steelprocessingstation
+				Tooltip: " Is used in steel processing, but also as a furnace and anvil"
 			}
 
 			CorruptionFlails: {
@@ -1679,9 +1694,11 @@ Mods: {
 			缭乱砾岩Tile.MapEntry: 缭乱砾岩
 			FusioninstrumentTile.MapEntry: Fusioninstrument
 			PurifierTile.MapEntry: Purifier
+			SteelprocessingstationTile.MapEntry: Steelprocessingstation
 			LavaHunterChestTile.MapEntry: Lava Hunter Chest Tile
 			EarthShakerChestTile.MapEntry: Earth Shaker Chest Tile
 			JungleHunterChestTile.MapEntry: Jungle Hunter Chest Tile
+			FrozenCoreChestTile.MapEntry: Frozen Core Chest Tile
 		}
 
 		UI.Energy: Energy

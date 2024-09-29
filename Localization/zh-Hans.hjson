@@ -352,6 +352,11 @@ Mods: {
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
 			}
 
+			FrozenCoreChestPlaced: {
+				DisplayName: 极川之核匣(可放置)
+				Tooltip: ""
+			}
+
 			HoneyBait: {
 				DisplayName: 蜜汁饵食
 				Tooltip:
@@ -505,6 +510,11 @@ Mods: {
 				Tooltip: 千锤百炼
 			}
 
+			Flamepollen: {
+				DisplayName: 火焰花粉
+				Tooltip: 绝佳的助燃剂
+			}
+
 			Easyparts: {
 				DisplayName: 简易电子元件
 				Tooltip: 没有直接报废就算成功
@@ -556,6 +566,11 @@ Mods: {
 					用于净化被污染的物品（需要净化粉）
 					"净化！"
 					'''
+			}
+
+			Steelprocessingstation: {
+				// DisplayName: Steelprocessingstation
+				// Tooltip: " Is used in steel processing, but also as a furnace and anvil"
 			}
 
 			CorruptionFlails: {
@@ -1642,7 +1657,7 @@ Mods: {
 			JungleHunterBody.DisplayName: 丛林游猎者
 
 			JungleHunterHead: {
-				DisplayName: 丛林游猎者
+				DisplayName: 枯森骸虫
 				// BossChecklistIntegration.SpawnInfo: 在丛林使用 [i:5627] 召唤
 			}
 
@@ -1677,9 +1692,11 @@ Mods: {
 			缭乱砾岩Tile.MapEntry: 缭乱砾岩
 			FusioninstrumentTile.MapEntry: 聚合魔仪
 			PurifierTile.MapEntry: 净化台
+			// SteelprocessingstationTile.MapEntry: Steelprocessingstation
 			// LavaHunterChestTile.MapEntry: Lava Hunter Chest Tile
 			// EarthShakerChestTile.MapEntry: Earth Shaker Chest Tile
 			// JungleHunterChestTile.MapEntry: Jungle Hunter Chest Tile
+			// FrozenCoreChestTile.MapEntry: Frozen Core Chest Tile
 		}
 
 		UI.Energy: 能量
