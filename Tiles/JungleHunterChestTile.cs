@@ -35,7 +35,7 @@ namespace EmptySet.Tiles
             Player player = Main.LocalPlayer;
             player.noThrow = 2;
             player.cursorItemIconEnabled = true;
-            player.cursorItemIconID = ModContent.ItemType<EarthShakerChestPlaced>();
+            player.cursorItemIconID = ModContent.ItemType<JungleHunterChestPlaced>();
         }
     }
 }
