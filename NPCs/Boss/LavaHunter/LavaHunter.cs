@@ -125,7 +125,7 @@ namespace EmptySet.NPCs.Boss.LavaHunter
                 if (solarFragmentTimer >= 60 * 1) solarFragmentTimer = 0;
                 solarFragmentTimer++;
             }
-            if (NPC.life <= NPC.lifeMax * 0.1)
+            if (NPC.life <= NPC.lifeMax * 0.2)
             {
                 isDash = true;
             }
@@ -155,7 +155,7 @@ namespace EmptySet.NPCs.Boss.LavaHunter
                     break;
                 case 1:
                     dashTimer++;
-                    if (dashTimer < 200)
+                    if (dashTimer < 100)
                     {
                         Movement(new Vector2(player.position.X - player.direction * 10 * 16, player.position.Y + 16 * 35), 0.4f, 18);
                     }
@@ -180,7 +180,7 @@ namespace EmptySet.NPCs.Boss.LavaHunter
                     NPC.rotation = NPC.velocity.ToRotation();
                     break;
                 case 2:
-                    if (dashTimer == 0) NPC.velocity = Vector2.Normalize(NPC.DirectionTo(player.Center)) * maxSpeed * 3f;
+                    if (dashTimer == 0) NPC.velocity = Vector2.Normalize(NPC.DirectionTo(player.Center)) * maxSpeed * 2f;
                     float angle = NPC.DirectionTo(player.Center).ToRotation() - NPC.velocity.ToRotation();
                     angle = MathHelper.WrapAngle(angle);
                     dashTimer++;
